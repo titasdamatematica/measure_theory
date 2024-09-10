@@ -1,0 +1,30 @@
+% Page Geometry: Set custom margins
+\geometry{left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
+
+% Custom Header and Footer with fancyhdr
+\pagestyle{fancy}            % Use the fancy page style
+\fancyhf{}                   % Clear default header/footer settings
+\fancyhead[L]{\nouppercase{\leftmark}}  % Left header: Chapter name, no uppercase
+\fancyhead[R]{\thepage}      % Right header: Page number
+
+% Title Information: Define the document title, author, and date
+\title{My LaTeX Book Template}
+\author{Pedro Vital}
+\date{\today}
+
+% Adjustments for fancyhdr
+\setlength{\headheight}{14.5pt}   % Increase header height to avoid warnings
+\addtolength{\topmargin}{-2.5pt}  % Adjust top margin to compensate for increased header height
+
+% Hyperref Setup: Configure clickable links and PDF metadata
+\hypersetup{
+    colorlinks=true,             % Enable colored links
+    linkcolor=blue-800,          % Color for internal links (e.g., table of contents)
+    filecolor=violet-700,        % Color for file links
+    urlcolor=blue-500,           % Color for URLs
+    pdftitle={Notas de Aula - Medida de Integração},  % Title metadata for the PDF
+    pdfpagemode=FullScreen,      % Open the PDF in full screen mode
+}
+
+% Bibliography: Link the .bib file for references
+\addbibresource{references.bib}  % Specify the bibliography file
