@@ -1,0 +1,56 @@
+\newcommand{\hereditaryCollection}{
+    \begin{definition}{Família Hereditária}{hereditaryCollection}
+        Dizemos que uma família de conjuntos $\mathcal{H}$ é um \textbf{hereditária} quando ela possui todos os subconjuntos dos seus elementos, isto é,
+        \begin{equation*}\label{def:hereditary_collection_a}
+            A\in \mathcal{H}, B\subset A\Longrightarrow B\in \mathcal{H}.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\ringOfSets}{
+    \begin{definition}{Anel de Conjuntos}{ring_of_sets}
+        Dizemos que uma família de conjuntos $\mathcal{R}$ é um \textbf{anel} quando ela é fechada pela união e pela diferença, isto é,
+        \begin{enumerate}
+            \item[(A1)] Se $A,B \in \mathcal{R} $, então  $A\bigcup B \in \mathcal{R}$.\label{def:ring_of_sets_a_union}
+            \item[(A2)] Se $A,B \in \mathcal{R} $, então  $A\setminus B \in \mathcal{R}$.\label{def:ring_of_sets_a_difference}
+        \end{enumerate}
+    \end{definition}
+}
+
+\newcommand{\sigmaRing}{
+    \begin{definition}{\texorpdfstring{$\sigma$}{sigma}-anel}{sigma_ring}
+        Dizemos que uma família de conjuntos $\Sigma$ é um \textbf{\texorpdfstring{$\sigma$}{sigma}-anel} quando ela é um \nameref{def:ring_of_sets} fechado pela união enumerável, isto é,
+        \begin{equation*}\label{def:sigma_ring_a_union}
+            \left(A_n\right)_{n=1}^\infty \subset \Sigma \Longrightarrow\bigcup_{n=1}^\infty A_n \in \Sigma.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\algebraOfSets}{
+    \begin{definition}{Álgebra de Conjuntos}{algebra_of_sets}
+        Seja $X$ um conjunto não vazio e $\mathcal{A}\subset \powerset{X}$. Dizemos que $\mathcal{A}$ é uma \textbf{Álgebra de Conjuntos} quando $\mathcal{A}$ é um \nameref{def:ring_of_sets} com unidade, isto é, $X\in\mathcal{A}$.
+    \end{definition}
+}
+
+\newcommand{\sigmaAlgebra}{
+    \begin{definition}{\texorpdfstring{$\sigma$}{sigma}-álgebra}{sigma_algebra}
+        Seja $X$ um conjunto não vazio e $\Sigma\subset \powerset{X}$. Dizemos que $\Sigma$ é uma \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebra} quando $\Sigma$ é um \nameref{def:sigma_ring} com unidade.
+    \end{definition}
+}
+
+\newcommand{\measurableSpace}{
+    \begin{definition}{Espaço Mensurável}{measurable_space}
+        Seja $X$ um conjunto não vazio e $\Sigma$ uma \nameref{def:sigma_algebra} no conjunto $X$. Então o par ordenado $(X,\Sigma)$ é chamado de \textbf{espaço mensurável} e cada elemento de $\Sigma$ é dito um conjunto \textbf{\texorpdfstring{$\Sigma$-mensurável}{sigma-mensurável}}.
+    \end{definition}
+}
+
+\newcommand{\generatedSigmaAlgebra}{
+    \begin{definition}{\texorpdfstring{$\sigma$}{sigma}-álgebra gerada por $\mathcal{C}$}{generated_sigma_algebra}
+        Seja $\mathcal{C} \subset \powerset{X}$ uma família de subconjuntos de $X$. Dizemos que a $\sigma$-álgebra $\sigma [\mathcal{C}]$ é a \textbf{$\sigma$-álgebra gerada por $A$} quando
+
+        \begin{enumerate}
+            \item $\mathcal{C} \subset \sigma[\mathcal{C}]$;
+            \item Se $\Sigma$ é uma $\sigma$-álgebra de $X$ tal que $\mathcal{C} \subset \Sigma$, então $\sigma [\mathcal{C}]\subset \Sigma$.
+        \end{enumerate}
+    \end{definition}
+}
