@@ -54,3 +54,136 @@
         \end{enumerate}
     \end{definition}
 }
+
+\newcommand{\topology}{
+    \begin{definition}{Topologia}{topology}
+        Seja $X$ um conjunto não vazio e $\tau\subset\powerset{X}$. Dizemos que $\tau$ é uma \textbf{topologia} quando ela contém o conjunto vazio e $X$, é fechada pela união arbitrária e pela interseção finita, isto é,
+        \begin{enumerate}
+            \item[(A1)] $\varnothing, X\in \tau$.\label{def:topology_sets}
+            \item[(A2)] Se $\{O_i\}_{i\in \mathcal{I}}$, então  $\bigcup_{i\in \mathcal{I}} O_i \in \tau$.\label{def:topology_union}
+            \item[(A3)] Se $(O_i)_{i=1}^{n} $, então  $\bigcap_{i=1}^{n} O_i \in \tau$.\label{def:topology_intersection}
+        \end{enumerate}
+    \end{definition}
+}
+
+\newcommand{\topologicalSpace}{
+    \begin{definition}{Espaço Topológico}{topological_space}
+        Seja $X$ um conjunto não vazio e $\tau$ uma \nameref{def:topology} no conjunto $X$. Então o par ordenado $(X,\tau)$ é chamado de \textbf{espaço topológico} e cada elemento de $\tau$ é dito um conjunto \textbf{aberto} em $X$.
+    \end{definition}
+}
+
+\newcommand{\borelSigmaAlgebra}{
+    \begin{definition}{\texorpdfstring{$\sigma$}{sigma}-álgebra de Borel}{borel_sigma_algebra}
+        Seja $(X,\tau)$ um \nameref{def:topological_space}. Então $\mathcal{B}(X)=\sigma [\tau]$ é a \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebra de Borel}. Os elementos de $\mathcal{B}(X)$ são chamados de \textbf{boreleanos}.
+    \end{definition}
+}
+
+\newcommand{\cartesianProduct}{
+    \begin{definition}{Produto Cartesiano}{cartesian_product}
+        Seja $\{X_i \}_{i \in \mathcal{I}}$ uma família de conjuntos indexada por $\mathcal{I}$. Definimos o \textbf{produto cartesiano} da seguinte forma:
+        \begin{equation*}
+            \prod_{i \in \mathcal{I}} X_i \coloneqq \left\{f:\mathcal{I}\rightarrow \bigcup_{i \in \mathcal{I}} X_i; \forall i \in \mathcal{I}, f(i)\in X_i \right\}.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\projection}{
+    \begin{definition}{Projeção}{projection}
+        Seja $\{X_i\}_{i \in \mathcal{I}}$ uma família de conjuntos indexada por $\mathcal{I}$. Considere a função
+        \begin{equation*}
+            \pi_{j} : \prod_{i\in \mathcal{I}} X_i \rightarrow X_j
+        \end{equation*}
+        definida por $\pi_j (f)=f(j)$. Chamamos esta função de \textbf{$j$-ésima projeção}.
+    \end{definition}
+}
+
+\newcommand{\productSigmaAlgebra}{
+    \begin{definition}{\texorpdfstring{$\sigma$}{sigma}-álgebra Produto}{product_sigma_algebra}
+        Seja $\{(X_i,\Sigma_i)\}_{i\in I}$ uma família de \nameref{def:measurable_space} indexada por $I$. Considere a família
+        \begin{equation*}
+            \mathcal{C}\coloneqq \left\{\pi_i^{-1}(E_i); E_i\in \Sigma_i, i\in I\right\}.
+        \end{equation*}
+        Chamamos $\mathcal{C}$ de \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebra produto} em $\Pi_{i_\in I} X_i$. Denotaremos esta $\sigma$-álgebra por $\bigotimes_{i\in I} \Sigma_i$.
+    \end{definition}
+}
+
+\newcommand{\countablyAdditiveFunction}{
+    \begin{definition}{Função Aditiva Contável}{countably_additive_function}
+        Uma função real cujo domínio é uma família de conjuntos, $f:\mathcal{R}\rightarrow \Rextend$, é dita uma \textbf{função aditiva contável} quando satisfaz a seguinte propriedade:
+        \begin{equation*}
+            \text{Se} \ (A_i)_{i=1}^{\infty}\subset \mathcal{R} \ \text{é dois a dois disjunta, então} \ f\left(\bigcup_{i=1}^{\infty}A_1\right)=\sum_{i=1}^{\infty}f(A_i).
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\countablySubadditiveFunction}{
+    \begin{definition}{Função Subaditiva Contável}{countably_subadditive_function}
+        Uma função real cujo domínio é uma família de conjuntos, $f:\mathcal{R}\rightarrow \Rextend$, é dita uma \textbf{função subaditiva contável} quando satisfaz a seguinte propriedade:
+        \begin{equation*}
+            \text{Se} \ (A_i)_{i=1}^{\infty}\subset \mathcal{R} \ \text{, então} \ f\left(\bigcup_{i=1}^{\infty}A_1\right)\leq\sum_{i=1}^{\infty}f(A_i).
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\monotonicFunction}{
+    \begin{definition}{Função Monotônica}{monotonic_function}
+        Uma função real cujo domínio é uma família de conjuntos, $f:\mathcal{R}\rightarrow \Rextend$, é dita uma \textbf{função monotônica} quando satisfaz a seguinte propriedade:
+        \begin{equation*}
+            \text{Se} \ A,B\subset \mathcal{R} \ \text{e} \ A\subseteq B \text{, então} \ f(A)\leq f(B).
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\preMeasure}{
+    \begin{definition}{Pré-medida}{pre_measure}
+        Seja $X$ um conjunto não vazio e $\mathcal{R}\subset \powerset{X}$ um \nameref{def:ring_of_sets}. Dizemos que uma função $\mu_0:\mathcal{R}\rightarrow [0,\infty]$ é uma \textbf{pré-medida} quando $\mu_0(\varnothing)=0$ e ela é uma \nameref{def:countably_additive_function}.
+    \end{definition}
+}
+
+\newcommand{\measure}{
+    \begin{definition}{Medida}{measure}
+        Dizemos que uma \nameref{def:pre_measure} é uma \textbf{medida} quando o domínio é uma \nameref{def:sigma_algebra}.
+    \end{definition}
+}
+
+\newcommand{\measureSpace}{
+    \begin{definition}{Espaço de Medida}{measure_space}
+        Seja $X$ um conjunto não vazio, $\Sigma$ uma \nameref{def:sigma_algebra} no conjunto $X$ e $\mu$ uma \nameref{def:measure} definida em $\Sigma$. Então a tripla ordenada $(X,\Sigma, \mu)$ é chamada de \textbf{espaço de medida}.
+    \end{definition}
+}
+
+\newcommand{\nullSet}{
+    \begin{definition}{Conjunto de Medida Nula}{null_set}
+        Seja $(X,\Sigma, \mu)$ um \nameref{def:measure_space}. Se $N\in \Sigma$ é tal que $\mu (N)=0$, então dizemos que $N$ é um \textbf{conjunto de medida nula}.
+    \end{definition}
+}
+
+\newcommand{\almostEverywhere}{
+    \begin{definition}{Para Quase Todo Ponto}{almost_everywhere}
+        Seja $(X,\Sigma, \mu)$ um \nameref{def:measure_space} e $P(x)$ uma propriedade dos elementos de $X$. Se existe um conjunto $N\in\Sigma$ de medida nula tal que $P$ vale para todo $x\in N^{\complement}$, então dizemos que $P$ vale \textbf{para quase todo ponto}, o que abreviaremos para ($\mu$-qtp).
+    \end{definition}
+}
+
+\newcommand{\completeMeasureSpace}{
+    \begin{definition}{Espaço de Medida Completa}{complete_measure}
+        Seja $(X,\Sigma, \mu)$ um \nameref{def:measure_space}. Dizemos que ele é um \textbf{espaço de medida completa} quando a família dos \nameref{def:null_set}, $\mathcal{N}_\mu$, é \nameref{def:hereditaryCollection}.
+    \end{definition}
+}
+
+\newcommand{\outerMeasure}{
+    \begin{definition}{Espaço de Medida Completa}{outer_measure}
+        Seja $\mathcal{H}$ um \nameref{def:ring_of_sets} que é \nameref{def:hereditaryCollection}. Dizemos que uma função  $\mu^{*}:\mathcal{H}\rightarrow [0,\infty]$ é uma \textbf{medida exterior} quando $\mu^{*}(\varnothing)=0$, ela é \nameref{def:monotonic_function} e \nameref{def:countably_subadditive_function} .
+    \end{definition}
+}
+
+\newcommand{\finiteMeasure}{
+    \begin{definition}{Medida Finita}{finite_measure}
+        Seja $\mu$ uma \nameref{def:measure} em um \nameref{def:measure_space} $(X,\Sigma)$. Dizemos que $\mu$ é uma \textbf{medida finita} quando $\mu(X)<\infty$.
+    \end{definition}
+}
+
+\newcommand{\sigmaFiniteMeasure}{
+    \begin{definition}{Medida \texorpdfstring{$\sigma$}{sigma}-finita}{sigma_finite_measure}
+        Seja $\mu$ uma \nameref{def:measure} em um \nameref{def:measure_space} $(X,\Sigma)$. Dizemos que $\mu$ é uma \textbf{medida \texorpdfstring{$\sigma$}{sigma}-finita} quando existe $(E_i)_{i=1}^{\infty}$ com $\mu(E_i)<\infty$ para todo $i\geq 1$ tal que $X=\cup_{i=1}^{\infty} E_i$. 
+    \end{definition}
+}
