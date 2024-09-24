@@ -1,28 +1,46 @@
 \chapter{Medidas}
-\lipsum[1-2]  % Generates paragraphs 1 to 2 of Lorem Ipsum
+
+O nosso objetivo é generalizar a idea de volumes. De forma bem superficial, existe um problema com a nossa intuição de ``mensurabilidade''. Em particular, existem conjuntos bem patológicos que não conseguimos ``medir''. Uso aspas aqui para explicitar a informalidade do termo até aqui. Para resolver o problema mencionado, podemos construir uma estrutura chamada de \texorpdfstring{$\sigma$}{sigma}-álgebra que definirá o conceito de mensurabilidade.
+
+Com esta estrutura em maõs, vamos discutir algumas das suas propriedades e estudar a sua relação com a topologia de um espaço. Depois disso, construiremos uma função que chamaremos de medida. Esta é a função que vai associar um número a cada conjunto mensurável. Na prática, esta será a nossa generalização para volumes. Por fim, trataremos dos teoremas que nos permitem estender medidas ``ruins'' para criar medidas bem comportadas.
+
+Dessa forma, podemos resumir os conceitos mais importantes deste capítulo na seguinte lista:
+
+\begin{enumerate}
+    \item Espaços Mensuráveis
+    \item Medidas
+    \item Teoremas de Extensão
+    \item Construção de Medidas
+\end{enumerate}
+
 \section{Estruturas Algébricas}
-\hereditaryCollection
-\ringOfSets
-\sigmaRing
-\algebraOfSets
+Como prometido, vamos definir o que são as \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebras}. Poderíamos passar o dia todo falando de estruturas algébricas que antecedem esta construção, mas, para os nossos fins, tudo o que precisamos saber é que uma \texorpdfstring{$\sigma$}{sigma}-álgebra de um conjunto é uma família de subconjuntos \textit{fechada pelas operações de complemento e união enumerável. Também pedimos que o conjunto todo pertença a esta família.} Veja a definição rigorosa abaixo.
+
 \sigmaAlgebra
-\measurableSpace
+
+Algumas propriedades são importante, como, por exemplo, o fato de que as \texorpdfstring{$\sigma$}{sigma}-álgebras são \textit{fechadas por interseção enumerável.} Para mostrar isso, basta aplicar as \nameref{thm:de_morgan}. Desse conjunto extenso de propriedades vindas da teoria dos conjuntos, precisamos de duas, que estão enunciadas abaixo.
+
+\deMorgan
+
+Vamos ver vários exemplos de \texorpdfstring{$\sigma$}{sigma}-álgebras. Pule se já estiver familiarizado com o assunto. No apêndice de exercícios resolvidos é provado que cada um destes exemplos é, de fato, uma \texorpdfstring{$\sigma$}{sigma}-álgebra.
+
+\trivialSigmaAlgebra
+\powerSetSigmaAlgebra
+\countableSetsSigmaAlgebra
+
+Para partir para problemas mais interessantes precisamos de uma forma de criar \texorpdfstring{$\sigma$}{sigma}-álgebras. Fazemos isso com o conceito de \textbf{\texorpdfstring{$\sigma$}{sigma}-algebra gerada por conjuntos.} Intuitivamente, esta será a menor $\sigma$-álgebra que contém os elementos. Formalizamos esta ideia com a definição abaixo.
+
 \generatedSigmaAlgebra
-\topology
-\topologicalSpace
-\borelSigmaAlgebra
-\cartesianProduct
-\projection
-\productSigmaAlgebra
-\countablyAdditiveFunction
-\countablySubadditiveFunction
-\monotonicFunction
-\preMeasure
-\measure
-\measureSpace
-\nullSet
-\almostEverywhere
-\completeMeasureSpace
-\outerMeasure
-\finiteMeasure
-\sigmaFiniteMeasure
+
+A definição acima pode ser bem abstrata e difícil de trabalhar. Assim, introduziremos uma caracterização mais tangível. A fim de chegar nesta caracterização, provemos dois lemas.
+
+\sigmaAlgebraIntersection
+\generatedSigmaAlgebraIsUnique
+
+Com esta ferramenta em mãos, vamos introduzir a \nameref{lmm:generated_sigma_algebra_characterization}.
+
+\generatedSigmaAlgebraCharacterization
+
+O resultado abaixo é bem direto, mas útil.
+
+\sigmaAlgebraGeneratedBySubset

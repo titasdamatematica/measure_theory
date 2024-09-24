@@ -1,0 +1,49 @@
+% modules\theorems.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%FIRST CHAPTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% first chapter lemmas
+\newcommand{\sigmaAlgebraIntersection}{
+    \begin{lemma}{Interseção de \texorpdfstring{$\sigma$}{sigma}-álgebras é \texorpdfstring{$\sigma$}{sigma}-álgebra}{sigma_algebra_intersection}
+        Seja $X$ um conjunto e $\{\Sigma_i\}_{i\in\mathcal{I}}$ uma família de \nameref{def:sigma_algebra} de $X$. Então, $\cap_{i\in\mathcal{I}} \Sigma_i $ é uma \texorpdfstring{$\sigma$}{sigma}-álgebra de $X$.
+    \end{lemma}
+}
+
+\newcommand{\generatedSigmaAlgebraIsUnique}{
+    \begin{lemma}{Unicidade da \texorpdfstring{$\sigma$}{sigma}-álgebra gerada}{generated_sigma_algebra_is_unique}
+        Seja $X$ um conjunto e $\mathcal{C}\subset \powerset{X}$. Então, a \nameref{def:generated_sigma_algebra} por $\mathcal{C}$ é única.
+    \end{lemma}
+}
+
+\newcommand{\sigmaAlgebraGeneratedBySubset}{
+    \begin{lemma}{\texorpdfstring{$\sigma$}{sigma}-álgebra Gerada Por Subconjunto}{sigma_algebra_generated_by_subset}
+        Seja $\mathcal{C}\in \powerset{X}$. Se $E\in \sigma [\mathcal{C}]$, então $\sigma [E] \subset \sigma [\mathcal{C}]$.
+    \end{lemma}
+}
+
+% first chapter propositions
+\newcommand{\generatedSigmaAlgebraCharacterization}{
+    \begin{proposition}{Caracterização da \texorpdfstring{$\sigma$}{sigma}-álgebra gerada}{generated_sigma_algebra_characterization}
+        Sejam $X$ um conjunto, $\mathcal{C}\subset \powerset{X}$ e $\mathcal{J}=\{\Sigma_j\}$ a família de todas as $\sigma$-álgebras de $X$ que contém $\mathcal{C}$. Então,
+        \begin{equation*}
+            \sigma [\mathcal{C}] = \bigcap_{\Sigma_j\in\mathcal{J}} \Sigma_{j}.
+        \end{equation*}
+    \end{proposition}
+}
+
+% first chapter theorems
+\newcommand{\deMorgan}{
+    \begin{theorem}{Leis de De Morgan}{de_morgan}
+        Seja $X$ um conjunto e $\{O_i\}_{i\in \mathcal{I}}\subset \powerset{X}$. Então,
+        \begin{enumerate}
+            \item \begin{equation*}
+                \complement \left(\bigcup_{i\in\mathcal{I}}O_i\right) = \bigcap_{i\in\mathcal{I}} \complement \left(O_i \right),
+            \end{equation*}
+            \item \begin{equation*}
+                \complement \left(\bigcap_{i\in\mathcal{I}}O_i\right) = \bigcup_{i\in\mathcal{I}} \complement \left(O_i \right).
+            \end{equation*}
+        \end{enumerate}
+    \end{theorem}
+}

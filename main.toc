@@ -1,2 +1,3 @@
 \contentsline {chapter}{\numberline {1}Medidas}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Estruturas Algébricas}{1}{section.1.1}%
+\contentsline {chapter}{Definições Adicionais}{5}{chapter*.6}%
