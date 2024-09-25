@@ -33,6 +33,99 @@
     \end{proposition}
 }
 
+\newcommand{\productSigmaAlgebraOfCountableFamily}{
+    \begin{proposition}{\sigmaAlg produto de família enumerável}{product_sigma_algebra_of_countable_family}
+        Seja $I$ um conjunto enumerável e $\{X_i\}_{i\in I}$ uma família de espaços mensuráveis. Então
+    \begin{equation*}
+        \bigotimes_{i\in I} \Sigma_i=\generateSigmaAlg{\left\{\prod_{i\in I} E_i; E_i\in \Sigma_i\right\}}.
+    \end{equation*}
+    \end{proposition}
+}
+
+\newcommand{\productSigmaAlgebraOfFamiliesGeneratedBySet}{
+    \begin{proposition}{\sigmaAlg produto de famílias geradas por conjuntos}{product_sigma_algebra_of_families_generated_by_sets}
+        Seja $\{X_i\}_{i\in I}$ uma família de espaços mensuráveis tal que cada $\Sigma_i=\sigma [\mathcal{C}_i]$. Então
+    \begin{equation*}
+        \bigotimes_{i\in I} \Sigma_i=\generateSigmaAlg{\left\{\pi_i^{-1}(E_i); E_i\in \mathcal{C}_i, i\in I\right\}}.
+    \end{equation*}
+    \end{proposition}
+}
+
+\newcommand{\productSigmaAlgebraOfMetricSpaces}{
+    \begin{proposition}{\sigmaAlg produto de família de espaços métricos}{product_sigma_algebra_of_metric_spaces}
+        Seja $\{X_i\}_{i=1}^{n}$ uma família finita de espaços métricos com a topologia, $\tau_i$, induzida pela distância. Então
+    \begin{equation*}
+        \bigotimes_{i=1}^{n} \borel{X_i}\subseteq \borel{\prod_{i=1}^{n}X_i}.
+    \end{equation*}
+    \end{proposition}
+}
+
+\newcommand{\measureIsMonotonic}{
+    \begin{proposition}{Monotonicidade da Medida}{measure_is_monotonic}
+        Seja $(X,\Sigma,\mu)$ um espaço de medida. Então, $\mu$ é uma \nameref{def:monotonic_function}.
+    \end{proposition}
+}
+
+\newcommand{\measureIsSubadditive}{
+    \begin{proposition}{Subaditividade da medida}{measure_is_subadditive}
+        Seja $(X,\Sigma,\mu)$ um espaço de medida. Então $\mu$ é uma \nameref{def:countably_subadditive_function}.
+    \end{proposition}
+}
+
+\newcommand{\measureIsContinuousFromBelow}{
+    \begin{proposition}{Continuidade por baixo}{measure_is_continuous_from_below}
+        Seja $(X,\Sigma,\mu)$ um espaço de medida. Se $(E_n)_{n=1}^{\infty}\subset \Sigma$ é uma sequência crescente, então
+        \begin{equation*}
+            \mu\left(\bigcup_{n=1}^{\infty} E_n\right) = \lim \mu (E_n).
+        \end{equation*}
+    \end{proposition}
+}
+
+\newcommand{\measureIsContinuousFromAbove}{
+    \begin{proposition}{Continuidade por cima}{measure_is_continuous_from_above}
+        Seja $(X,\Sigma,\mu)$ um espaço de medida. Se $(F_n)_{n=1}^{\infty}\subset \Sigma$ é uma sequência decrescente e a medida de $\mu (F_1)$ é finita, então
+        \begin{equation*}
+            \mu\left(\bigcap_{n=1}^{\infty} F_n\right) = \lim \mu (F_n).
+        \end{equation*}
+    \end{proposition}
+}
+
+% first chapter corollary
+\newcommand{\productSigmaAlgebraOfCountableGeneratedFamilies}{
+    \begin{corollary}{\sigmaAlg produto de família enumerável geradas}{product_sigma_algebra_of_countable_generated_families}
+        Seja $I$ um conjunto enumerável e $\{X_i\}_{i\in I}$ uma família de espaços mensuráveis tal que cada $\Sigma_i=\sigma [\mathcal{C}_i]$. Então $\bigotimes_{i\in I} \Sigma_i$ é a $\sigma$-álgebra gerada por 
+    \begin{equation*}
+        \bigotimes_{i\in I} \Sigma_i=\generateSigmaAlg{\left\{\prod_{i\in I} E_i; E_i\in \mathcal{C}_i\right\}}.
+    \end{equation*}
+    \end{corollary}
+}
+
+\newcommand{\productSigmaAlgebraOfSeparableMetricSpaces}{
+    \begin{corollary}{\sigmaAlg produto de espaços métricos separáveis}{product_sigma_algebra_of_separable_metric_spaces}
+        Sejam $\{X_i\}_{i=1}^{n}$ e $X$ como na Proposição \ref{prop:product_sigma_algebra_of_metric_spaces}. Se cada $X_i$ for separável, então $\bigotimes_{i=1}^{n} \mathcal{B}(X_i)= \mathcal{B}(X)$.
+        \begin{equation*}
+            \bigotimes_{i=1}^{n} \borel{X_i} = \borel{\prod_{i=1}^{n}X_i}.
+        \end{equation*}
+    \end{corollary}
+}
+
+\newcommand{\productSigmaAlgebraOfRn}{
+    \begin{corollary}{\sigmaAlg produto de $\R^n$}{product_sigma_algebra_of_Rn}
+        \begin{equation*}
+            \mathcal{B}(\R^n)=\bigotimes_{i=1}^{n} \mathcal{B}(\R).
+        \end{equation*}
+    \end{corollary}
+}
+
+\newcommand{\measureOfDiffenrece}{
+    \begin{corollary}{Medida da Diferença}{measure_of_diffenrece}
+        Nas condições da Proposição \ref{prop:measure_is_monotonic}, se $E,F\in \Sigma$ e $\mu(E)<\infty$, então
+        \begin{equation*}
+            \mu (F \setminus E) = \mu (F) - \mu (E).
+        \end{equation*}
+    \end{corollary}
+}
+
 % first chapter theorems
 \newcommand{\deMorgan}{
     \begin{theorem}{Leis de De Morgan}{de_morgan}
@@ -45,5 +138,11 @@
                 \complement \left(\bigcap_{i\in\mathcal{I}}O_i\right) = \bigcup_{i\in\mathcal{I}} \complement \left(O_i \right).
             \end{equation*}
         \end{enumerate}
+    \end{theorem}
+}
+
+\newcommand{\measureCompletion}{
+    \begin{theorem}{Completamento de Medida}{measure_completion}
+        Seja $(X,\Sigma,\mu)$ um espaço de medida. Existe uma única $\overline{\mu}$, extensão de $\mu$ a uma $\sigma$-álgebra $\overline{\Sigma}$, tal que $(X,\overline{\Sigma},\overline{\mu})$ é um \nameref{def:complete_measure} .
     \end{theorem}
 }

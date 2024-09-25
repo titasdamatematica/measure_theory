@@ -19,3 +19,31 @@
         é uma \nameref{def:sigma_algebra} conhecida como a \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebra dos conjuntos enumeráveis e co-enumeráveis de $X$}.
     \end{example}
 }
+
+\newcommand{\countingMeasure}{
+    \begin{example}{Medida de Contagem}{counting_measure}
+        Seja $(X,\Sigma)$ um \nameref{def:measure_space} onde $X$ é um conjunto não enumerável e $\Sigma$ é a \nameref{exm:countable_sets_sigma_algebra}. A função
+    \begin{equation*}
+        \mu (E)=
+        \begin{cases}
+            \#E, \text{ se } E \text{ é finito}, \\
+            +\infty, \text{ se } E \text{ é infinito},
+        \end{cases}
+    \end{equation*}
+    é uma medida em $X$.
+    \end{example}
+}
+
+\newcommand{\diracMeasure}{
+    \begin{example}{Medida de Dirac}{dirac_measure}
+        Sejam $(X,\powerset{X})$ um \nameref{def:measure_space} e $x_0\in X$ um ponto fixado. A função
+    \begin{equation*}
+        \mu (E)=
+        \begin{cases}
+            1, \text{ se } x_0\in E, \\
+            0, \text{ se } x_0\not\in E,
+        \end{cases}
+    \end{equation*}
+    é uma medida em $X$.
+    \end{example}
+}

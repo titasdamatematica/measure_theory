@@ -1,6 +1,6 @@
 \chapter{Medidas}
 
-O nosso objetivo é generalizar a idea de volumes. De forma bem superficial, existe um problema com a nossa intuição de ``mensurabilidade''. Em particular, existem conjuntos bem patológicos que não conseguimos ``medir''. Uso aspas aqui para explicitar a informalidade do termo até aqui. Para resolver o problema mencionado, podemos construir uma estrutura chamada de \texorpdfstring{$\sigma$}{sigma}-álgebra que definirá o conceito de mensurabilidade.
+O nosso objetivo é generalizar a idea de volumes. De forma bem superficial, existe um problema com a nossa intuição de ``mensurabilidade''. Em particular, existem conjuntos bem patológicos que não conseguimos ``medir''. Uso aspas aqui para explicitar a informalidade do termo até aqui. Para resolver o problema mencionado, podemos construir uma estrutura chamada de \sigmaAlg que definirá o conceito de mensurabilidade.
 
 Com esta estrutura em maõs, vamos discutir algumas das suas propriedades e estudar a sua relação com a topologia de um espaço. Depois disso, construiremos uma função que chamaremos de medida. Esta é a função que vai associar um número a cada conjunto mensurável. Na prática, esta será a nossa generalização para volumes. Por fim, trataremos dos teoremas que nos permitem estender medidas ``ruins'' para criar medidas bem comportadas.
 
@@ -13,22 +13,33 @@ Dessa forma, podemos resumir os conceitos mais importantes deste capítulo na se
     \item Construção de Medidas
 \end{enumerate}
 
-\section{Estruturas Algébricas}
-Como prometido, vamos definir o que são as \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebras}. Poderíamos passar o dia todo falando de estruturas algébricas que antecedem esta construção, mas, para os nossos fins, tudo o que precisamos saber é que uma \texorpdfstring{$\sigma$}{sigma}-álgebra de um conjunto é uma família de subconjuntos \textit{fechada pelas operações de complemento e união enumerável. Também pedimos que o conjunto todo pertença a esta família.} Veja a definição rigorosa abaixo.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Seção 1 - Espaços Mensuráveis 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Espaços Mensuráveis}
+\subsection*{O que são \sigmaAlgs?}
+Como prometido, vamos definir o que são as \textbf{\sigmaAlgs}. Poderíamos passar o dia todo falando de estruturas algébricas que antecedem esta construção, mas, para os nossos fins, tudo o que precisamos saber é que uma \sigmaAlg de um conjunto é uma família de subconjuntos \textit{fechada pelas operações de complemento e união enumerável. Também pedimos que o conjunto todo pertença a esta família.} Veja a definição rigorosa abaixo.
 
 \sigmaAlgebra
 
-Algumas propriedades são importante, como, por exemplo, o fato de que as \texorpdfstring{$\sigma$}{sigma}-álgebras são \textit{fechadas por interseção enumerável.} Para mostrar isso, basta aplicar as \nameref{thm:de_morgan}. Desse conjunto extenso de propriedades vindas da teoria dos conjuntos, precisamos de duas, que estão enunciadas abaixo.
+Algumas propriedades que decorrem da \ref{def:sigma_algebra} são importantes, como, por exemplo, o fato de que as \sigmaAlgs são \textit{fechadas por interseção enumerável.} Para mostrar isso, basta aplicar as \nameref{thm:de_morgan}. Desse conjunto extenso de propriedades vindas da teoria dos conjuntos, precisamos de duas, que estão enunciadas abaixo.
 
 \deMorgan
 
-Vamos ver vários exemplos de \texorpdfstring{$\sigma$}{sigma}-álgebras. Pule se já estiver familiarizado com o assunto. No apêndice de exercícios resolvidos é provado que cada um destes exemplos é, de fato, uma \texorpdfstring{$\sigma$}{sigma}-álgebra.
+\subsection*{Exemplos de \sigmaAlgs}
+Vamos ver vários exemplos de \sigmaAlgs. Pule se já estiver familiarizado com o assunto. No apêndice de exercícios resolvidos é provado que cada um destes exemplos é, de fato, uma \sigmaAlg.
 
 \trivialSigmaAlgebra
 \powerSetSigmaAlgebra
 \countableSetsSigmaAlgebra
 
-Para partir para problemas mais interessantes precisamos de uma forma de criar \texorpdfstring{$\sigma$}{sigma}-álgebras. Fazemos isso com o conceito de \textbf{\texorpdfstring{$\sigma$}{sigma}-algebra gerada por conjuntos.} Intuitivamente, esta será a menor $\sigma$-álgebra que contém os elementos. Formalizamos esta ideia com a definição abaixo.
+\subsection*{Como criar \sigmaAlgs?}
+Para partir para problemas mais interessantes precisamos de uma forma de criar \sigmaAlgs. Fazemos isso com o conceito de \textbf{\sigmaAlg gerada por conjuntos.} Intuitivamente, esta será a menor $\sigma$-álgebra que contém os elementos. Formalizamos esta ideia com a definição abaixo.
 
 \generatedSigmaAlgebra
 
@@ -37,10 +48,123 @@ A definição acima pode ser bem abstrata e difícil de trabalhar. Assim, introd
 \sigmaAlgebraIntersection
 \generatedSigmaAlgebraIsUnique
 
-Com esta ferramenta em mãos, vamos introduzir a \nameref{lmm:generated_sigma_algebra_characterization}.
+Com esta ferramenta em mãos, vamos introduzir a \nameref{prop:generated_sigma_algebra_characterization}.
 
 \generatedSigmaAlgebraCharacterization
 
 O resultado abaixo é bem direto, mas útil.
 
 \sigmaAlgebraGeneratedBySubset
+
+\subsection*{\sigmaAlgs de Borel}
+Agora que temos uma ferramenta poderosa para criar \sigmaAlgs, vamos estudar o que acontece quando estudamos espaços com mais estrutura, como a reta. Lembre que o nosso objetivo é generalizar a ideia do que é uma ``medida'' ou ``volume'', portanto, é bastante natural estudar \sigmaAlgs em $\R$ e $\R^n$.
+
+\borelSigmaAlgebra
+
+Pela Definição \ref{def:borel_sigma_algebra}, podemos tomar qualquer base da reta para formar os boreleanos em $\R$. Veja o exercício X. Criar uma \sigmaAlg de $\R$ (ou em $\Rextend$) é bem direto, mas dependemos de uma abordagem mais cautelosa para construir uma \sigmaAlg em $R^n$.
+
+Para fazer essa construção, vamos começar definindo um \textbf{espaço mensurável}. Da mesma forma que podemos tomar um par ordenado de conjunto e subconjuntos para formar um \nameref{def:topological_space}, podemos tomar um par ordenado para formar um \nameref{def:measurable_space}.
+
+\measurableSpace
+
+A construção geral é bem parecida com a definição da topologia produto.
+
+\productSigmaAlgebra
+
+Esta primeira definição é bastante abstrata. Por um lado, as abstrações nos permitem trabalhar em casos gerais que podem nos revelar propriedades universais. Por outro lado, essas abstrações também criam obstáculos quanto a manipulação dessas estruturas.
+
+A fim de recuperar alguma estrutura, vamos dar uma olhada de perto no que acontece quando a família é indexada por um conjunto enumerável.
+
+\productSigmaAlgebraOfCountableFamily
+
+A proposição abaixo nos garante que podemos olhar apenas para os geradores das \sigmaAlgs para construir o produto.
+
+\productSigmaAlgebraOfFamiliesGeneratedBySet
+
+\productSigmaAlgebraOfCountableGeneratedFamilies
+
+Estamos descendo o grau de generalidade para chegar em coisas cada vez mais concretas. Vamos passar agora de espaços mensuráveis abstratos para espaços métricos. Aqui, entenderemos os espaços métricos como espaços mensuráveis onde a distância induz uma topologia, dando origem a um espaço topológico, e a topologia induz uma \sigmaAlg de Borel, dando origem a um espaço mensurável.
+
+\productSigmaAlgebraOfMetricSpaces
+
+Se colocarmos uma hipótese a mais conseguimos garantir a igualdade. Veja o corolário abaixo.
+
+\productSigmaAlgebraOfSeparableMetricSpaces
+
+Toda essa construção nos leva a um resultado importante.
+
+\productSigmaAlgebraOfRn
+
+\subsection*{Revisitando os Resultados}
+Desta seção, podemos destacar algumas definições e resultados essenciais. Quanto a \nameref{def:sigma_algebra}, destacamos as operações pelas quais esta família é fechada: complemento, união enumerável, interseção enumerável. Além disso, lembramos da importância do conceito da \nameref{def:generated_sigma_algebra}, principalmente no que tange a definição da \nameref{def:borel_sigma_algebra}. Por fim, o resultado mais importante desta seção, a construção da \nameref{cor:product_sigma_algebra_of_Rn}, nos diz que os conjuntos mensuráveis de $\R^n$ são gerados pelo produto cartesiano de conjuntos mensuráveis de $\R$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%      Seção 2 - Medidas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Medidas}
+
+\subsection*{O que são medidas?}
+Com a estrutura dos \nameref{def:measurable_space} em mãos, vamos construir os espaços de medida, isto é, aqueles conjuntos onde, além da noção de mensurabilidade, é possível atribuir um valor a um dado conjunto. Futuramente, isto nos permitirá atribuir um valor a uma função mensurável.
+
+Em linhas gerais, uma \textbf{medida} é uma \nameref{def:countably_additive_function} não negativa onde o domínio é uma \nameref{def:sigma_algebra}. Existe uma função mais fraca que esta, chamada de \textbf{pré-medida}. Observe as definições abaixo.
+
+\preMeasure
+\measure
+
+Anteriomente, definimos os \nameref{def:measurable_space} com um par ordenado. Desta vez, vamos definir os \nameref{def:measure_space} a partir de uma tripla dada por um conjunto, uma família de subconjuntos e uma \nameref{def:measure}.
+
+\measureSpace
+
+\subsection*{Exemplos de Medidas}
+
+Vamos ver alguns exemplos de medidas que serão úteis mais tarde. Pule se estiver familiarizado com o assunto. No apêndice de exercícios resolvidos é provado que cada um destes exemplos é, de fato, uma medida.
+
+\countingMeasure
+\diracMeasure
+
+\subsection*{Propriedades das Medidas}
+
+As medidas obedecem a algumas propriedades naturais que serão úteis no futuro. Elas são naturais no sentido de que seguem uma lógica intuitiva como, por exemplo, um conjunto que contém outro possui uma medida maior que este. Estudemos estas propriedades.
+
+Medidas têm $4$ propriedades importantes que serão enunciadas: medidas são funções monotônicas crescentes e subaditivas contáveis. Além disso, elas satisfazem duas propriedades conhecidas como continuitdade por baixo e por cima.
+
+\measureIsMonotonic
+\measureOfDiffenrece
+\measureIsSubadditive
+\measureIsContinuousFromBelow
+\measureIsContinuousFromAbove
+
+\subsection*{Conjuntos de Medida Nula e Medidas Completas}
+Na hora de trabalhar com integrais e espaços de funções, uma categoria bem particular de conjuntos costuma gerar problemas. Estes são os conjuntos de medida nula, aqueles com uma medida insignificante. Pense, por exemplo na medida de um único ponto na reta real. A fim de evitar problemas técnicos mais adiante, mostraremos que existe uma medida que lida com esses pontos problemáticos de uma forma melhor. Mais ainda, veremos que qualquer medida pode ser estendida de forma a evitar esses problemas técnicos.
+
+Vamos começar definindo o que é um conjunto de medida nula.
+
+\nullSet
+
+Paremos para refletir um pouco. Se um conjunto tem medida nula, ele não deveria afetar em nada o comportamento do nosso objeto de estudo. Assim, se uma certa propriedade vale dentro desse conjunto, é como se ela não existisse. Da mesma forma, se uma propriedade não vale sempre, mas vale nos pontos de interesse, então é como se ela valesse sempre. De fato, diremos que ela vale quase sempre ou para quase todo ponto.
+
+\almostEverywhere
+
+\subsetsMayNotBeMeasurable
+
+Isto pode ser um problema na demonstração de algumas proposições. Existem medidas bem comportadas que evitam esses problemas. Elas são chamadas de medidas completas.
+
+\completeMeasureSpace
+
+Nesta última etapa do capítulo, vamos estudar formas de estender uma dada medida (ou pré-medida) para criar uma medida bem comportada.
+
+\subsection*{Revisitando os Resultados}
+Antes disso, vamos rever os principais conceitos sobre as medidas. Vimos que medidas são funções não negativas, monotônicas crescente, aditiva e subaditiva contaveis que satisfazem mais duas propriedades de continuidade. Em linhas gerais, estas medidas reproduzem a nossa intuição do que seria o tamanho de um conjunto. Também vimos que alguns conjuntos podem ter medida nula e que certos espaços de medida podem ser completos. O que vamos ver agora é como podemos estender as medidas para criar uma medida bem comportada.
+
+\section{Teoremas de Extensão}
+\subsection*{Completamento de Medida}
+O nosso objetivo aqui vai ser partir de um espaço de medida ``ruim'' e estender a sua \sigmaAlg para que ela inclua todos os subconjuntos dos \nameref{def:null_set}. Claro, também precisaremos definir uma nova medida para o novo domínio. Essa função será uma extensão da primeira no sentido de que, quando ela estiver restrita a \sigmaAlg inicial, ela coincide com a primeira medida. Vejamos o teorema.
+
+\measureCompletion
+
+\section{Construção de Medidas}

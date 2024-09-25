@@ -297,6 +297,9 @@ INPUT modules\theorems.tex
 INPUT .\modules\examples.tex
 INPUT .\modules\examples.tex
 INPUT modules\examples.tex
+INPUT .\modules\remarks.tex
+INPUT .\modules\remarks.tex
+INPUT modules\remarks.tex
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT main.aux
@@ -370,6 +373,17 @@ OUTPUT main.toc
 INPUT .\modules\chapters\measures.tex
 INPUT .\modules\chapters\measures.tex
 INPUT modules\chapters\measures.tex
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT .\modules\appendices\definitions.tex
 INPUT .\modules\appendices\definitions.tex
