@@ -1,0 +1,65 @@
+\begin{proof}
+    A mensurabilidade de $f$ segue diretamente da Proposição \ref{prop:measurable_functions_sequences}, mas é um passo importante para que faça sentido integrar essa função segundo a Definição \ref{def:lebesgue_integral_non_negative_function}. Provaremos a segunda parte do teorema mostrando que
+    \begin{equation*}
+        \int_{X} \left(\lim_{n\rightarrow \infty} f_n\right) \ d\mu \geq \lim_{n\rightarrow \infty} \left( 
+ \int_{X} f_n \ d\mu\right) \quad \quad \text{e} \quad \quad \int_{X} \left(\lim_{n\rightarrow \infty} f_n\right) \ d\mu \leq \lim_{n\rightarrow \infty} \left( 
+ \int_{X} f_n \ d\mu\right).
+    \end{equation*}
+    Para mostrar que a primeira desigualdade, note que, como $(f_n)$ é uma sequência monótona crescente, então $f_n\leq f_{n+k}$ para todos $n,k$ natural. Assim, se $k\rightarrow \infty$ então $f_{n+k} \rightarrow f$ para todo $n$. Logo,
+    \begin{equation*}
+        f_n \leq \lim_{n\rightarrow \infty}f_n \quad \forall \ n\in\N.
+    \end{equation*}
+    Pelo Lema \ref{lmm:integral_inequalities}, o fato acima nos dá que
+    \begin{equation*}
+        \int_{X} f_n \ d\mu \leq \int_{X} \left(\lim_{n\rightarrow \infty} f_n\right) \ d\mu \quad \forall \ n\in\N.
+    \end{equation*}
+    Note que o lado direito da desigualdade é constante. De fato, ele será igual a $\int_X f d\mu$. Assim, podemos tomar o limite dos dois lados para concluir que
+    \begin{equation*}
+        \lim_{n\rightarrow \infty}\left(\int_{X} f_n \ d\mu\right) \leq \int_{X} \left(\lim_{n\rightarrow \infty} f_n\right) \ d\mu \Longleftrightarrow \int_{X} \left(\lim_{n\rightarrow \infty} f_n\right) \ d\mu \geq \lim_{n\rightarrow \infty} \left( 
+ \int_{X} f_n \ d\mu\right).
+    \end{equation*}
+
+    Aqui vale notar que o Lema \ref{lmm:integral_inequalities} garante que $\left(\int_X f_n d\mu\right)$ também é uma sequência crescente, o que justifica a existência do limite em $\Rextend$. Resta mostrarmos a outra desigualdade.
+    
+    A ideia é mostrar que, para toda função simples $\varphi \leq f$, teremos $\int_X \varphi \leq \lim (\int_X f_n d\mu)$. Depois poderemos tomar o supremo dos dois lados da desigualdade para chegar no resultado desejado.
+
+    Começaremos tomando uma função $\varphi\in M^{+}(X,\Sigma)$ simples tal que $\varphi\leq f$ e $\alpha\in\R$ tal que $\alpha\in (0,1)$. Agora, defina o conjunto
+    \begin{equation}
+        A_n\coloneqq \{x\in X; \ \alpha\varphi(x)\leq f_n(x)\}.
+    \end{equation}
+    Faremos três afirmações sobre esse conjunto.
+    \begin{enumerate}
+        \item $A_n\in\Sigma$ para todo $n$ natural.\label{teo/lema:A_n_mensuravel}
+        \item $(A_n)_{n=1}^{\infty}\subset \Sigma$ é uma sequência monótona crescente.\label{teo/lema:monotona_crescente}
+        \item $\cup_{n=1}^{\infty}A_n=X$.\label{teo/lema:limite_conjunto}
+    \end{enumerate}
+    
+    Vamos provar o Item \ref{teo/lema:A_n_mensuravel}. Aplicando as operações estabelecidas na Proposição \ref{prop:measurable_functions_operations}, temos que $f_n-\alpha\varphi$ é uma função mensurável para todo $n$. Além disso, podemos escrevermos cada $A_n$ como a pré-imagem da função $f_n-\alpha\varphi$.
+    \begin{equation*}
+        A_n=(f_n-\alpha\varphi)^{-1}((0,\infty)) \ \forall \ n\in\N.
+    \end{equation*}
+    Logo, pela Definição \ref{def:measurable_functions}, $A_n\in \Sigma$ para todo $n$.
+    
+    Vamos provar o Item \ref{teo/lema:monotona_crescente}. Para tanto precisamos mostrar que $A_n\subset A_{n+1}$ para todo $n$. Esta afirmação segue imediatamente da monotonicidade de $(f_n)$ uma vez que se $x\in A_n$ então $\alpha\varphi(x)\leq f_n(x)\leq f_{n+1}$.
+
+    Vamos provar o Item \ref{teo/lema:limite_conjunto}. A primeira continência é imediata uma vez que cada $A_n$ é um subconjunto de $X$. No entanto, ainda é preciso mostrar que $X\subseteq \cup_{n=1}^{\infty} A_n$. Tome $x\in X$. Sabemos que $\varphi (x) \leq f(x)$ por hipótese. Como $\alpha\in (0,1)$, então $\alpha\varphi(x)\leq f(x)$. Queremos mostrar que existe um $N$ natural tal que $\alpha \varphi(x) \leq f_N(x)$. Faremos isso por contradição. Suponha que, para todo $n\in\N$, $f_n(x)<\alpha\varphi(x)$. Tomando o limite dos dois lados teríamos que $\lim f_n(x) = f(x) < \alpha \varphi(x)$, o que contradiz a nossa hipótese. Logo, existe $N\in\N$ tal que $\alpha \varphi(x) \leq f_N(x)$. Assim sendo, $x\in A_N \subset \cup_{n}^{\infty} A_n$. Por fim, concluímos que $\cup_{n=1}^{\infty}A_n=X$.
+
+    Provados estes detalhes técnicos, vamos usar o Lema \ref{lmm:integral_inequalities} mais uma vez. Note que $A_n\subset X$ para todo $n$. Portanto, pelo segundo item do lema, temos que $\int_{A_n} f_n d\mu \leq \int_{X} f_n d\mu$ para todo $n$. Agora, pela definição de $A_n$, temos que $\alpha\varphi\chi_{A_n} \leq f_n\chi_{A_n}$. Logo, pelo primeiro item do lema temos que $\int_{A_n} \alpha\varphi d\mu \leq \int_{A_n} f_n d\mu$. Juntando essas duas desigualdades, obtemos
+    \begin{equation*}
+        \alpha \int_{A_n} \varphi \ d\mu \leq \int_{X} f_n \ d\mu \Rightarrow \alpha \lim_{n\rightarrow \infty} \int_{A_n} \varphi \ d\mu \leq \lim_{n\rightarrow \infty}\left(\int_{X} f_n \ d\mu\right).
+    \end{equation*}
+    Estamos quase chegando no resultado desejado, resta mostrar que $\lim\int_{A_n} \varphi \ d\mu = \int_{X} \varphi \ d\mu$. Esta demonstração pode ser encontrada em (Fazer).
+
+    Por fim, podemos tomar o limite de $\alpha$ indo para $1$ dos dois lados e depois tomar o supremo de ambos os lados.
+    \begin{equation*}
+        \alpha \int_{X} \varphi \ d\mu \leq \lim_{n\rightarrow \infty}\left(\int_{X} f_n \ d\mu\right)\Rightarrow \lim_{\alpha\rightarrow 1} \alpha \int_{X} \varphi \ d\mu = \int_{X} \varphi \ d\mu \leq \lim_{n\rightarrow \infty}\left(\int_{X} f_n \ d\mu\right).
+    \end{equation*}
+    \begin{equation*}
+        \therefore \sup\left(\int_{X} \varphi \ d\mu \right) = \int_{X} f \ d\mu \leq \lim_{n\rightarrow \infty}\left(\int_{X} f_n \ d\mu\right).
+    \end{equation*}
+    Assim, chegamos na desigualdade que buscávamos:
+    \begin{equation*}
+        \int_{X} \left(\lim_{n\rightarrow \infty} f_n\right) \ d\mu \leq \lim_{n\rightarrow \infty} \left( 
+ \int_{X} f_n \ d\mu\right).
+    \end{equation*}
+\end{proof}

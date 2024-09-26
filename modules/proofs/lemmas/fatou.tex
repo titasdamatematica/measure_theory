@@ -1,0 +1,23 @@
+\begin{proof}
+    Defina $g_n=\inf_{k\geq n} f_k$. Pela definição de $g_n$, para todo $k\geq n$, $g_n\leq f_k$. Assim, pelo Lema \ref{lmm:integral_inequalities},
+    \begin{equation*}
+        \int_{X} g_n \ d\mu \leq \int_{X} f_k \ d\mu \quad \forall \ k\geq n.
+    \end{equation*}
+    Portanto, tomando o ínfimo dos dois lados,
+    \begin{equation*}
+        \int_{X} g_n \ d\mu \leq \inf_{k\geq n}\int_{X} f_k \ d\mu.
+    \end{equation*}
+    Tomemos o limite dos dois lados.
+    \begin{equation}\label{eq/passo:fatou}
+        \lim_{n\rightarrow \infty}\left(\int_{X} g_n \ d\mu\right) \leq \lim_{n\rightarrow \infty}\left(\inf_{k\geq n}\int_{X} f_k \ d\mu\right)=\liminf_{n\rightarrow\infty}\left(\int_{X} f_k \ d\mu\right) .
+    \end{equation}
+    Estamos bem próximo dos resultado final, basta observar que $(g_n)\subset M^{+}(X,\Sigma)$, pelo Lema \ref{prop:measurable_functions_sequences}, e que esta é uma sequência monótona crescente que converge para $\liminf f_n$. Portanto, podemos aplicar o Teorema da Convergência Monótona (\ref{thm:mct}) e concluir que
+    \begin{equation*}
+        \lim_{n\rightarrow\infty}\left(\int_{X} g_n \ d\mu\right) = \int_{X} \liminf_{n\rightarrow\infty} f_n \ d\mu.
+    \end{equation*}
+    Assim, juntando isso com \eqref{eq/passo:fatou}, temos que 
+    \begin{equation*}
+        \int_{X} \left(\liminf_{n\rightarrow \infty} f_n\right) \ d\mu \leq \liminf_{n\rightarrow \infty} \left( 
+ \int_{X} f_n \ d\mu\right).
+    \end{equation*}
+\end{proof}

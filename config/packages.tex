@@ -1,13 +1,39 @@
+% config/packages.tex
+
+% Encoding and Language
 \usepackage[utf8]{inputenc}                    % Input encoding
+
+% Bibliography
 \usepackage[backend=biber,style=numeric]{biblatex} % Bibliography management
-\usepackage{amsmath, amssymb, amsthm, amsfonts} % Math packages
-\usepackage{mathtools}
-\usepackage{fancyhdr}                          % For custom headers and footers
+
+% Geometry and Layout
 \usepackage{geometry}                          % To adjust page margins
+
+% Graphics and Colors
 \usepackage{graphicx}                          % For including images
+\usepackage{xcolor}                            % For color definitions
+
+% Hyperlinks
 \usepackage{hyperref}                          % For cross-referencing and links
+
+% Math Packages
+\usepackage{amsmath, amssymb, amsthm, amsfonts} % Math packages
+\usepackage{mathtools}                         % Math tools
+
+% Text and Filler
 \usepackage{lipsum}                            % For filler text
+
+% Theorems and Boxes
 \usepackage{tcolorbox}                         % For custom boxes
 \tcbuselibrary{breakable}                      % tcolorbox: For breakable boxes
 \tcbuselibrary{theorems}                       % tcolorbox: For theorem-boxes
-\usepackage{xcolor}                            % For color definitions
+
+% Headers and Footers
+\usepackage{fancyhdr}                          % For custom headers and footers
+
+% Title Customization
+\usepackage{titlesec}                          % For section and chapter title formatting
+
+% Graphics and Decorations
+\usepackage{tikz}                              % For drawing and custom title decorations
+\usetikzlibrary{positioning}                   % TikZ library for positioning elements

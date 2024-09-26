@@ -1,0 +1,14 @@
+\begin{proof}
+    A ida é imediata, segue da Definição \ref{def:measurable_functions}. Para mostrar a volta, precisamos provar que $f^{-1}(E)\in\Sigma$ para cada $E\in \sigma(\mathcal{C})$. Definamos o conjunto abaixo.
+    \begin{equation*}
+        \mathcal{S}=\{E\in \sigma(\mathcal{C}); \ f^{-1}(E)\in \Sigma\}.
+    \end{equation*}
+
+    Note bem, temos, por hipótese, que $\mathcal{C}\subset \mathcal{S}$ por hipótese. Se este conjunto for uma $\sigma$-álgebra, então $\sigma(\mathcal{C}) \subset \mathcal{S}$, Logo, $\mathcal{S}=\mathcal{C}$ e $f$ é mensurável. Vamos provar, portanto, que $\mathcal{S}$ é uma $\sigma$-álgebra.
+
+    Primeiramente, note que $\varnothing$ e $X$ pertencem a $\mathcal{S}$ pois $f^{-1}(\varnothing)=\varnothing$ e $f^{-1}(Y)=X$. Em segundo lugar, perceba que se $A\in \mathcal{S}$ então $f^{-1}(A)\in \Sigma$. Como $\Sigma$ é $\sigma$-álgebra, então $(f^{-1}(A))^{c}=f^{-1}(A^{c})\in \Sigma$. Assim, $A^{c}\in \mathcal{S}$. Por último, verifique que:
+    \begin{equation*}
+        \left(A_n\right)_{n=1}^\infty \subset \mathcal{S} \Rightarrow \left(f^{-1}(A_n)\right)_{n=1}^\infty \in \Sigma\Rightarrow  \bigcup_{n=1}^{\infty} f^{-1}(A_n)= f^{-1}\left(\bigcup_{n=1}^{\infty} A_n\right) \in \Sigma \Rightarrow \bigcup_{n=1}^{\infty} A_n\in S.
+    \end{equation*}
+    Mostrado que $S$ é uma $\sigma$-álgebra, concluímos o argumento de que $f$ é mensurável.
+\end{proof}

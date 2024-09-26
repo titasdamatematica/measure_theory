@@ -1,29 +1,45 @@
 % modules\theorems.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%FIRST CHAPTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%            FIRST CHAPTER STATEMENTS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % first chapter lemmas
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 \newcommand{\sigmaAlgebraIntersection}{
     \begin{lemma}{Interseção de \texorpdfstring{$\sigma$}{sigma}-álgebras é \texorpdfstring{$\sigma$}{sigma}-álgebra}{sigma_algebra_intersection}
         Seja $X$ um conjunto e $\{\Sigma_i\}_{i\in\mathcal{I}}$ uma família de \nameref{def:sigma_algebra} de $X$. Então, $\cap_{i\in\mathcal{I}} \Sigma_i $ é uma \texorpdfstring{$\sigma$}{sigma}-álgebra de $X$.
     \end{lemma}
+    \input{modules/proofs/lemmas/sigmaAlgebraIntersection.tex}
 }
 
 \newcommand{\generatedSigmaAlgebraIsUnique}{
     \begin{lemma}{Unicidade da \texorpdfstring{$\sigma$}{sigma}-álgebra gerada}{generated_sigma_algebra_is_unique}
         Seja $X$ um conjunto e $\mathcal{C}\subset \powerset{X}$. Então, a \nameref{def:generated_sigma_algebra} por $\mathcal{C}$ é única.
     \end{lemma}
+    \input{modules/proofs/lemmas/generatedSigmaAlgebraIsUnique.tex}
 }
 
 \newcommand{\sigmaAlgebraGeneratedBySubset}{
     \begin{lemma}{\texorpdfstring{$\sigma$}{sigma}-álgebra Gerada Por Subconjunto}{sigma_algebra_generated_by_subset}
         Seja $\mathcal{C}\in \powerset{X}$. Se $E\in \sigma [\mathcal{C}]$, então $\sigma [E] \subset \sigma [\mathcal{C}]$.
     \end{lemma}
+    \input{modules/proofs/lemmas/sigmaAlgebraGeneratedBySubset.tex}
 }
 
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % first chapter propositions
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \newcommand{\generatedSigmaAlgebraCharacterization}{
     \begin{proposition}{Caracterização da \texorpdfstring{$\sigma$}{sigma}-álgebra gerada}{generated_sigma_algebra_characterization}
         Sejam $X$ um conjunto, $\mathcal{C}\subset \powerset{X}$ e $\mathcal{J}=\{\Sigma_j\}$ a família de todas as $\sigma$-álgebras de $X$ que contém $\mathcal{C}$. Então,
@@ -31,6 +47,7 @@
             \sigma [\mathcal{C}] = \bigcap_{\Sigma_j\in\mathcal{J}} \Sigma_{j}.
         \end{equation*}
     \end{proposition}
+    \input{modules/proofs/propositions/generatedSigmaAlgebraCharacterization.tex}
 }
 
 \newcommand{\productSigmaAlgebraOfCountableFamily}{
@@ -40,6 +57,7 @@
         \bigotimes_{i\in I} \Sigma_i=\generateSigmaAlg{\left\{\prod_{i\in I} E_i; E_i\in \Sigma_i\right\}}.
     \end{equation*}
     \end{proposition}
+    \input{modules/proofs/propositions/productSigmaAlgebraOfCountableFamily.tex}
 }
 
 \newcommand{\productSigmaAlgebraOfFamiliesGeneratedBySet}{
@@ -49,6 +67,7 @@
         \bigotimes_{i\in I} \Sigma_i=\generateSigmaAlg{\left\{\pi_i^{-1}(E_i); E_i\in \mathcal{C}_i, i\in I\right\}}.
     \end{equation*}
     \end{proposition}
+    \input{modules/proofs/propositions/productSigmaAlgebraOfFamiliesGeneratedBySet.tex}
 }
 
 \newcommand{\productSigmaAlgebraOfMetricSpaces}{
@@ -58,18 +77,21 @@
         \bigotimes_{i=1}^{n} \borel{X_i}\subseteq \borel{\prod_{i=1}^{n}X_i}.
     \end{equation*}
     \end{proposition}
+    \input{modules/proofs/propositions/productSigmaAlgebraOfMetricSpaces.tex}
 }
 
 \newcommand{\measureIsMonotonic}{
     \begin{proposition}{Monotonicidade da Medida}{measure_is_monotonic}
         Seja $(X,\Sigma,\mu)$ um espaço de medida. Então, $\mu$ é uma \nameref{def:monotonic_function}.
     \end{proposition}
+    \input{modules/proofs/propositions/measureIsMonotonic.tex}
 }
 
 \newcommand{\measureIsSubadditive}{
     \begin{proposition}{Subaditividade da medida}{measure_is_subadditive}
         Seja $(X,\Sigma,\mu)$ um espaço de medida. Então $\mu$ é uma \nameref{def:countably_subadditive_function}.
     \end{proposition}
+    \input{modules/proofs/propositions/measureIsSubadditive.tex}
 }
 
 \newcommand{\measureIsContinuousFromBelow}{
@@ -79,6 +101,7 @@
             \mu\left(\bigcup_{n=1}^{\infty} E_n\right) = \lim \mu (E_n).
         \end{equation*}
     \end{proposition}
+    \input{modules/proofs/propositions/measureIsContinuousFromBelow.tex}
 }
 
 \newcommand{\measureIsContinuousFromAbove}{
@@ -88,9 +111,14 @@
             \mu\left(\bigcap_{n=1}^{\infty} F_n\right) = \lim \mu (F_n).
         \end{equation*}
     \end{proposition}
+    \input{modules/proofs/propositions/measureIsContinuousFromAbove.tex}
 }
 
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % first chapter corollary
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \newcommand{\productSigmaAlgebraOfCountableGeneratedFamilies}{
     \begin{corollary}{\sigmaAlg produto de família enumerável geradas}{product_sigma_algebra_of_countable_generated_families}
         Seja $I$ um conjunto enumerável e $\{X_i\}_{i\in I}$ uma família de espaços mensuráveis tal que cada $\Sigma_i=\sigma [\mathcal{C}_i]$. Então $\bigotimes_{i\in I} \Sigma_i$ é a $\sigma$-álgebra gerada por 
@@ -98,6 +126,7 @@
         \bigotimes_{i\in I} \Sigma_i=\generateSigmaAlg{\left\{\prod_{i\in I} E_i; E_i\in \mathcal{C}_i\right\}}.
     \end{equation*}
     \end{corollary}
+    \input{modules/proofs/corollaries/productSigmaAlgebraOfCountableGeneratedFamilies.tex}
 }
 
 \newcommand{\productSigmaAlgebraOfSeparableMetricSpaces}{
@@ -107,6 +136,7 @@
             \bigotimes_{i=1}^{n} \borel{X_i} = \borel{\prod_{i=1}^{n}X_i}.
         \end{equation*}
     \end{corollary}
+    \input{modules/proofs/corollaries/productSigmaAlgebraOfSeparableMetricSpaces.tex}
 }
 
 \newcommand{\productSigmaAlgebraOfRn}{
@@ -115,6 +145,7 @@
             \mathcal{B}(\R^n)=\bigotimes_{i=1}^{n} \mathcal{B}(\R).
         \end{equation*}
     \end{corollary}
+    \input{modules/proofs/corollaries/productSigmaAlgebraOfRn.tex}
 }
 
 \newcommand{\measureOfDiffenrece}{
@@ -124,11 +155,16 @@
             \mu (F \setminus E) = \mu (F) - \mu (E).
         \end{equation*}
     \end{corollary}
+    \input{modules/proofs/corollaries/measureOfDiffenrece.tex}
 }
 
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % first chapter theorems
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \newcommand{\deMorgan}{
-    \begin{theorem}{Leis de De Morgan}{de_morgan}
+    \begin{theorem}{Teorema de De Morgan}{de_morgan}
         Seja $X$ um conjunto e $\{O_i\}_{i\in \mathcal{I}}\subset \powerset{X}$. Então,
         \begin{enumerate}
             \item \begin{equation*}
@@ -145,4 +181,225 @@
     \begin{theorem}{Completamento de Medida}{measure_completion}
         Seja $(X,\Sigma,\mu)$ um espaço de medida. Existe uma única $\overline{\mu}$, extensão de $\mu$ a uma $\sigma$-álgebra $\overline{\Sigma}$, tal que $(X,\overline{\Sigma},\overline{\mu})$ é um \nameref{def:complete_measure} .
     \end{theorem}
+    \input{modules/proofs/theorems/measureCompletion.tex}
+}
+
+\newcommand{\caratheodory}{
+    \begin{theorem}{Teorema de Extensão de Carathéodory}{caratheodory}
+        Sejam $\mathcal{H}$ um \texorpdfstring{$\sigma$}{sigma}-anel hereditário e $\mu^{*}$ uma medida exterior em $\mathcal{H}$. Então:
+    \begin{enumerate}
+        \item A coleção $\mathfrak{M}\subset \mathcal{H}$ dos conjuntos $\mu^{*}$-mensuráveis é um \texorpdfstring{$\sigma$}{sigma}-anel.\label{teo:caratheodory/item/sigma_anel}
+        \item Dados $A\in\mathcal{H}$ e uma sequência $(E_n)_{n=1}^{\infty}\subset \mathfrak{M}$ de elementos dois a dois disjuntos, então
+        \begin{equation*}\label{teo:caratheodory/item/aditiva_contavel}
+            \mu^{*}\left(A\cap \bigcup_{n=1}^{\infty} E_n \right) = \sum_{n=1}^{\infty} \mu^{*}\left(A\cap E_n\right).
+        \end{equation*}
+        \item A restrição de $\mu^{*}$ a $\mathfrak{M}$ é uma medida \texorpdfstring{$\sigma$}{sigma}-aditiva.\label{teo:caratheodory/item/sigma_aditiva}
+        \item Se $E\in\mathcal{H}$ é tal que $\mu^{*}(E)=0$ então $E\in\mathfrak{M}$.\label{teo:caratheodory/item/medida_mula}
+    \end{enumerate}
+    \end{theorem}
+    \input{modules/proofs/theorems/caratheodory.tex}
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%            SECOND CHAPTER STATEMENTS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% second chapter lemmas
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\newcommand{\integralOfSimpleFunctionSemiStandard}{
+    \begin{lemma}{Integral de uma função simples na representação SP}{integral_of_simple_function_semi_standard}
+        Seja $\varphi\in M^{+}(X,\Sigma)$ uma função simples. Se
+        \begin{equation*}
+            \varphi=\sum_{i=1}^{n} b_i\chi E_i
+        \end{equation*}
+        é uma representação semi-padrão de $\varphi$, então
+        \begin{equation*}
+            \int_X \varphi \ d\mu = \sum_{i=1}^{n} b_i \mu(E_i).
+        \end{equation*}
+    \end{lemma}
+    \input{modules/proofs/lemmas/integralOfSimpleFunctionSemiStandard.tex}
+}
+
+\newcommand{\integralInequalities}{
+    \begin{lemma}{Desigualdade de integrais}{integral_inequalities}
+        Sejam $f,g\in M^{+}(X,\Sigma)$ e $E,F\subset \Sigma$.
+    \begin{enumerate}
+        \item Se $f\leq g$, então $\int_{X} f \ d\mu \leq \int_{X} g \ d\mu$.
+        \item Se $E\subseteq F$, então $\int_{E} f \ d\mu \leq \int_{F} f \ d\mu$.
+    \end{enumerate}
+    \end{lemma}
+    \input{modules/proofs/lemmas/integralInequalities.tex}
+}
+
+\newcommand{\fatou}{
+    \begin{lemma}{Lema de Fatou}{fatou}
+        Seja $(f_n)\subset M^{+}(X,\Sigma)$. Então,
+    \begin{equation}
+        \int_{X} \left(\liminf_{n\rightarrow \infty} f_n\right) \ d\mu \leq \liminf_{n\rightarrow \infty} \left( 
+ \int_{X} f_n \ d\mu\right).
+    \end{equation}
+    \end{lemma}
+    \input{modules/proofs/lemmas/fatou.tex}
+}
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% second chapter propositions
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\newcommand{\measurableFunctionsAndSigmaAlgebrasGeneratedBySet}{
+    \begin{proposition}{Funções mensuráveis e \sigmaAlgs geradas por \texorpdfstring{$\mathcal{C}$}{C}}{measurable_functions_and_sigma_algebras_generated_by_set}
+        Sejam $(X,\Sigma)$, $(Y,\generateSigmaAlg{\mathcal{C}}) $ \nameref{def:measurable_space} para algum $\mathcal{C}\subset \mathcal{P}(Y)$ e $f:(X,\Sigma)\rightarrow (Y,\generateSigmaAlg{\mathcal{C}})$. Então $f$ é mensurável se, e somente se, $f^{-1}(E)\in\Sigma$ para todo $E\in \mathcal{C}$.
+    \end{proposition}
+    \input{modules/proofs/propositions/measurableFunctionsAndSigmaAlgebrasGeneratedBySet.tex}
+}
+
+\newcommand{\measurableFunctionsOperations}{
+    \begin{proposition}{Operações com funções reais mensuráveis}{measurable_functions_operations}
+        Sejam $f,g:X\rightarrow \R$ funções mensuráveis. Então,
+    \begin{itemize}
+        \item $f+g$,
+        \item $\lambda f$ para todo $\lambda\in \R$,
+        \item $f^2$,
+        \item $|f|$,
+        \item $\max\{f,g\}$,
+        \item $\min\{f,g\}$,
+        \item $fg$
+    \end{itemize}
+    são mensuráveis.
+    \end{proposition}
+    \input{modules/proofs/propositions/measurableFunctionsOperations.tex}
+}
+
+\newcommand{\measurableFunctionsOperationsRExtend}{
+    \begin{proposition}{Operações com funções \texorpdfstring{$\Rextend$}{R}-mensuráveis}{measurable_functions_operations_r_extend}
+        Sejam $f,g:X\rightarrow \Rextend$ funções mensuráveis. Então,
+    \begin{itemize}
+        \item $\lambda f$ para todo $\lambda\in \R$,
+        \item $f^2$,
+        \item $|f|$,
+        \item $\max\{f,g\}$,
+        \item $\min\{f,g\}$,
+        \item $fg$
+    \end{itemize}
+    são mensuráveis.
+    \end{proposition}
+    \input{modules/proofs/propositions/measurableFunctionsOperationsRExtend.tex}
+}
+
+\newcommand{\measurableFunctionsSequences}{
+    \begin{proposition}{Sequências de funções mensuráveis}{measurable_functions_sequences}
+        Seja $(f_n)\subset M(X,\Sigma)_{n=1}^{\infty}$ uma sequência de funções mensuráveis. Então,
+    \begin{enumerate}
+        \item $f(x)=\inf_{n\in\N} f_n(x)$,
+        \item $F(x)=\sup_{n\in\N} f_n(x)$,
+        \item $f^{*}(x)=\lim\inf_{n\in\N} f_n(x)$,
+        \item $F^{*}(x)=\lim\sup_{n\in\N} f_n(x)$,
+        \item $g(x)=\lim_{n\in\N} f_n(x)$ (dado que a sequência é pontualmente convergente),
+    \end{enumerate}
+    são mensuráveis
+    \end{proposition}
+    \input{modules/proofs/propositions/measurableFunctionsSequences.tex}
+}
+
+\newcommand{\integralOfSimpleFunctionIsLinear}{
+    \begin{proposition}{Linearidade da integral de funções simples}{integral_of_simple_function_is_linear}
+        Sejam $\varphi,\psi \in M^{+}(X,\Sigma)$ funções simples e $c\geq 0$. Então
+    \begin{enumerate}
+        \item $\int_{X} \ c\varphi \ d\mu = c\int_{X} \ \varphi \ d\mu$.
+        \item $\int_{X} \ \varphi + \psi \ d\mu = \int_{X} \ \varphi \ d\mu + \int_{X} \ \psi \ d\mu$
+    \end{enumerate}
+    \end{proposition}
+    \input{modules/proofs/propositions/integralOfSimpleFunctionIsLinear.tex}
+}
+
+\newcommand{\functionIsIntegrableIffAbsoluteValueIs}{
+    \begin{proposition}{Condição para integrabilidade}{function_is_integrable_iff_absolute_value_is}
+        Uma função $f \in L$ se, e somente se, $|f| \in L$. Neste caso,
+    \begin{equation*}
+        \left|\int f \, d\mu \right| \leq \int |f| \, d\mu.
+    \end{equation*}
+    \end{proposition}
+    \input{modules/proofs/propositions/functionIsIntegrableIffAbsoluteValueIs.tex}
+}
+
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% second chapter corollary
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\newcommand{\measurableFunctionsInR}{
+    \begin{corollary}{Mensurabilidade de funções reais}{measurable_functions_in_r}
+        Sejam $(X,\Sigma)$, $(Y,\generateSigmaAlg{\mathcal{C}}) $ \nameref{def:measurable_space} para algum $\mathcal{C}\subset \mathcal{P}(Y)$ e $f:(X,\Sigma)\rightarrow (Y,\generateSigmaAlg{\mathcal{C}})$. Então $f$ é mensurável se, e somente se, $f^{-1}(E)\in\Sigma$ para todo $E\in \mathcal{C}$.
+    \end{corollary}
+    \input{modules/proofs/corollaries/measurableFunctionsInR.tex}
+}
+
+\newcommand{\measurableFunctionsInRExtend}{
+    \begin{corollary}{Mensurabilidade de funções reais}{measurable_functions_in_r_extend}
+        Seja $(X,\Sigma)$ um \nameref{def:measurable_space} e $f:(X,\Sigma)\rightarrow (\Rextend,\mathcal{B}(\Rextend))$. Sejam,
+    \begin{equation*}
+        A\coloneq\{x\in X; \ f(x)=+\infty\} \quad \text{e} \quad B\coloneq\{x\in X; \ f(x)=\infty\}
+    \end{equation*}
+    e a função $f_0:(X,\Sigma)\rightarrow (\R,\mathcal{B})$ definida da seguinte forma
+    \begin{equation*}
+        f_0(x) = \begin{cases}
+            f(x), \text{ se } x \in (A\cup B)^{c} \\
+            0, \text{ se } x \in A\cup B.
+        \end{cases}
+    \end{equation*}
+    Então $f$ é mensurável se, e somente se, $A,B\in\Sigma$ e a $f_0$ é $\R$-mensurável. 
+    \end{corollary}
+    \input{modules/proofs/corollaries/measurableFunctionsInRExtend.tex}
+}
+
+\newcommand{\dominatedFunctionIsIntegrable}{
+    \begin{corollary}{Funções dominadas por função integrável é integrável}{dominated_function_is_integrable}
+        Se $f\in M$, $g \in L$ e $|f| \leq |g|$, então $f\in L$ e 
+    \begin{equation*}
+        \int |f| \, d\mu \leq \int |g| \, d\mu.
+    \end{equation*}
+    \end{corollary}
+    \input{modules/proofs/corollaries/dominatedFunctionIsIntegrable.tex}
+}
+
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% second chapter theorems
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\newcommand{\MCT}{
+    \begin{theorem}{Teorema da Convergência Monótona}{mct}
+        Seja $(f_n)\subset M^{+}(X,\Sigma)$ uma sequência monótona crescente tal que $f_n \xrightarrow{p} f$. Então $f\in M^{+}(X,\Sigma)$ e 
+    \begin{equation}
+        \int_{X} \left(\lim_{n\rightarrow \infty} f_n\right) \ d\mu = \lim_{n\rightarrow \infty} \left( 
+ \int_{X} f_n \ d\mu\right)
+    \end{equation}
+    \end{theorem}
+    \input{modules/proofs/theorems/MCT.tex}
+}
+
+\newcommand{\DCT}{
+    \begin{theorem}{Teorema da Convergência Dominada}{dct}
+        Sejam $(f_n)\subset L$ e $f\in M(X,\Sigma)$ tais que
+    \begin{equation*}
+        \lim_{n\rightarrow \infty} f_n (x) = f(x) \ (\mu\text{-qtp}).
+    \end{equation*}
+    Se existe $g\in L$ tal que $|f_n| \leq g$ para todo $n$, então $f\in L$ e
+    \begin{equation}
+        \int_X f d\mu = \lim_{n\rightarrow \infty} \int_X f_n d\mu.
+    \end{equation}
+    \end{theorem}
+    \input{modules/proofs/theorems/DCT.tex}
 }

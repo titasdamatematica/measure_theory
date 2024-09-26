@@ -1,0 +1,62 @@
+\begin{proof}
+    Como $\lim_{n \to \infty} f_n(x) = f(x)$ e cada $f_n$ é mensurável, segue que $f$ é mensurável. Como $|f_n| \leq g$ para todo $n$, temos que $|f| \leq g$. Mas, por hipótese, $g$ é integrável e, consequentemente, $|g|$ é integrável. Portanto, $|f|$ é integrável e, finalmente, $f$ é integrável. Temos ainda 
+    \[
+    -|g| \leq f_n \leq |g|
+    \]
+    e daí segue que 
+    \[
+    |g| + f_n \geq 0 \ \text{para todo } n.
+    \]
+    
+    Portanto,
+    \begin{align*}
+    \int_X |g| d\mu + \int_X f_n d\mu &= \int_X (|g| + f_n) d\mu \\
+    &= \int_X \lim_{n \to \infty} (|g| + f_n) d\mu
+    \end{align*}
+    Pelo Lema de Fatou,
+    \[
+    \leq \liminf_{n \to \infty} \int_X (|g| + f_n) d\mu
+    \]
+    \begin{align*}
+    &= \liminf_{n \to \infty} \left( \int_X |g| d\mu + \int_X f_n d\mu \right) \\
+    &= \int_X |g| d\mu + \liminf_{n \to \infty} \int_X f_n d\mu.
+    \end{align*}
+    
+    Logo,
+    \[
+    \int_X f d\mu \leq \liminf_{n \to \infty} \int_X f_n d\mu.
+    \]
+    
+    Por outro lado,
+    \[
+    |g| - f_n \geq 0 \ \text{para todo } n.
+    \]
+    
+    Portanto,
+    \begin{align*}
+    \int_X |g| d\mu - \int_X f_n d\mu &= \int_X (|g| - f_n) d\mu \\
+    &= \int_X \lim_{n \to \infty} (|g| - f_n) d\mu
+    \end{align*}
+    Pelo Lema de Fatou,
+    \[
+    \leq \liminf_{n \to \infty} \int_X (|g| - f_n) d\mu
+    \]
+    \begin{align*}
+    &= \liminf_{n \to \infty} \left( \int_X |g| d\mu - \int_X f_n d\mu \right) \\
+    &= \int_X |g| d\mu - \limsup_{n \to \infty} \int_X f_n d\mu.
+    \end{align*}
+    
+    Consequentemente,
+    \[
+    \int_X f d\mu \geq \limsup_{n \to \infty} \int_X f_n d\mu.
+    \]
+    
+    Finalmente, temos
+    \[
+    \limsup_{n \to \infty} \int_X f_n d\mu \leq \int_X f d\mu \leq \liminf_{n \to \infty} \int_X f_n d\mu,
+    \]
+    e, portanto,
+    \[
+    \int_X f d\mu = \lim_{n \to \infty} \int_X f_n d\mu.
+    \]
+\end{proof}

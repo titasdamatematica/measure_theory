@@ -1,0 +1,158 @@
+\chapter{Integração}
+
+Como prometido, temos agora um espaço onde faz sentido falar de conjuntos mensuráveis. Em algum sentido, precisamos de uma forma de medir funções para chegar na integral que desejamos definir. Portanto, vamos definir o que seria uma função mensurável.
+
+Dessa forma, podemos resumir os conceitos mais importantes deste capítulo na seguinte lista:
+
+\begin{enumerate}
+    \item Funções Mensuráveis
+    \item Como Operar com Funções Mensuráveis
+    \item Como Operar com Funções Mensuráveis no Limite
+\end{enumerate}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Seção 1 - Funções Mensuráveis
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\section{Funções Mensuráveis}
+\subsection*{Quando Podemos Medir Funções?}
+
+\measurableFunctions
+
+Neste curso, serão estudadas as funções reais. Dito isso, a proposição abaixo caracteriza a mensurabilidade destas funções de uma forma mais tangível.
+
+\measurableFunctionsAndSigmaAlgebrasGeneratedBySet
+
+A grande relevância desta proposição é a forma como ela nos permite lidar com a mensurabilidade das funções de uma forma mais concreta. Veja como ela pode ser aplicada no caso real.
+
+\measurableFunctionsInR
+
+É possível usar o Exercício XXX para criar outros métodos de verificar a mensurabilidade de uma função real (ou em $\Rextend$). Veja o corolário abaixo.
+
+\measurableFunctionsInRExtend
+
+\constantFunction
+\characteristicFunction
+
+\subsection*{Como Operar com Funções Mensuráveis?}
+\measurableFunctionsOperations
+
+As funções nos reais estendidos possuem algumas peculiaridades. De fato, é possível arrumar contraexemplo para a soma. As operações que valem estão listadas abaixo
+
+\measurableFunctionsOperationsRExtend
+
+\measurableFunctionsNotation
+
+\subsection*{Como Operar com Funções Mensuráveis no Limite?}
+
+\measurableFunctionsSequences
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%      Seção 2 - Integração
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\section{Integração}
+
+Agora que já temos uma noção formal do que é uma medida e sabemos sob quais circunstâncias dadas funções e conjuntos são mensuráveis, podemos construir a integral de Lebesgue.
+
+Para construir a integral de Lebesgue, começaremos trabalhando com funções que só assumem uma quantidade finita de valores. Essas funções são chamadas de funções simples.
+
+\subsection*{Funções Simples}
+
+\simpleFunctions
+\simpleFunctionsSemiStandardRepresentation
+\simpleFunctionsStandardRepresentation
+
+As funções simples mensuráveis admitem uma forma canônica. Seja $\varphi$ uma função simples que assume os valores reais distintos $(c_i)_{i=1}^{n}$. Denotemos por $E_i=\varphi^{-1}(c_i)$. Note que $(E_i)_{i=1}^{n}$ forma uma partição de $X$. Assim, 
+
+\begin{equation*}
+    \varphi = \sum_{j=1}^{n} c_j \chi_{E_k}
+\end{equation*}
+
+é a chamada representação canônica da função. Note que cada $c_j$ é distinto e cada a sequência $(E_j)$ é disjunta. 
+
+\integralOfSimpleFunction
+
+A partir de agora, o nosso objetivo é recuperar algumas das propriedades boas da integral de Riemann a partir da Definição \ref{def:integral_of_simple_function}.
+Veremos que esta definição implica na linearidade da integral.
+
+\integralOfSimpleFunctionSemiStandard
+
+\integralOfSimpleFunctionIsLinear
+
+\subsection*{A Integral de Lebesgue}
+Nem todas as funções assumem um número finito de valores, mas podemos considerar o conjunto das funções simples menores do que uma dada função e tomar o supremo deste conjunto para generalizar a nossa definição de integral.
+
+\lebesgueIntegralofNonNegativeFunction
+
+Antes de partirmos para algumas desigualdades importantes, faz sentido definirmos a integral restrita a um dado conjunto.
+
+\lebesgueIntegralRestricted
+
+Os lemas abaixo também são importantíssimos para o desenvolvimento do resto da teoria.
+
+\integralInequalities
+
+Relembrando o nosso objetivo, queremos recuperar boas propriedades da integral de Riemann e criar novas ferramentas para trabalhar com essa integral. O próximo tópico trata de criar essas ferramentas.
+
+\lebesgueIntegral
+
+\functionIsIntegrableIffAbsoluteValueIs
+\dominatedFunctionIsIntegrable
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Seção 3 - Teoremas de Convergência
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\section{Teoremas de Convergência}
+
+Os teoremas abaixo nos permitem tirar o limite de dentro da integral, o que nos permitirá, por exemplo, mostrar a linearidade da integral de Lebesgue. Esses teoremas de convergência são centrais no estudo da teoria da medida.
+\subsection*{Teorema da Convergência Monótona}
+
+\MCT
+\fatou
+
+\subsection*{Teorema da Convergência Dominada}
+
+Para chegar no teorema da convergência dominada, vamos passar a estudar integrais de funções que não são necessariamente positivas.
+
+\functionIsIntegrableIffAbsoluteValueIs
+\dominatedFunctionIsIntegrable
+
+\DCT

@@ -1,0 +1,40 @@
+\begin{proof}
+    Para o primeiro item precisamos considerar dois casos. No primeiro caso, $c=0$ e a função simples que devemos integrar é a função simples constante. Isto valida a propriedade trivialmente pois teríamos que multiplicar a medida do conjunto inteiro por $0$. Mesmo se a medida for infinita, assumiremos ao longo destas notas que $0\cdot \infty=0$. Se $c > 0$ e $\varphi$ assume os valores $\{c_j\}_{j=1}^{n}$, então
+    \begin{equation*}
+        \int_{X}\ c\varphi \ d\mu = \sum_{j=i}^{n} c \, c_j \mu(f^{-1}(c_j)) = c\sum_{j=i}^{n}c_j \mu(f^{-1}(c_j))=c \int_{X}\varphi \ d\mu.
+    \end{equation*}
+
+    Vamos demonstrar o segundo item. Comece escrevendo $\varphi$ e $\psi$ na forma canônica.
+
+    \begin{equation*}
+        \varphi = \sum_{i=1}^{n} a_i \chi_{A_i} \quad \quad \text{e} \quad \quad 
+        \psi = \sum_{j=1}^{m} b_j \chi_{B_j}.
+    \end{equation*}
+
+    Pelo Lema (Colocar no Apêndice), podemos $\chi_{A_i}=\sum_{j=1}^{m}\chi_{A_i\cap B_j}$. Portanto,
+
+    \begin{equation*}
+        \varphi = \sum_{i=1}^{n} a_i \chi_{A_i} = \sum_{i=1}^{n} a_i \sum_{j=1}^{m}\chi_{A_i\cap B_j}
+    \end{equation*}
+
+    Como $a_i$ é constante (com relação ao somatório de dentro), podemos passar para dentro. O processo é análogo para $\psi$, de onde vem que
+
+    \begin{equation*}
+        \varphi = \sum_{i=1}^{n}\sum_{j=1}^{m} a_i \chi_{A_i\cap B_j} \quad \quad \text{e} \quad \quad 
+        \psi = \sum_{j=1}^{m}\sum_{i=1}^{n} b_j \chi_{A_i\cap B_j}.
+    \end{equation*}
+
+    Podemos trocar a ordem dos somatórios de $\psi$ uma vez que é uma soma finita. Com isso, temos
+
+    \begin{equation*}
+        \varphi + \psi = \sum_{i=1}^{n}\sum_{j=1}^{m} (a_i + b_j) \chi_{A_i\cap B_j}.
+    \end{equation*}
+
+    Note que esta é uma representação semi-padrão da função simples $\varphi+\psi$. Logo, pelo Lema \ref{lmm:integral_of_simple_function_semi_standard},
+    \begin{eqnarray*}
+        \int_X \varphi + \psi \ d\mu &=& \sum_{i=1}^{n}\sum_{j=1}^{m} (a_i + b_j) \mu(A_i\cap B_j)\\
+        &=&\sum_{i=1}^{n}\sum_{j=1}^{m} a_i \mu(A_i\cap B_j) + \sum_{j=1}^{m}\sum_{i=1}^{n} b_j \mu(A_i\cap B_j)\\
+        &=& \int_X \varphi d\mu + \int_X \psi d\mu
+    \end{eqnarray*}
+    
+\end{proof}

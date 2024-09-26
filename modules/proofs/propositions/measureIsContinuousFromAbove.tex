@@ -1,0 +1,15 @@
+\begin{proof}
+    Para provar, vamos usar o resultado da Proposição \ref{prop:measure_is_continuous_from_below}. A ideia é criar uma sequência crescente. Note bem, se a sequência é decrescente e o primeiro conjunto é finito, então todos os outros também são. Definimos, assim, os conjuntos $E_n=F_1\setminus F_n$ para formar a sequência crescente $(E_n)$.
+
+    Por um lado, por \nameref{prop:measure_is_continuous_from_below} temos que
+    \begin{equation*}
+        \mu\left(\bigcup_{n=1}^{\infty} E_n\right) = \lim \mu (E_n) = \mu(F_1) - \lim \mu(F_n).
+    \end{equation*}
+
+    Por outro lado,
+    \begin{equation*}
+        \mu\left(\bigcup_{n=1}^{\infty} E_n\right) = \mu\left(F_1\setminus \bigcap_{n=1}^{\infty} F_n\right) = \mu(F_1) - \mu\left( \bigcap_{n=1}^{\infty} F_n\right).
+    \end{equation*}
+    Igualando as duas equações e cancelando o termo $\mu(F_1)$ temos que $\mu(\cap F_n)=\lim \mu(F_n)$.
+    
+\end{proof}

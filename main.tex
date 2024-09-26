@@ -1,9 +1,13 @@
+% main.tex
 \documentclass[12pt]{book}
 \input{config/packages.tex}
 \input{config/colors.tex}
 \input{config/environments.tex}
 \input{config/settings.tex}
 \input{config/commands.tex}
+
+\input{config/title.tex}
+
 \input{modules/definitions.tex}
 \input{modules/theorems.tex}
 \input{modules/examples.tex}
@@ -11,12 +15,15 @@
 
 \begin{document}
 \input{titlepage.tex}
+
 \frontmatter
 \input{modules/chapters/intro.tex}
 \tableofcontents 
-\mainmatter 
 
+\mainmatter
 \input{modules/chapters/measures.tex}
+\input{modules/chapters/integration.tex}
+\input{modules/chapters/lpSpaces.tex}
 
 \backmatter
 \input{modules/appendices/definitions.tex}

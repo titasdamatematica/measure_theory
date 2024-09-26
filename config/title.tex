@@ -1,0 +1,30 @@
+% title.tex
+
+\newcommand{\chaptertitledecoration}[1]{%
+    \begin{tikzpicture}[remember picture,overlay]
+        % Background color fill
+        \fill[blue-50] (current page.north west) rectangle ([yshift=-5cm] current page.north east);
+        
+        % Title text
+        \node[anchor=north, yshift=-1cm] at (current page.north) { % Center horizontally
+            \begin{minipage}{\paperwidth} % Adjust width as needed
+                \centering
+                % Chapter number
+                \textbf{\LARGE\textcolor{teal-700}{Capítulo \thechapter}}\\[1em]
+                % Chapter title
+                \textbf{\Huge\textcolor{teal-700}{#1}}\\[0.1em]
+                % Divider line
+                \textcolor{teal-700}{\rule{\textwidth}{3pt}}
+            \end{minipage}
+        };
+    \end{tikzpicture}%
+    \vspace{3cm} % Adjust this value to control space between title and content
+}
+
+% Chapter formatting using titlesec
+\titleformat{\chapter}[block]
+  {\normalfont\Huge\bfseries}
+  {}{0em}
+  {\chaptertitledecoration}
+\titlespacing*{\chapter}
+  {0pt}{0pt}{0pt}

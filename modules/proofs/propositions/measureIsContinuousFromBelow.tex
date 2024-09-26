@@ -1,0 +1,22 @@
+\begin{proof}
+    Vamos começar mostrando o primeiro item. Seja $(E_n)_{n=1}^{\infty}\subset \Sigma$ uma sequência crescente, isto é, $E_n\subset E_{n+1}$ para todo $n$ natural. Então, como na demonstração da Proposição \ref{prop:measure_is_monotonic}, $E_{n}=E_{n-1}\cup (E_{n}\setminus E_{n-1})$ para todo $n$ natural.
+    
+    Se definirmos $A_1=E_1$ e $A_n=E_{n}\setminus E_{n-1}$ para todo $n\geq 2$, então a sequência $(A_j)$ é disjunta. Para provar esta afirmação basta tomar $A_i$ e $A_j$ com $i\neq j$. Suponha, sem perda de generalidade, que $i < j$. Neste caso, $A_i=E_{i}\setminus E_{i-1}$ e $A_j=E_{j}\setminus E_{j-1}$ mas, por hipótese, $E_i\subseteq E_{j-1}$. Portanto, nenhum elemento de $A_i$ pode pertencer a $A_j$.
+
+    Mostrado isso, podemos reescrever $E_n$ como a união de todos os $A_j$ até $n$.
+    \begin{equation*}
+        E_n=\bigcup_{j=1}^{n}A_j.
+    \end{equation*}
+    De fato, se $x\in E_n$ então $x\in E_{n-1} \cup A_n$. Por indução, $x\in\cup_{j=1}^{n}A_j$. Por outro lado, se $x\in \cup_{j=1}^{n}A_j$, então existe $j$ entre $1$ e $n$ tal que $x\in A_j=E_j\setminus E_{j-1}=E_j\cap E_{j-1}^{c}$. Logo, $x\in E_j\subseteq E_n$.
+
+    Por fim, podemos concluir que
+    \begin{equation*}
+        \mu\left(\bigcup_{n=1}^{\infty} E_n\right)=\mu\left(\bigcup_{j=1}^{\infty} A_j\right)=\sum_{j=1}^{\infty} \mu(A_j)=\lim_{k\rightarrow \infty} \sum_{j=1}^{k} \mu(A_j).
+    \end{equation*}
+    Pela Proposição \ref{prop:measure_is_monotonic}, temos que
+    \begin{equation*}
+        \sum_{j=1}^{k} \mu(A_j) = \sum_{j=1}^{k} \left(\mu(E_j)-\mu(E_{j-1})\right) = \mu(E_k)\Longrightarrow \lim_{k\rightarrow \infty} \sum_{j=1}^{k} \mu(A_j)=\lim_{n\rightarrow \infty}\mu(E_n).
+    \end{equation*}
+    Note que, como a sequência $(E_n)$ é estritamente crescente, podemos nos certificar que cada $A_j$ é finito. Assim vale a \nameref{prop:measure_is_continuous_from_below}.
+    
+\end{proof}

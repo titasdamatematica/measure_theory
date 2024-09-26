@@ -176,6 +176,15 @@
     \end{definition}
 }
 
+\newcommand{\measurableInOuterMeasure}{
+    \begin{definition}{Conjunto \texorpdfstring{$\mu^{*}$}{mu}-mensurável}{measurable_in_outer_measure}
+        Seja $\mathcal{H}$ um \nameref{def:sigma_ring} \nameref{def:hereditaryCollection} e $\mu^{*}:\mathcal{H}\rightarrow \left[0,+\infty\right]$ uma \nameref{def:outer_measure} em $\mathcal{H}$. Dizemos que $E\in \mathcal{H}$ é \textbf{$\mu^{*}$-mensurável} quando, para todo $A\in\mathcal{H}$, vale a igualdade:
+        \begin{equation*}
+            \mu^{*}(A)=\mu^{*}(A\cap E)+\mu^{*}(A\cap \complement(E))
+        \end{equation*}
+    \end{definition}
+}
+
 \newcommand{\finiteMeasure}{
     \begin{definition}{Medida Finita}{finite_measure}
         Seja $\mu$ uma \nameref{def:measure} em um \nameref{def:measure_space} $(X,\Sigma)$. Dizemos que $\mu$ é uma \textbf{medida finita} quando $\mu(X)<\infty$.
@@ -185,5 +194,76 @@
 \newcommand{\sigmaFiniteMeasure}{
     \begin{definition}{Medida \texorpdfstring{$\sigma$}{sigma}-finita}{sigma_finite_measure}
         Seja $\mu$ uma \nameref{def:measure} em um \nameref{def:measure_space} $(X,\Sigma)$. Dizemos que $\mu$ é uma \textbf{medida \texorpdfstring{$\sigma$}{sigma}-finita} quando existe $(E_i)_{i=1}^{\infty}$ com $\mu(E_i)<\infty$ para todo $i\geq 1$ tal que $X=\cup_{i=1}^{\infty} E_i$. 
+    \end{definition}
+}
+
+\newcommand{\measurableFunctions}{
+    \begin{definition}{Funções Mensuráveis}{measurable_functions}
+        Sejam $(X,\Sigma)$ e $(Y,\Sigma')$ \nameref{def:measurable_space}. Seja $f:(X,\Sigma) \rightarrow (Y,\Sigma')$ uma função tal que, para todo $E\in \Sigma'$, $f^{-1}(E)\in \Sigma$. Então, a função $f:(X,\Sigma) \rightarrow (Y,\Sigma')$ é chamada de \textbf{função mensurável}. 
+    \end{definition}
+}
+
+\newcommand{\simpleFunctions}{
+    \begin{definition}{Funções Simples}{simple_functions}
+        Uma função $\varphi:X\rightarrow \R$ é dita \textbf{simples} quando $\varphi(\R)$ é finita.
+    \end{definition}
+}
+
+\newcommand{\simpleFunctionsSemiStandardRepresentation}{
+    \begin{definition}{Representação semi-padrão de uma funções simples}{simple_functions_semi_standard_representation}
+        Seja $(E_i)_{i=1}^{n}\subset \Sigma$ uma partição de $X$. Dizemos que uma função simples $\varphi$  está escrita na \textbf{representação semi-padrão} quando existe $\left(a_i\right)_{i=1}^{n}\subset \R$ tal que 
+    \begin{equation*}
+        \varphi = \sum_{i=1}^{n} a_i \chi_{E_i}.
+    \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\simpleFunctionsStandardRepresentation}{
+    \begin{definition}{Representação padrão de uma funções simples}{simple_functions_standard_representation}
+        Considere a função simples $\varphi$ escrita na representação semi-padrão.
+    \begin{equation*}
+        \varphi = \sum_{i=1}^{n} a_i \chi_{E_i}.
+    \end{equation*}
+    Dizemos que $\varphi$ está na \textbf{representação padrão} quando a sequência $(a_i)$ é dois a dois disjunta.
+    \end{definition}
+}
+
+\newcommand{\integralOfSimpleFunction}{
+    \begin{definition}{Representação padrão de uma funções simples}{integral_of_simple_function}
+        Seja $\varphi \in M^{+}(X,\Sigma)$ uma função simples na representação padrão. Então
+    \begin{equation*}
+        \int_X \varphi \  d\mu = \sum_{i=1}^{n} a_i \mu(E_i).
+    \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\lebesgueIntegralofNonNegativeFunction}{
+    \begin{definition}{Integral de Lebesgue de Função Positiva}{lebesgue_integral_non_negative_function}
+        Seja $f \in M^{+}(X,\Sigma)$. Então
+    \begin{equation*}
+        \int_X f \, d\mu = \sup \left\{ \int_X \varphi \, d\mu; \ \varphi \in  M^{+}(X,\Sigma) \text{ e } 0 \leq \varphi \leq f \right\}.
+    \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\lebesgueIntegral}{
+    \begin{definition}{Integral de Lebesgue de Função Positiva}{lebesgue_integral}
+        A integral de uma função mensurável pode ser definida para funções na classe 
+    \begin{equation*}
+        L(X,\Sigma, \mu) = \{f \in M(X,\Sigma); \ f^{+}\text{ e } f^{-} \text{ são mensuráveis}\}.
+    \end{equation*}
+    A integral de $f$ é então dada por:
+    \begin{equation*}
+        \int f \, d\mu = \int f^{+} \, d\mu - \int f^{-} \, d\mu.
+    \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\lebesgueIntegralRestricted}{
+    \begin{definition}{Integral restrita a um conjunto mensurável}{lebesgue_integral_restricted}
+        Seja $f \in M^{+}(X,\Sigma)$ e $E\in \Sigma$. Então
+    \begin{equation*}
+        \int_E f \, d\mu = \int_X f\chi_E \, d\mu.
+    \end{equation*}
     \end{definition}
 }

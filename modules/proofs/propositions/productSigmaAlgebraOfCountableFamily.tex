@@ -1,0 +1,21 @@
+\begin{proof}
+    Vamos denotar por $\mathcal{F}$ a família de conjuntos do enunciado. Considere $\mathcal{C}$ a família como na Definição \ref{def:product_sigma_algebra}. Pretendemos mostrar que  $\generateSigmaAlg{\mathcal{C}}=\generateSigmaAlg{\mathcal{F}}$. Uma forma natural de chegar nesse resultado é mostrar que $\generateSigmaAlg{\mathcal{C}}\subseteq\generateSigmaAlg{\mathcal{F}}$ e $\generateSigmaAlg{\mathcal{F}}\subseteq\generateSigmaAlg{\mathcal{C}}$.
+    
+    Por um lado, podemos mostrar (ver Exercício X) que
+    
+    \begin{equation*}
+        \prod_{i\in I} E_i = \bigcap_{i\in I} \pi_{i}^{-1} E_i.
+    \end{equation*}
+    
+    Usando o Lema \ref{lmm:sigma_algebra_intersection}, mostramos que $\bigcap_{i\in I} \pi_{i}^{-1} (E_i) \in \generateSigmaAlg{\mathcal{C}}$. Com isso, concluímos que $\mathcal{F} \subseteq \generateSigmaAlg{\mathcal{C}}$ e, pelo Lema \ref{lmm:sigma_algebra_generated_by_subset}, $\generateSigmaAlg{\mathcal{F}}=\generateSigmaAlg{\mathcal{C}}$.
+    
+    Resta mostrar a segunda inclusão. Usaremos a mesma ideia. Para tanto, precisamos mostrar (ver Exercício Y) que, para todo $E_i\in\Sigma_i$ onde $i\in I$,
+    
+    \begin{eqnarray*}
+        \pi_{i}^{-1} (E_i) 
+        &=& X_1 \times \dots \times E_i \times\dots \\
+        &=& \prod_{j\in I} E_j, \quad j\neq i \Rightarrow E_j=X_j.
+    \end{eqnarray*}
+    
+    Sabemos que cada $X_j\in\Sigma_j$ pela definição de $\sigma$-álgebra e $E_i\in\Sigma_i$ por hipótese. Logo, $\pi_{i}^{-1} (E_i) \in \mathcal{F} \subset \generateSigmaAlg{\mathcal{F}}$. Usamos o Lema \ref{lmm:sigma_algebra_generated_by_subset} mais uma vez para concluir que $\generateSigmaAlg{\mathcal{C}}\subseteq\generateSigmaAlg{\mathcal{F}}$.
+\end{proof}

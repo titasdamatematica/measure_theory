@@ -1,0 +1,26 @@
+\begin{proof}
+    Para demonstrar o teorema, precisamos mostrar vários resultados. Aqui serão apresentadas as ideias gerais. Você poderá seguir até o Apêndice para conferir a demonstração passo a passo.
+    
+    Para mostrar o item \ref{teo:caratheodory/item/sigma_anel}, precisamos provar que $\mathfrak{M}$ é fechado para a união enumerável e para a diferença de conjuntos (ver em AAA).
+    
+    A fim de verificar o item \ref{teo:caratheodory/item/aditiva_contavel}, podemos usar indução para mostrar que, para algum $t\in\N$,
+    
+    \begin{equation*}
+        \mu^{*}\left(A\cap \bigcup_{n=1}^{t} E_n \right) = \sum_{n=1}^{t} \mu^{*}\left(A\cap E_n\right).
+    \end{equation*}
+    Depois, podemos usar a monotonicidade em 
+    \begin{equation*}
+        A\cap\left(\bigcup_{n=1}^{\infty} E_n\right)^{\complement}\subset A\cap\left(\bigcup_{n=1}^{t} E_n\right)^{\complement}
+    \end{equation*}
+    para mostrar que 
+    \begin{equation*}
+        \mu^{*}(A)\geq\left(\sum_{n=1}^{t}\mu^{*}(A\cap E_n)\right) + \mu^{*}\left(A\cap\left(\bigcup_{n=1}^{\infty} E_n\right)^{\complement}\right).
+    \end{equation*}
+    Por fim, usamos a subaditividade e tomamos o limite $t\rightarrow \infty$ para concluir que
+    \begin{equation*}
+        \mu^{*}(A) =\left(\sum_{n=1}^{\infty}\mu^{*}(A\cap E_n)\right) + \mu^{*}\left(A\cap\left(\bigcup_{n=1}^{\infty} E_n\right)^{\complement}\right).
+    \end{equation*}
+    Chegamos no resultado desejado substituindo $A$ por $A\cap\left(\bigcup_{n=1}^{\infty} E_n\right)$.
+    
+    Os últimos dois itens são mais simples. Verifique a demonstração passo a passo em BBB.
+    \end{proof}

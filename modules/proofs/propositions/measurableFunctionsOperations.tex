@@ -1,0 +1,37 @@
+\begin{proof}
+    Seja $\alpha\in\R$. Como $f$ e $g$ são funções mensuráveis, então os conjuntos
+    \begin{eqnarray*}
+        \{x\in X; \ f(x)> r\}\in \Sigma\\
+        \{x\in X; \ g(x)> \alpha-r\}\in \Sigma
+    \end{eqnarray*}
+    para todo $r$ racional. Chamemos
+    \begin{equation*}
+        S_r=\{x\in X; \ f(x)> r\}\cap \{x\in X; \ g(x)> \alpha-r\}\in\Sigma.
+    \end{equation*}
+    Como, cada $S_r$ é mensurável, a sua união também é pois os racionais são enumeráveis. Assim, basta mostrar que
+    \begin{equation*}
+        \{x\in X; \ f(x)+g(x)> \alpha\}= \bigcup_{r\in \mathbb{Q}} S_r\in\Sigma.
+    \end{equation*}
+    Assim, pela propriedade, $f+g$ é mensurável.
+
+    Para mostrar que $\lambda f$ é mensurável, é razoável desconsiderar o caso em que $\lambda =0$ pois a função identicamente nula é mensurável. Quando este não for o caso, basta mostrar que
+
+    \begin{equation*}
+        \{x\in X; \ \lambda f(x)> \alpha\}= \{x\in X; \ f(x)> \frac{\alpha}{\lambda}\}\in \Sigma
+    \end{equation*}
+        pois $f$ é mensurável por hipótese.
+
+        Para mostrar que $f^2$ é mensurável, usamos uma estratégia similar. De fato, se $\alpha$ for negativo então a pré-imagem será $X\in\Sigma$. Caso contrário, então 
+        \begin{equation*}
+        \{x\in X; \ \lambda f^2(x)> \alpha\}= \{x\in X; \ f(x)> \sqrt{\alpha}\}\cup\{x\in X; \ f(x)< -\sqrt{\alpha}\} \in \Sigma
+    \end{equation*}
+    pois $f$ é mensurável. O caso é análogo para $|f|$.
+
+    Para mostrar que $\max\{f,g\}$ e $\min\{f,g\}$ são mensuráveis, mostre que
+    \begin{eqnarray*}
+        \{x\in X; \ \max\{f,g\}> \alpha\}= \{x\in X; \ f(x)< \alpha\}\cap\{x\in X; \ g(x)<\alpha\} \in \Sigma\\
+        \{x\in X; \ \min\{f,g\}> \alpha\}= \{x\in X; \ f(x)> \alpha\}\cap\{x\in X; \ g(x)>\alpha\} \in \Sigma\\
+    \end{eqnarray*}
+
+    Para mostrar que $fg$ é mensurável, escreva $fg=\frac{1}{4}((f+g)^2-(f-g)^2)$ e aplique as propriedades anteriores.
+\end{proof}

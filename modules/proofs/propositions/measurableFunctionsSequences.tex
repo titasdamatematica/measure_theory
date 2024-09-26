@@ -1,0 +1,27 @@
+\begin{proof}
+    \textbf{(1)} Para provar que $ f(x) = \inf_{n \in \mathbb{N}} f_n(x) $ é mensurável, observe que, para qualquer número real $\alpha$,
+    \begin{equation*}
+    \{ x \in X : f(x) \geq \alpha \} = \bigcap_{n=1}^{\infty} \{ x \in X : f_n(x) \geq \alpha \}.
+    \end{equation*}
+    Como cada $ f_n $ é mensurável, o conjunto $ \{ x \in X : f_n(x) \geq \alpha \} \in \Sigma $. Logo, $ f(x) $ é mensurável, já que a interseção enumerável de conjuntos mensuráveis pertence a $\Sigma$.
+
+    \textbf{(2)} De forma análoga, para mostrar que $ F(x) = \sup_{n \in \mathbb{N}} f_n(x) $ é mensurável, observe que, para qualquer número real $\alpha$,
+    \begin{equation*}
+    \{ x \in X : F(x) \leq \alpha \} = \bigcap_{n=1}^{\infty} \{ x \in X : f_n(x) \leq \alpha \}.
+    \end{equation*}
+    Como cada $ f_n $ é mensurável, $ \{ x \in X : f_n(x) \leq \alpha \} \in \Sigma $, o que implica que $ F(x) $ é mensurável.
+
+    \textbf{(3)} Para $ f^{*}(x) = \liminf_{n \to \infty} f_n(x) $, recorde que
+    \begin{equation*}
+    f^{*}(x) = \sup_{k \geq 1} \inf_{n \geq k} f_n(x).
+    \end{equation*}
+    Dado que $ f(x) = \inf_{n \in \mathbb{N}} f_n(x) $ e que o $ \sup $ de funções mensuráveis é mensurável, segue que $ f^{*}(x) $ é mensurável.
+
+    \textbf{(4)} Para $ F^{*}(x) = \limsup_{n \to \infty} f_n(x) $, temos que
+    \begin{equation*}
+    F^{*}(x) = \inf_{k \geq 1} \sup_{n \geq k} f_n(x).
+    \end{equation*}
+    Usando o mesmo raciocínio do $ f^{*}(x) $, as operações de $ \sup $ e $ \inf $ pontuais preservam a mensurabilidade, então $ F^{*}(x) $ é mensurável.
+
+    \textbf{(5)} Finalmente, se $ g(x) = \lim_{n \to \infty} f_n(x) $, dado que a sequência $ (f_n(x)) $ converge para todo $x \in X$, então $ g(x)=f^{*}(x)=F^{*}(x) $. Portanto, $ g(x) $ é mensurável.
+\end{proof}

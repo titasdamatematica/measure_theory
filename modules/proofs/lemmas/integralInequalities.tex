@@ -1,0 +1,11 @@
+\begin{proof}
+    Para mostrar o primeiro item, perceba que toda função $\varphi \in M^{+}(X,\Sigma)$ simples tal que $\varphi \leq f$ também é, por hipótese, tal que $\varphi \leq g$. Ou seja,
+    \begin{equation*}
+        \left\{ \int_X \varphi \, d\mu; \ \varphi \in  M^{+}(X,\Sigma) \text{ e } 0 \leq \varphi \leq f \right\} \subseteq \left\{ \int_X \varphi \, d\mu; \ \varphi \in  M^{+}(X,\Sigma) \text{ e } 0 \leq \varphi \leq g \right\}.
+    \end{equation*}
+    Tomando o supremo dos dois lados, obtemos, pela Definição \ref{def:lebesgue_integral_non_negative_function},
+    \begin{equation*}
+        \int_{X} f \ d\mu \leq \int_{X} g \ d\mu.
+    \end{equation*}
+    Já para o segundo item basta notar que $f\chi_E\leq f\chi_F$ por hipótese. A demonstração segue da aplicação do primeiro item e da Definição \ref{def:lebesgue_integral_restricted}.
+\end{proof}

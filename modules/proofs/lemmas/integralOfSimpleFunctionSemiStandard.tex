@@ -1,0 +1,30 @@
+\begin{proof}
+    Suponha que $\varphi$ seja uma função simples com a representação 
+    \[
+    \varphi = \sum_{j=1}^{m} \alpha_j 1_{A_j}.
+    \]
+    A representação semi-padrão de $\varphi$ é
+    \[
+    \varphi = \sum_{k=1}^{n} \beta_k 1_{B_k}.
+    \]
+    Para cada $j = 1, \dots, m$, defina
+    \[
+    K_j = \{ k : 1 \leq k \leq n \ \text{e} \ \beta_k = \alpha_j \}.
+    \]
+    Daí,
+    \[
+    A_j = \bigcup_{k \in K_j} B_k.
+    \]
+    Assim, temos:
+    \begin{align*}
+        \int_X \varphi d\mu &= \sum_{j=1}^{m} \alpha_j \mu(A_j) \\
+        &= \sum_{j=1}^{m} \alpha_j \sum_{k \in K_j} \mu(B_k) \\
+        &= \sum_{j=1}^{m} \sum_{k \in K_j} \alpha_j \mu(B_k) \\
+        &= \sum_{j=1}^{m} \sum_{k \in K_j} \beta_k \mu(B_k) \\
+        &= \sum_{k=1}^{n} \beta_k \mu(B_k),
+    \end{align*}
+    pois
+    \[
+    \bigcup_{j=1}^{m} K_j = \{ 1, \dots, n \}.
+    \]
+\end{proof}

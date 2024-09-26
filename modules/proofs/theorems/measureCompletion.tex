@@ -1,0 +1,22 @@
+\begin{proof}
+    Denotemos por $\mathcal{N}$ a família de todos os conjuntos de medida nula.
+    \begin{equation*}
+        \mathcal{N}\coloneqq \{N\in\Sigma; \ \mu(N)=0\}.
+    \end{equation*}
+    
+    Agora vamos expandir a nossa \texorpdfstring{$\sigma$}{sigma}-álgebra original para incluir todos os subconjuntos de conjuntos de medida nula.
+    
+    \begin{equation*}
+        \overline{\Sigma}\coloneqq \left\{E\cup F; \ E\in \Sigma \text{ e } F\subset N\in\mathcal{N}\right\}.
+    \end{equation*} 
+    A ideia aqui é criar uma segunda função $\overline{\mu}:\overline{\Sigma}\rightarrow \left[0,+\infty\right]$ tal que $\overline{\mu}$ restrita a $\Sigma$ coincida com $\mu$, uma extensão da medida original. Como queremos que $\overline{\mu}$ seja uma medida, é preciso mostrar que $\overline{\Sigma}$ é uma \texorpdfstring{$\sigma$}{sigma}-álgebra (Passo XXX).
+
+    Como argumentamos anteriormente, para $\overline{\mu}$ ser extensão $\mu$, ela deve coincidir com o valor assumido por $\mu$ para conjuntos em $\Sigma$. Definiremos, então
+    \begin{equation*}
+    \overline{\mu}(E\cup F) = \mu(E) \text{ para todo } E\cup F \in \overline{\Sigma}.
+    \end{equation*}
+
+    Para que isso funcione, é preciso mostrar que a função está bem definida (Passo YYY). Também precisamos mostrar que $\overline{\mu}$ satisfaz a definição de medida (Passo ZZZ), além de mostrar que ela é a única extensão existente (Passo AAA).
+
+    Assim, mostramos que sempre podemos considerar um espaço de medida maior do que o original onde a nova medida será completa.
+\end{proof}

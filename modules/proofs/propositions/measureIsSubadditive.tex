@@ -1,0 +1,18 @@
+\begin{proof}
+    Vamos construir uma sequência disjunta $(F_n)$ a partir da sequência $(E_n)$ dada. Seja $F_1=E_1$ e defina
+    \begin{equation*}
+        F_k = E_k \setminus \left(\bigcup_{n=1}^{k-1} E_n\right).
+    \end{equation*}
+    Por construção, $F_i \cap F_j =\varnothing$ para quaisquer $i,j\in \N$ tais que $i\neq j$. Também temos que $F_n \subset E_n$ para todo $n\in \N$. Por último, notamos que
+    \begin{equation}\label{eq/proof/measure_subadditivity}
+        \bigcup_{n=1}^{\infty} E_n = \bigcup_{n=1}^{\infty} F_n \Longrightarrow \mu \left(\bigcup_{n=1}^{\infty} E_n\right) = \mu \left(\bigcup_{n=1}^{\infty} F_n\right).
+    \end{equation}
+    Como $(F_n)$ é disjunta e $\mu$ é aditiva contável, concluímos, a partir da Equação \eqref{eq/proof/measure_subadditivity} que
+    \begin{equation}\label{eq/proof/measure_monotonicity}
+        \mu \left(\bigcup_{n=1}^{\infty} E_n\right) = \mu \left(\bigcup_{n=1}^{\infty} F_n\right) = \sum_{n=1}^{\infty} \mu (F_n).
+    \end{equation}
+    Agora, aplicando o fato de que $F_n\subset E_n$ a Proposição \ref{prop:measure_is_monotonic}, temos que $\mu(F_n) \leq \mu(E_n)$ para todo $n\in N$. Assim, as séries também seguem esta desigualdade. Portanto, pela Equação \eqref{eq/proof/measure_monotonicity},
+    \begin{equation*}
+        \mu \left(\bigcup_{n=1}^{\infty} E_n\right) = \sum_{n=1}^{\infty} \mu (F_n)\leq \sum_{n=1}^{\infty} \mu (E_n).
+    \end{equation*}
+\end{proof}

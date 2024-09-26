@@ -1,0 +1,12 @@
+\begin{proof}
+    Note bem, estamos trabalhando com um número finito de espaços métricos, cuja $\sigma$-álgebra é gerada pelos abertos de cada conjunto. Assim, valem, as hipóteses do Corolário \ref{cor:product_sigma_algebra_of_countable_generated_families}. Com isso, ganhamos que a $\sigma$-álgebra produto de $X$ é gerada pelo produto de todos os abertos. 
+
+    \begin{equation*}
+        \mathcal{C}\coloneq \left\{\prod_{i=1}^{n} E_i; E_i \in \tau_i \right\} \Longrightarrow \generateSigmaAlg{\mathcal{C}} = \bigotimes_{i=1}^{n} \mathcal{B}(X_i)
+    \end{equation*}
+    
+    Por outro lado, cada produto de abertos é aberto na topologia produto (ver Proposição X) e, portanto, pertence a $\borel{X}$. Portanto, $\mathcal{C}\in\borel{X}$ e, pelo Lema \ref{lmm:sigma_algebra_generated_by_subset}, temos que
+    \begin{equation*}
+        \generateSigmaAlg{\mathcal{C}} = \bigotimes_{i=1}^{n} \mathcal{B}(X_i) \subseteq \borel{X}.
+    \end{equation*}
+\end{proof}

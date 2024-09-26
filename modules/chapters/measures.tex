@@ -13,6 +13,11 @@ Dessa forma, podemos resumir os conceitos mais importantes deste capítulo na se
     \item Construção de Medidas
 \end{enumerate}
 
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -21,9 +26,15 @@ Dessa forma, podemos resumir os conceitos mais importantes deste capítulo na se
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+
+
+
+
 \section{Espaços Mensuráveis}
 \subsection*{O que são \sigmaAlgs?}
-Como prometido, vamos definir o que são as \textbf{\sigmaAlgs}. Poderíamos passar o dia todo falando de estruturas algébricas que antecedem esta construção, mas, para os nossos fins, tudo o que precisamos saber é que uma \sigmaAlg de um conjunto é uma família de subconjuntos \textit{fechada pelas operações de complemento e união enumerável. Também pedimos que o conjunto todo pertença a esta família.} Veja a definição rigorosa abaixo.
+Como prometido, vamos definir o que são as \textbf{\sigmaAlgs}. Poderíamos passar o dia todo falando de estruturas algébricas que antecedem esta construção, mas, para os nossos fins, tudo o que precisamos saber é que uma \sigmaAlg de um conjunto é uma família de subconjuntos \textit{fechada pelas operações conjuntistas}, isto é, interseção, união e complemento de elementos dessa família ainda pertence a família. Veja a definição rigorosa abaixo.
 
 \sigmaAlgebra
 
@@ -98,6 +109,11 @@ Toda essa construção nos leva a um resultado importante.
 \subsection*{Revisitando os Resultados}
 Desta seção, podemos destacar algumas definições e resultados essenciais. Quanto a \nameref{def:sigma_algebra}, destacamos as operações pelas quais esta família é fechada: complemento, união enumerável, interseção enumerável. Além disso, lembramos da importância do conceito da \nameref{def:generated_sigma_algebra}, principalmente no que tange a definição da \nameref{def:borel_sigma_algebra}. Por fim, o resultado mais importante desta seção, a construção da \nameref{cor:product_sigma_algebra_of_Rn}, nos diz que os conjuntos mensuráveis de $\R^n$ são gerados pelo produto cartesiano de conjuntos mensuráveis de $\R$.
 
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -105,6 +121,11 @@ Desta seção, podemos destacar algumas definições e resultados essenciais. Qu
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 
 \section{Medidas}
 
@@ -161,10 +182,60 @@ Nesta última etapa do capítulo, vamos estudar formas de estender uma dada medi
 \subsection*{Revisitando os Resultados}
 Antes disso, vamos rever os principais conceitos sobre as medidas. Vimos que medidas são funções não negativas, monotônicas crescente, aditiva e subaditiva contaveis que satisfazem mais duas propriedades de continuidade. Em linhas gerais, estas medidas reproduzem a nossa intuição do que seria o tamanho de um conjunto. Também vimos que alguns conjuntos podem ter medida nula e que certos espaços de medida podem ser completos. O que vamos ver agora é como podemos estender as medidas para criar uma medida bem comportada.
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Seção 3 - Teoremas de Extensão
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
 \section{Teoremas de Extensão}
 \subsection*{Completamento de Medida}
 O nosso objetivo aqui vai ser partir de um espaço de medida ``ruim'' e estender a sua \sigmaAlg para que ela inclua todos os subconjuntos dos \nameref{def:null_set}. Claro, também precisaremos definir uma nova medida para o novo domínio. Essa função será uma extensão da primeira no sentido de que, quando ela estiver restrita a \sigmaAlg inicial, ela coincide com a primeira medida. Vejamos o teorema.
 
 \measureCompletion
+\subsection*{O Teorema de Extensão de Carathéodory}
+Os teoremas desta seção nos dão as ferramentas necessárias para construir medidas boas a partir de domínios que não são \sigmaAlgs. De fato, estas são as ferramentas que formalizam a construção da medida de Lebesgue.
+
+Começaremos definindo o que é uma medida exterior, uma função mais geral do que a medida que desejamos.
+
+\outerMeasure
+
+Note que $\mathcal{H}$ não é uma \sigmaAlg, ou seja, $\mu^{*}$ é uma \nameref{def:pre_measure}. Aqui, vamos criar uma nova noção de mensurabilidade.
+
+\measurableInOuterMeasure
+
+Com isso em mãos, podemos enunciar o seguinte teorema.
+
+\caratheodory
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Seção 4 - Construção de Medidas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 
 \section{Construção de Medidas}
+EM BREVE
