@@ -10,7 +10,6 @@ Dessa forma, podemos resumir os conceitos mais importantes deste capítulo na se
     \item Espaços Mensuráveis
     \item Medidas
     \item Teoremas de Extensão
-    \item Construção de Medidas
 \end{enumerate}
 
 
@@ -33,14 +32,16 @@ Dessa forma, podemos resumir os conceitos mais importantes deste capítulo na se
 
 
 \section{Espaços Mensuráveis}
-\subsection*{O que são \sigmaAlgs?}
+\subsection{O que são \sigmaAlgs?}
 Como prometido, vamos definir o que são as \textbf{\sigmaAlgs}. Poderíamos passar o dia todo falando de estruturas algébricas que antecedem esta construção, mas, para os nossos fins, tudo o que precisamos saber é que uma \sigmaAlg de um conjunto é uma família de subconjuntos \textit{fechada pelas operações conjuntistas}, isto é, interseção, união e complemento de elementos dessa família ainda pertence a família. Veja a definição rigorosa abaixo.
 
 \sigmaAlgebra
 
-Algumas propriedades que decorrem da \ref{def:sigma_algebra} são importantes, como, por exemplo, o fato de que as \sigmaAlgs são \textit{fechadas por interseção enumerável.} Para mostrar isso, basta aplicar as \nameref{thm:de_morgan}. Desse conjunto extenso de propriedades vindas da teoria dos conjuntos, precisamos de duas, que estão enunciadas abaixo.
+Dessa definição, já ganhamos o fechamento por união enumerável e complemento. O fato de que as \sigmaAlgs são \textit{fechadas por interseção enumerável} é provado a partir da Definição \ref{def:sigma_algebra}. Para mostrar isso, basta aplicar as \nameref{thm:de_morgan}. Desse conjunto extenso de propriedades vindas da teoria dos conjuntos, precisamos de duas, que estão enunciadas abaixo.
 
 \deMorgan
+
+\sigmaAlgebraIntersection
 
 \subsection*{Exemplos de \sigmaAlgs}
 Vamos ver vários exemplos de \sigmaAlgs. Pule se já estiver familiarizado com o assunto. No apêndice de exercícios resolvidos é provado que cada um destes exemplos é, de fato, uma \sigmaAlg.
@@ -49,14 +50,13 @@ Vamos ver vários exemplos de \sigmaAlgs. Pule se já estiver familiarizado com 
 \powerSetSigmaAlgebra
 \countableSetsSigmaAlgebra
 
-\subsection*{Como criar \sigmaAlgs?}
+\subsection{Como gerar \sigmaAlgs?}
 Para partir para problemas mais interessantes precisamos de uma forma de criar \sigmaAlgs. Fazemos isso com o conceito de \textbf{\sigmaAlg gerada por conjuntos.} Intuitivamente, esta será a menor $\sigma$-álgebra que contém os elementos. Formalizamos esta ideia com a definição abaixo.
 
 \generatedSigmaAlgebra
 
-A definição acima pode ser bem abstrata e difícil de trabalhar. Assim, introduziremos uma caracterização mais tangível. A fim de chegar nesta caracterização, provemos dois lemas.
+A definição acima pode ser bem abstrata e difícil de trabalhar. Assim, introduziremos uma caracterização mais tangível. A fim de chegar nesta caracterização, provemos o lema abaixo.
 
-\sigmaAlgebraIntersection
 \generatedSigmaAlgebraIsUnique
 
 Com esta ferramenta em mãos, vamos introduzir a \nameref{prop:generated_sigma_algebra_characterization}.
@@ -67,7 +67,7 @@ O resultado abaixo é bem direto, mas útil.
 
 \sigmaAlgebraGeneratedBySubset
 
-\subsection*{\sigmaAlgs de Borel}
+\subsection{\sigmaAlgs de Borel}
 Agora que temos uma ferramenta poderosa para criar \sigmaAlgs, vamos estudar o que acontece quando estudamos espaços com mais estrutura, como a reta. Lembre que o nosso objetivo é generalizar a ideia do que é uma ``medida'' ou ``volume'', portanto, é bastante natural estudar \sigmaAlgs em $\R$ e $\R^n$.
 
 \borelSigmaAlgebra
@@ -107,7 +107,7 @@ Toda essa construção nos leva a um resultado importante.
 \productSigmaAlgebraOfRn
 
 \subsection*{Revisitando os Resultados}
-Desta seção, podemos destacar algumas definições e resultados essenciais. Quanto a \nameref{def:sigma_algebra}, destacamos as operações pelas quais esta família é fechada: complemento, união enumerável, interseção enumerável. Além disso, lembramos da importância do conceito da \nameref{def:generated_sigma_algebra}, principalmente no que tange a definição da \nameref{def:borel_sigma_algebra}. Por fim, o resultado mais importante desta seção, a construção da \nameref{cor:product_sigma_algebra_of_Rn}, nos diz que os conjuntos mensuráveis de $\R^n$ são gerados pelo produto cartesiano de conjuntos mensuráveis de $\R$.
+Desta seção, podemos destacar algumas definições e resultados essenciais. Quanto a \nameref{def:sigma_algebra}, destacamos as operações pelas quais esta família é fechada: complemento, união enumerável, interseção enumerável. Além disso, lembramos da importância do conceito da \nameref{def:generated_sigma_algebra}, principalmente no que tange a definição da \nameref{def:borel_sigma_algebra}. Por fim, o resultado mais importante desta seção, a construção da \nameref{cor:product_sigma_algebra_of_Rn}, nos diz que a \nameref{def:borel_sigma_algebra} de $\R^n$ é o \nameref{def:cartesian_product} de $n$ \sigmaAlgs de Borel de $\R$.
 
 
 
@@ -129,7 +129,7 @@ Desta seção, podemos destacar algumas definições e resultados essenciais. Qu
 
 \section{Medidas}
 
-\subsection*{O que são medidas?}
+\subsection{O que são medidas?}
 Com a estrutura dos \nameref{def:measurable_space} em mãos, vamos construir os espaços de medida, isto é, aqueles conjuntos onde, além da noção de mensurabilidade, é possível atribuir um valor a um dado conjunto. Futuramente, isto nos permitirá atribuir um valor a uma função mensurável.
 
 Em linhas gerais, uma \textbf{medida} é uma \nameref{def:countably_additive_function} não negativa onde o domínio é uma \nameref{def:sigma_algebra}. Existe uma função mais fraca que esta, chamada de \textbf{pré-medida}. Observe as definições abaixo.
@@ -148,7 +148,7 @@ Vamos ver alguns exemplos de medidas que serão úteis mais tarde. Pule se estiv
 \countingMeasure
 \diracMeasure
 
-\subsection*{Propriedades das Medidas}
+\subsection{Propriedades das Medidas}
 
 As medidas obedecem a algumas propriedades naturais que serão úteis no futuro. Elas são naturais no sentido de que seguem uma lógica intuitiva como, por exemplo, um conjunto que contém outro possui uma medida maior que este. Estudemos estas propriedades.
 
@@ -160,7 +160,7 @@ Medidas têm $4$ propriedades importantes que serão enunciadas: medidas são fu
 \measureIsContinuousFromBelow
 \measureIsContinuousFromAbove
 
-\subsection*{Conjuntos de Medida Nula e Medidas Completas}
+\subsection{Conjuntos de Medida Nula e Medidas Completas}
 Na hora de trabalhar com integrais e espaços de funções, uma categoria bem particular de conjuntos costuma gerar problemas. Estes são os conjuntos de medida nula, aqueles com uma medida insignificante. Pense, por exemplo na medida de um único ponto na reta real. A fim de evitar problemas técnicos mais adiante, mostraremos que existe uma medida que lida com esses pontos problemáticos de uma forma melhor. Mais ainda, veremos que qualquer medida pode ser estendida de forma a evitar esses problemas técnicos.
 
 Vamos começar definindo o que é um conjunto de medida nula.
@@ -200,11 +200,11 @@ Antes disso, vamos rever os principais conceitos sobre as medidas. Vimos que med
 
 
 \section{Teoremas de Extensão}
-\subsection*{Completamento de Medida}
+\subsection{Teorema de Completamento de Medida}
 O nosso objetivo aqui vai ser partir de um espaço de medida ``ruim'' e estender a sua \sigmaAlg para que ela inclua todos os subconjuntos dos \nameref{def:null_set}. Claro, também precisaremos definir uma nova medida para o novo domínio. Essa função será uma extensão da primeira no sentido de que, quando ela estiver restrita a \sigmaAlg inicial, ela coincide com a primeira medida. Vejamos o teorema.
 
 \measureCompletion
-\subsection*{O Teorema de Extensão de Carathéodory}
+\subsection{Teorema de Extensão de Carathéodory}
 Os teoremas desta seção nos dão as ferramentas necessárias para construir medidas boas a partir de domínios que não são \sigmaAlgs. De fato, estas são as ferramentas que formalizam a construção da medida de Lebesgue.
 
 Começaremos definindo o que é uma medida exterior, uma função mais geral do que a medida que desejamos.
@@ -237,5 +237,5 @@ Com isso em mãos, podemos enunciar o seguinte teorema.
 
 
 
-\section{Construção de Medidas}
-EM BREVE
+%\section{Construção de Medidas}
+%EM BREVE

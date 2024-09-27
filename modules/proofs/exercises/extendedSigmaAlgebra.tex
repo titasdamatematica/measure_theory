@@ -1,0 +1,68 @@
+\begin{proof}
+    Vamos mostrar que $\overline{\Sigma}$ é fechado por união enumerável. Para tanto, provaremos que tanto $\Sigma$ quanto $\mathcal{N}$ são fechados por união enumerável. $\Sigma$ o é por definição, uma vez que é \sigmaAlg. Agora, vamos mostrar que $\mathcal{N}$ também é. 
+
+    Seja $(N_i)_{i=1}^{\infty}\subseteq \mathcal{N}$. Então, como \hyperref[prop:measure_is_subadditive]{a medida é subaditiva},
+
+    \begin{equation*}
+        \mu\left(\bigcup_{i=1}^{\infty} N_i\right) \leq \sum_{i=1}^{\infty} \mu(N_i) = 0.
+    \end{equation*}
+
+    Portanto, $\mathcal{N}$ é fechado por união enumerável. Assim, se tomarmos qualquer $(E_i\cup F_i)_{i=1}^{\infty}\subseteq \overline{\Sigma}$, onde $F_i\subset N_i$ com $N_i\in \mathcal{N}$ para todo $i\in\N$, temos
+
+    \begin{equation*}
+        \bigcup_{i=1}^{\infty} \left(E_i\cup F_i\right) = \left(\bigcup_{i=1}^{\infty} E_i\right) \cup \left(\bigcup_{i=1}^{\infty} F_i\right).
+    \end{equation*}
+
+    Note que
+
+    \begin{eqnarray*}
+        \bigcup_{i=1}^{\infty} E_i &\in& \Sigma\\
+        \bigcup_{i=1}^{\infty} F_i&\subseteq& \bigcup_{i=1}^{\infty} N_i \in \mathcal{N}.
+    \end{eqnarray*}
+
+    Logo, $\overline{\Sigma}$ é fechado por união enumerável.
+
+    Ainda precisamos mostrar que $\overline{\Sigma}$ é fechado pelo complemento. Fixe um $(E\cup F) = A \in \overline{\Sigma}$. Nessas condições, $E\in\Sigma$ e $F\subseteq N\in \mathcal{N}$. Vamos assumir que $E$ e $N$ são disjuntos. Se este não for o caso, basta reescrever $A$ substituindo $F$ por $F'=F\setminus E$ e $N$ por $N'=N\setminus E$. Note que $F'\subseteq N'\in \Sigma$ e 
+    
+    \begin{equation*}
+        A = E \cup F = E \cup ((F\cap E) \cup (F\setminus E)) = E \cup (F\setminus E)=E\cup F'.
+    \end{equation*}
+
+    Agora que sabemos que podemos tomar $(E\cup F)$ com $E$ e $N$ disjuntos, façamos
+
+    \begin{equation*}
+        E\cup F = (E\cup N) \cap (\complement(N) \cup F).
+    \end{equation*}
+
+    Vamos provar esta igualdade de conjuntos.Vale resstaltar que esta relação só vale quando $E$ e $N$ são disjuntos. De fato, se $x\in E\cup F$, então $x\in E$ ou $x\in F$. Por consequência, $x\in (E\cup N)$ e $x\in (F\cup \complement(N))$. Assim, $x\in (E\cup N) \cap (\complement(N) \cup F)$. Portanto,
+
+    \begin{equation}\label{pf:extended_sigma_algebra:eq:1}
+        E\cup F \subseteq (E\cup N) \cap (\complement(N) \cup F).
+    \end{equation}
+
+    Para mostrar a igualdade, tomamos agora um $x \in (E\cup N) \cap (\complement(N) \cup F)$, isto é, $x \in (E\cup N)$ e $x \in (\complement(N) \cup F)$. Logo, pela primeira relação, $x\in E$ ou $x\in N$ e, pela segunda, $x\in F$ ou $x\in \complement(N)$. Note que $x$ só pode pertencer a $N$ ou $\complement(N)$ pois eles são disjuntos. Da mesma forma, $x$ só pode pertencer a $E$ ou a $N$ pois eles são disjuntos por hipótese. Se $x\in N$, então $x\not\in \complement(N)$. Como $x\in(\complement(N) \cup F)$, temos que $x\in F$. Por outro lado, se $x\in\complement(N)$, então $x\not\in N$. Como $x\in(E\cup N)$, temos que $x\in E$. Portanto,
+
+    \begin{equation}\label{pf:extended_sigma_algebra:eq:2}
+        E\cup F \supseteq (E\cup N) \cap (\complement(N) \cup F).
+    \end{equation}
+
+    Juntando \ref{pf:extended_sigma_algebra:eq:1} e \ref{pf:extended_sigma_algebra:eq:2}, temos que
+
+    \begin{equation*}
+        E\cup F = (E\cup N) \cap (\complement(N) \cup F).
+    \end{equation*}
+
+    Mostrada esta igualdade, retomemos o nosso objetivo de mostrar que $\overline{\Sigma}$ é fechado pelo complemento. Com o que fizemos anteriomente, e aplicando o \nameref{thm:de_morgan}, podemos ver que, para qualquer $E\cup F\in\overline{\Sigma}$, é tal que,
+
+    \begin{eqnarray*}
+        \complement(E\cup F) 
+        &=& \complement\left((E\cup N) \cap (\complement(N) \cup F)\right)\\
+        &=& \complement(E\cup N) \cup \complement(\complement(N) \cup F)\\
+        &=& \complement(E\cup N) \cup N \cap \complement(F)\\
+        &=& \complement(E\cup N) \cup (N \setminus F).\\
+    \end{eqnarray*}
+
+    Note que, como $\Sigma$ é fechado para as operações conjuntistas, $\complement(E\cup N)\in\Sigma$ e $(N \setminus F)\subset N$. Logo, $\complement(E\cup F) \in\overline{\Sigma}$.
+    
+    Concluimos, por fim, que $\overline{\Sigma}$ é uma \nameref{def:sigma_algebra}.
+\end{proof}

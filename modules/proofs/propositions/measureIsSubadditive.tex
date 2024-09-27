@@ -7,11 +7,11 @@
     \begin{equation}\label{eq/proof/measure_subadditivity}
         \bigcup_{n=1}^{\infty} E_n = \bigcup_{n=1}^{\infty} F_n \Longrightarrow \mu \left(\bigcup_{n=1}^{\infty} E_n\right) = \mu \left(\bigcup_{n=1}^{\infty} F_n\right).
     \end{equation}
-    Como $(F_n)$ é disjunta e $\mu$ é aditiva contável, concluímos, a partir da Equação \eqref{eq/proof/measure_subadditivity} que
+    Como $(F_n)$ é disjunta e $\mu$ é \nameref{def:countably_additive_function}, concluímos, a partir da Equação \eqref{eq/proof/measure_subadditivity} que
     \begin{equation}\label{eq/proof/measure_monotonicity}
         \mu \left(\bigcup_{n=1}^{\infty} E_n\right) = \mu \left(\bigcup_{n=1}^{\infty} F_n\right) = \sum_{n=1}^{\infty} \mu (F_n).
     \end{equation}
-    Agora, aplicando o fato de que $F_n\subset E_n$ a Proposição \ref{prop:measure_is_monotonic}, temos que $\mu(F_n) \leq \mu(E_n)$ para todo $n\in N$. Assim, as séries também seguem esta desigualdade. Portanto, pela Equação \eqref{eq/proof/measure_monotonicity},
+    Agora, aplicando o fato de que $F_n\subset E_n$ \hyperref[prop:measure_is_monotonic]{medida é uma função monotônica}, temos que $\mu(F_n) \leq \mu(E_n)$ para todo $n\in N$. Assim, as séries também seguem esta desigualdade. Portanto, pela Equação \eqref{eq/proof/measure_monotonicity},
     \begin{equation*}
         \mu \left(\bigcup_{n=1}^{\infty} E_n\right) = \sum_{n=1}^{\infty} \mu (F_n)\leq \sum_{n=1}^{\infty} \mu (E_n).
     \end{equation*}

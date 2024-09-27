@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  26 SEP 2024 12:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  27 SEP 2024 17:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -784,37 +784,30 @@ File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \c@tcb@cnt@theorem=\count462
 ) (config/settings.tex
 Package hyperref Info: Option `colorlinks' set `true' on input line 27.
-) (config/commands.tex) (config/title.tex) (modules/definitions.tex) (modules/theorems.tex) (modules/examples.tex) (modules/remarks.tex)
+) (config/commands.tex) (config/title.tex) (modules/definitions.tex) (modules/theorems.tex) (modules/examples.tex) (modules/remarks.tex) (modules/exercises.tex)
 \@quotelevel=\count463
 \@quotereset=\count464
- (main.aux
-
-LaTeX Warning: Label `prop:function_is_integrable_iff_absolute_value_is' multiply defined.
-
-
-LaTeX Warning: Label `cor:dominated_function_is_integrable' multiply defined.
-
-)
+ (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (C:\Users\pedro\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
@@ -828,8 +821,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 16.
-Package biblatex Info: Reference segment=0 on input line 16.
+Package biblatex Info: Reference section=0 on input line 17.
+Package biblatex Info: Reference segment=0 on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -884,7 +877,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\pedro\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 16.
+Package hyperref Info: Link coloring ON on input line 17.
  (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -932,17 +925,17 @@ Chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.42 
+l.41 
       [1
 
-]
+] (modules/proofs/lemmas/sigmaAlgebraIntersection.tex)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.54 
-      [2] (modules/proofs/lemmas/sigmaAlgebraIntersection.tex) (modules/proofs/lemmas/generatedSigmaAlgebraIsUnique.tex) (modules/proofs/propositions/generatedSigmaAlgebraCharacterization.tex
+l.52 
+      [2] (modules/proofs/lemmas/generatedSigmaAlgebraIsUnique.tex) (modules/proofs/propositions/generatedSigmaAlgebraCharacterization.tex
 
 [3]) (modules/proofs/lemmas/sigmaAlgebraGeneratedBySubset.tex)
 
@@ -987,13 +980,13 @@ Overfull \hbox (0.23048pt too wide) in paragraph at lines 2--3
 
 [15]
 
-[16]
+[16
+
+]
 Chapter 2.
 (modules/proofs/propositions/measurableFunctionsAndSigmaAlgebrasGeneratedBySet.tex
 
-[17
-
-]) (modules/proofs/corollaries/measurableFunctionsInR.tex) (modules/proofs/corollaries/measurableFunctionsInRExtend.tex
+[17]) (modules/proofs/corollaries/measurableFunctionsInR.tex) (modules/proofs/corollaries/measurableFunctionsInRExtend.tex
 
 [18]) (modules/proofs/propositions/measurableFunctionsOperations.tex
 
@@ -1009,32 +1002,32 @@ Chapter 2.
 
 [24])
 
-[25] (modules/proofs/lemmas/integralInequalities.tex) (modules/proofs/propositions/functionIsIntegrableIffAbsoluteValueIs.tex
+[25] (modules/proofs/lemmas/integralInequalities.tex)
 
-[26]) (modules/proofs/corollaries/dominatedFunctionIsIntegrable.tex) (modules/proofs/theorems/MCT.tex
-
-[27]
+[26] (modules/proofs/theorems/MCT.tex
 Overfull \hbox (2.07307pt too wide) in paragraph at lines 24--25
 []\OT1/cmr/m/n/12 A ideia ^^Se mostrar que, para toda fun^^Xc~ao sim-ples $\OML/cmm/m/it/12 ' \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 f$\OT1/cmr/m/n/12 , ter-e-mos $[][] \OML/cmm/m/it/12 ' \OMS/cmsy/m/n/12 ^^T []\OT1/cmr/m/n/12 ([][] \OML/cmm/m/it/12 f[]d^^V\OT1/cmr/m/n/12 )$.
  []
 
 
 
-[28]) (modules/proofs/lemmas/fatou.tex
+[27]
 
-[29]) (modules/proofs/propositions/functionIsIntegrableIffAbsoluteValueIs.tex) (modules/proofs/corollaries/dominatedFunctionIsIntegrable.tex) (modules/proofs/theorems/DCT.tex
+[28]) (modules/proofs/lemmas/fatou.tex) (modules/proofs/propositions/functionIsIntegrableIffAbsoluteValueIs.tex
 
-[30]
+[29]) (modules/proofs/corollaries/dominatedFunctionIsIntegrable.tex) (modules/proofs/theorems/DCT.tex
 
-[31])) (modules/chapters/lpSpaces.tex
+[30])) (modules/chapters/lpSpaces.tex
 
-[32]
+[31]
+
+[32
+
+]
 Chapter 3.
 )
 
-[33
-
-]
+[33]
 
 [34
 
@@ -1050,35 +1043,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[36])
+[36]) (modules/appendices/exercises.tex
 
-[37] (main.aux)
+[37]
+
+[38
+
+] (modules/proofs/exercises/extendedSigmaAlgebra.tex
+
+[39]))
+
+[40] (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9D1E4CBE783286EBA0D70F722A4C5D06;2004.
+(rerunfilecheck)             Checksum: C596B11DEAF0D6AB4379218B15DE40DE;5280.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33120 strings out of 473898
- 661292 string characters out of 5726480
- 1944960 words of memory out of 5000000
- 55241 multiletter control sequences out of 15000+600000
+ 33177 strings out of 473898
+ 662564 string characters out of 5726480
+ 1945960 words of memory out of 5000000
+ 55275 multiletter control sequences out of 15000+600000
  574169 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,14n,104p,956b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\pedro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (43 pages, 370230 bytes).
+Output written on main.pdf (46 pages, 390808 bytes).
 PDF statistics:
- 614 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 718 PDF objects out of 1000 (max. 8388607)
+ 191 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 
