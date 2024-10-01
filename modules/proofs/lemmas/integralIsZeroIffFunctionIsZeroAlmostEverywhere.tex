@@ -1,0 +1,16 @@
+\begin{proof}
+    Suponha que $\int_X \abs{f} \, d\mu = 0$. Defina $E_n = \{x \in X : f(x) > \frac{1}{n} \}$. Como $f \geq \frac{1}{n} \chi_{E_n}$, temos
+    \[
+    0 = \int_X \abs{f} \, d\mu \geq \frac{1}{n} \mu(E_n) \geq 0.
+    \]
+    Logo, $\mu(E_n) = 0$ para todo $n \in \mathbb{N}$ e, portanto, 
+    \[
+    \mu(\{ x \in X : f(x) > 0 \}) = \mu\left( \bigcup_{n=1}^{\infty} E_n \right) = 0.
+    \]
+    Portanto, $f = 0$ $\mu$-qtp.
+
+    Reciprocamente, se $f = 0$ ($\mu$-qtp), então $|f| = 0$ ($\mu$-qtp) e, por consequência, 
+    \[
+    \int_X f \, d\mu = \int_X \abs{f} \, d\mu = 0.
+    \]
+\end{proof}

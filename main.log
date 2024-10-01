@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  27 SEP 2024 17:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  1 OCT 2024 11:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -939,54 +939,49 @@ l.52
 
 [3]) (modules/proofs/lemmas/sigmaAlgebraGeneratedBySubset.tex)
 
-[4] (modules/proofs/propositions/productSigmaAlgebraOfCountableFamily.tex) (modules/proofs/propositions/productSigmaAlgebraOfFamiliesGeneratedBySet.tex
+[4] (modules/proofs/propositions/productSigmaAlgebraOfCountableFamily.tex
 
-[5]) (modules/proofs/corollaries/productSigmaAlgebraOfCountableGeneratedFamilies.tex) (modules/proofs/propositions/productSigmaAlgebraOfMetricSpaces.tex
+[5]) (modules/proofs/propositions/productSigmaAlgebraOfFamiliesGeneratedBySet.tex
 
-[6]
-Overfull \hbox (7.22102pt too wide) in paragraph at lines 8--9
-[]\OT1/cmr/m/n/12 Por outro lado, cada pro-duto de aber-tos ^^Se aberto na topolo-gia pro-duto (ver Proposi^^Xc~ao
- []
+[6]) (modules/proofs/corollaries/productSigmaAlgebraOfCountableGeneratedFamilies.tex) (modules/proofs/propositions/productSigmaAlgebraOfMetricSpaces.tex
 
-) (modules/proofs/corollaries/productSigmaAlgebraOfSeparableMetricSpaces.tex) (modules/proofs/corollaries/productSigmaAlgebraOfRn.tex
+[7]) (modules/proofs/corollaries/productSigmaAlgebraOfSeparableMetricSpaces.tex) (modules/proofs/corollaries/productSigmaAlgebraOfRn.tex)
 
-[7])
-
-[8] (modules/proofs/propositions/measureIsMonotonic.tex) (modules/proofs/corollaries/measureOfDiffenrece.tex
-
-[9]) (modules/proofs/propositions/measureIsSubadditive.tex) (modules/proofs/propositions/measureIsContinuousFromBelow.tex
-
-[10]) (modules/proofs/propositions/measureIsContinuousFromAbove.tex
-
-[11])
-
-[12] (modules/proofs/theorems/measureCompletion.tex
-
-[13])
-LaTeX Font Info:    Trying to load font information for U+euf on input line 220.
- (C:\Users\pedro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) (modules/proofs/theorems/caratheodory.tex
+[8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[14]
+[9] (modules/proofs/propositions/measureIsMonotonic.tex) (modules/proofs/corollaries/measureOfDiffenrece.tex
+
+[10]) (modules/proofs/propositions/measureIsSubadditive.tex) (modules/proofs/propositions/measureIsContinuousFromBelow.tex
+
+[11]) (modules/proofs/propositions/measureIsContinuousFromAbove.tex)
+
+[12]
+
+[13] (modules/proofs/theorems/measureCompletion.tex
+
+[14])
+LaTeX Font Info:    Trying to load font information for U+euf on input line 220.
+ (C:\Users\pedro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) (modules/proofs/theorems/caratheodory.tex
 Overfull \hbox (0.23048pt too wide) in paragraph at lines 2--3
 []\OT1/cmr/m/n/12 Para demon-strar o teo-rema, pre-cisamos mostrar v^^Sarios re-sul-ta-dos. Aqui
  []
 
-)) (modules/chapters/integration.tex
 
-[15]
 
-[16
+[15])) (modules/chapters/integration.tex
 
-]
+[16]
 Chapter 2.
 (modules/proofs/propositions/measurableFunctionsAndSigmaAlgebrasGeneratedBySet.tex
 
-[17]) (modules/proofs/corollaries/measurableFunctionsInR.tex) (modules/proofs/corollaries/measurableFunctionsInRExtend.tex
+[17
+
+]) (modules/proofs/corollaries/measurableFunctionsInR.tex) (modules/proofs/corollaries/measurableFunctionsInRExtend.tex
 
 [18]) (modules/proofs/propositions/measurableFunctionsOperations.tex
 
@@ -1002,80 +997,112 @@ Chapter 2.
 
 [24])
 
-[25] (modules/proofs/lemmas/integralInequalities.tex)
+[25] (modules/proofs/lemmas/integralInequalities.tex) (modules/proofs/propositions/integralOfNonNegativeFunctionIsLinear.tex
+Overfull \hbox (0.55211pt too wide) detected at line 10
+[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 d^^V \OT1/cmr/m/n/12 = [] [][](\OML/cmm/m/it/12 '[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12  []\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 d^^V \OT1/cmr/m/n/12 = [] [] = [][] \OML/cmm/m/it/12 f d^^V \OT1/cmr/m/n/12 + [][] \OML/cmm/m/it/12 g d^^V:
+ []
 
-[26] (modules/proofs/theorems/MCT.tex
+
+
+[26]) (modules/proofs/theorems/MCT.tex
+
+[27]
 Overfull \hbox (2.07307pt too wide) in paragraph at lines 24--25
 []\OT1/cmr/m/n/12 A ideia ^^Se mostrar que, para toda fun^^Xc~ao sim-ples $\OML/cmm/m/it/12 ' \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 f$\OT1/cmr/m/n/12 , ter-e-mos $[][] \OML/cmm/m/it/12 ' \OMS/cmsy/m/n/12 ^^T []\OT1/cmr/m/n/12 ([][] \OML/cmm/m/it/12 f[]d^^V\OT1/cmr/m/n/12 )$.
  []
 
 
 
-[27]
+[28]) (modules/proofs/lemmas/fatou.tex
 
-[28]) (modules/proofs/lemmas/fatou.tex) (modules/proofs/propositions/functionIsIntegrableIffAbsoluteValueIs.tex
+[29]) (modules/proofs/lemmas/integralIsZeroIffFunctionIsZeroAlmostEverywhere.tex) (modules/proofs/propositions/functionIsIntegrableIffAbsoluteValueIs.tex
 
-[29]) (modules/proofs/corollaries/dominatedFunctionIsIntegrable.tex) (modules/proofs/theorems/DCT.tex
+[30]) (modules/proofs/propositions/integralIsLinear.tex
 
-[30])) (modules/chapters/lpSpaces.tex
+[31]) (modules/proofs/corollaries/dominatedFunctionIsIntegrable.tex) (modules/proofs/theorems/DCT.tex
 
-[31]
+[32]
 
-[32
+[33]) (modules/proofs/theorems/DCTAlmostEverywhere.tex)) (modules/chapters/lpSpaces.tex
 
-]
+[34]
 Chapter 3.
 )
 
-[33]
+[35
 
-[34
+]
+
+[36
 
 ] (modules/appendices/definitions.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[35
+[37
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[36]) (modules/appendices/exercises.tex
+[38]) (modules/appendices/theorems.tex
 
-[37]
+[39]
 
-[38
+[40
+
+]) (modules/appendices/exercises.tex
+
+[41]
+
+[42
 
 ] (modules/proofs/exercises/extendedSigmaAlgebra.tex
 
-[39]))
+[43]) (modules/proofs/exercises/muIsWellDefined.tex
 
-[40] (main.aux)
+[44]) (modules/proofs/exercises/muIsMeasure.tex
+
+[45]) (modules/proofs/exercises/muIsUnique.tex) (modules/proofs/exercises/productOfSetsThatGenerateSigmaAlgebra.tex
+
+[46]) (modules/proofs/exercises/preimageOnCountableFamilyOfSets.tex
+
+[47]) (modules/proofs/exercises/sigmaAlgebraGeneratedByCountableTopologicalBasis.tex) (modules/proofs/exercises/mIsSigmaRing.tex
+Overfull \hbox (26.45148pt too wide) detected at line 18
+\OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )[]) \OMS/cmsy/m/n/12 ^^U \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )[])\OML/cmm/m/it/12 ;
+ []
+
+
+
+[48]
+
+[49]))
+
+[50] (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C596B11DEAF0D6AB4379218B15DE40DE;5280.
+(rerunfilecheck)             Checksum: E33926FEE46D0319F00529AD4ECC5F08;5505.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33177 strings out of 473898
- 662564 string characters out of 5726480
+ 33362 strings out of 473898
+ 668987 string characters out of 5726480
  1945960 words of memory out of 5000000
- 55275 multiletter control sequences out of 15000+600000
- 574169 words of font info for 98 fonts, out of 8000000 for 9000
+ 55388 multiletter control sequences out of 15000+600000
+ 575671 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,14n,104p,956b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\pedro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (46 pages, 390808 bytes).
+Output written on main.pdf (56 pages, 450729 bytes).
 PDF statistics:
- 718 PDF objects out of 1000 (max. 8388607)
- 191 named destinations out of 1000 (max. 500000)
- 245 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 880 PDF objects out of 1000 (max. 8388607)
+ 234 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
 

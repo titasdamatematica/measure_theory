@@ -1,21 +1,33 @@
 \begin{proof}
-    Vamos denotar por $\mathcal{F}$ a família de conjuntos do enunciado. Considere $\mathcal{C}$ a família como na Definição \ref{def:product_sigma_algebra}. Pretendemos mostrar que  $\generateSigmaAlg{\mathcal{C}}=\generateSigmaAlg{\mathcal{F}}$. Uma forma natural de chegar nesse resultado é mostrar que $\generateSigmaAlg{\mathcal{C}}\subseteq\generateSigmaAlg{\mathcal{F}}$ e $\generateSigmaAlg{\mathcal{F}}\subseteq\generateSigmaAlg{\mathcal{C}}$.
+    Vamos denotar por $\mathcal{F}$ a família de conjuntos do enunciado. Considere $\mathcal{C}$ a família como na Definição \ref{def:product_sigma_algebra}. Assim,
+    \begin{eqnarray*}
+        \mathcal{F} &\coloneq& \left\{\prod_{i\in I} E_i; E_i\in \Sigma_i\right\}\\
+        \mathcal{C} &\coloneq& \left\{\pi_i^{-1}(E_i); E_i\in \Sigma_i, i\in I\right\}
+    \end{eqnarray*}
     
-    Por um lado, podemos mostrar (ver Exercício X) que
+    Pretendemos mostrar que  $\bigotimes_{i\in I} \Sigma_i=\generateSigmaAlg{\mathcal{C}}=\generateSigmaAlg{\mathcal{F}}$. Uma forma natural de chegar nesse resultado é mostrar que $\generateSigmaAlg{\mathcal{C}}\subseteq\generateSigmaAlg{\mathcal{F}}$ e $\generateSigmaAlg{\mathcal{F}}\subseteq\generateSigmaAlg{\mathcal{C}}$.
+    
+    Por um lado, dado $\prod_{i\in I} E_i\in \mathcal{F}$, podemos mostrar (ver Exercício \ref{exe:product_of_sets_that_generate_sigma_algebra}) que
     
     \begin{equation*}
-        \prod_{i\in I} E_i = \bigcap_{i\in I} \pi_{i}^{-1} E_i.
+        \prod_{i\in I} E_i = \bigcap_{i\in I} \pi_{i}^{-1} (E_i).
     \end{equation*}
     
-    Usando o Lema \ref{lmm:sigma_algebra_intersection}, mostramos que $\bigcap_{i\in I} \pi_{i}^{-1} (E_i) \in \generateSigmaAlg{\mathcal{C}}$. Com isso, concluímos que $\mathcal{F} \subseteq \generateSigmaAlg{\mathcal{C}}$ e, pelo Lema \ref{lmm:sigma_algebra_generated_by_subset}, $\generateSigmaAlg{\mathcal{F}}=\generateSigmaAlg{\mathcal{C}}$.
+    Como a interseção de conjuntos mensuráveis é mensurável, então $\bigcap_{i\in I} \pi_{i}^{-1} (E_i) \in \generateSigmaAlg{\mathcal{C}}$. Por consequência, $\prod_{i\in I} E_i\in \generateSigmaAlg{\mathcal{C}}$. Com isso, concluímos que $\mathcal{F} \subseteq \generateSigmaAlg{\mathcal{C}}$ e, pelo Lema \ref{lmm:sigma_algebra_generated_by_subset}, $\generateSigmaAlg{\mathcal{F}}=\generateSigmaAlg{\mathcal{C}}$.
     
-    Resta mostrar a segunda inclusão. Usaremos a mesma ideia. Para tanto, precisamos mostrar (ver Exercício Y) que, para todo $E_i\in\Sigma_i$ onde $i\in I$,
+    Resta mostrar a segunda inclusão. Usaremos a mesma ideia. Para tanto, precisamos mostrar (ver Exercício \ref{exe:preimage_on_countable_family_of_sets}) que, para todo $E_i\in\Sigma_i$ onde $i\in I$,
     
     \begin{eqnarray*}
         \pi_{i}^{-1} (E_i) 
-        &=& X_1 \times \dots \times E_i \times\dots \\
-        &=& \prod_{j\in I} E_j, \quad j\neq i \Rightarrow E_j=X_j.
+        &=& X_1 \times X_2 \times \dots \times X_{i-1} \times E_i \times X_{i+1}\times\dots \\
+        &=& \prod_{j\in I} E_j, \text{onde } j\neq i \Rightarrow E_j=X_j.
     \end{eqnarray*}
     
-    Sabemos que cada $X_j\in\Sigma_j$ pela definição de $\sigma$-álgebra e $E_i\in\Sigma_i$ por hipótese. Logo, $\pi_{i}^{-1} (E_i) \in \mathcal{F} \subset \generateSigmaAlg{\mathcal{F}}$. Usamos o Lema \ref{lmm:sigma_algebra_generated_by_subset} mais uma vez para concluir que $\generateSigmaAlg{\mathcal{C}}\subseteq\generateSigmaAlg{\mathcal{F}}$.
+    Sabemos que cada $X_j\in\Sigma_j$ pela definição de $\sigma$-álgebra e $E_i\in\Sigma_i$ por hipótese. Assim, temos que todo elemento $\pi_{i}^{-1} (E_i)\in \mathcal{C}$ pertence também a $\mathcal{F}$. Logo, $\pi_{i}^{-1} (E_i) \in \mathcal{F} \subset \generateSigmaAlg{\mathcal{F}}$. Isso nos permite concluir que $\mathcal{C} \subseteq \generateSigmaAlg{\mathcal{F}}$. Usamos o Lema \ref{lmm:sigma_algebra_generated_by_subset} mais uma vez para concluir que $\generateSigmaAlg{\mathcal{C}}\subseteq\generateSigmaAlg{\mathcal{F}}$.
+
+    Podemos, por fim, concluir que $\generateSigmaAlg{\mathcal{C}}=\generateSigmaAlg{\mathcal{F}}$, isto é, 
+
+    \begin{equation*}
+        \bigotimes_{i\in I} \Sigma_i=\generateSigmaAlg{\mathcal{C}}=\generateSigmaAlg{\mathcal{F}}=\generateSigmaAlg{\left\{\prod_{i\in I} E_i; E_i\in \Sigma_i\right\}}.
+    \end{equation*}
 \end{proof}

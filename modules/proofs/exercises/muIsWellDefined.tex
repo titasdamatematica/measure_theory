@@ -1,0 +1,25 @@
+\begin{proof}
+    Sejam $N_0,M_0\in\mathcal{N}$. Suponha que $E_1 \cup F_1 = E_2 \cup F_2$, com $E_1, E_2 \in \Sigma$ e $F_1\subset N_0$, $F_2\subset M_0$. Mostraremos que $\overline{\mu}(E_1 \cup F_1) = \overline{\mu}(E_2 \cup F_2)$, ou seja, $\mu(E_1) = \mu(E_2)$.
+
+    Por construção, temos
+    \begin{equation*}
+        E_1 \subseteq E_1 \cup F_1 = E_2 \cup F_2 \subseteq E_2 \cup M_0.
+    \end{equation*}
+
+    Assim, como a medida é \hyperref[prop:measure_is_monotonic]{monotônica} e \hyperref[prop:measure_is_subadditive]{subaditiva},
+    \begin{equation*}
+        \mu(E_1) \leq \mu(E_2 \cup M_0) \leq \mu(E_2) + \mu(M_0) = \mu(E_2).
+    \end{equation*}
+
+    Analogamente, temos 
+    \begin{equation*}
+        E_2 \subseteq E_2 \cup F_2 = E_1 \cup F_1 \subseteq E_1 \cup N_0,
+    \end{equation*}
+    
+    o que implica que
+    \begin{equation*}
+        \mu(E_2) \leq \mu(E_1 \cup N_0) \leq \mu(E_1) + \mu(N_0) = \mu(E_1).
+    \end{equation*}
+
+    Portanto, $\mu(E_1) = \mu(E_2)$, e assim $\overline{\mu}$ está bem definida.
+\end{proof}

@@ -12,3 +12,63 @@
     \end{exercise}
     \input{modules/proofs/exercises/extendedSigmaAlgebra.tex}
 }
+
+\newcommand{\muIsWellDefined}{
+    \begin{exercise}{\texorpdfstring{$\overline{\mu}$}{mu} está bem definida}{mu_is_well_defined}
+        Nas condições do Teorema \ref{thm:measure_completion}, mostre que
+        \begin{equation*}
+            \overline{\mu}(E\cup F)\coloneqq \mu(E) \text{ para todo } E\cup F \in \overline{\Sigma}
+        \end{equation*}
+        está bem definida.
+
+    \end{exercise}
+    \input{modules/proofs/exercises/muIsWellDefined.tex}
+}
+
+\newcommand{\muIsMeasure}{
+    \begin{exercise}{\texorpdfstring{$\overline{\mu}$}{mu} é medida}{mu_is_measure}
+        Nas condições do Teorema \ref{thm:measure_completion}, mostre que $\overline{\mu}$ é uma medida.
+    \end{exercise}
+    \input{modules/proofs/exercises/muIsMeasure.tex}
+}
+
+\newcommand{\muIsUnique}{
+    \begin{exercise}{\texorpdfstring{$\overline{\mu}$}{mu} é única}{mu_is_unique}
+        Nas condições do Teorema \ref{thm:measure_completion}, mostre que $\overline{\mu}$ é a única medida que estende $\mu$ a uma medida completa.
+    \end{exercise}
+    \input{modules/proofs/exercises/muIsUnique.tex}
+}
+
+\newcommand{\productOfSetsThatGenerateSigmaAlgebra}{
+    \begin{exercise}{\texorpdfstring{$\prod_{i\in I} E_i = \bigcap_{i\in I} \pi_{i}^{-1} (E_i)$}{Produto de E é interseção de projeções}}{product_of_sets_that_generate_sigma_algebra}
+        Nas condições da Proposição \ref{prop:product_sigma_algebra_of_countable_family}, temos que, para cada $i\in \mathcal{I}$, $E_i$ é um elemento da família que gera $\Sigma_i$. Mostre que
+        \begin{equation*}
+            \prod_{i\in I} E_i = \bigcap_{i\in I} \pi_{i}^{-1} (E_i).
+        \end{equation*}
+    \end{exercise}
+    \input{modules/proofs/exercises/productOfSetsThatGenerateSigmaAlgebra.tex}
+}
+
+\newcommand{\preimageOnCountableFamilyOfSets}{ 
+    \begin{exercise}{\texorpdfstring{$ \pi_{i}^{-1} (E_i) =\prod_{j\in I} E_j, \text{onde } j\neq i \Rightarrow E_j=X_j$}{pré-imagem de E é produto}}{preimage_on_countable_family_of_sets}
+        Nas condições da Proposição \ref{prop:product_sigma_algebra_of_countable_family}, temos que $\mathcal{I}$ é uma família enumerável. Mostre que
+        \begin{equation*}
+            \pi_{i}^{-1} (E_i) =\prod_{j\in I} E_j, \text{onde } j\neq i \Rightarrow E_j=X_j.
+        \end{equation*}
+    \end{exercise}
+    \input{modules/proofs/exercises/preimageOnCountableFamilyOfSets.tex}
+}
+
+\newcommand{\sigmaAlgebraGeneratedByCountableTopologicalBasis}{ 
+    \begin{exercise}{A \sigmaAlg gerada por uma base topológica}{sigma_algebra_generated_by_countable_topological_basis}
+        Seja $(X,\tau)$ um \nameref{def:topological_space} tal que $\tau$ admite base enumerável, $\mathcal{C}$. Então $\borel{\tau}=\borel{\mathcal{C}}$. Em particular, o resultado vale para espaços separáveis.
+    \end{exercise}
+    \input{modules/proofs/exercises/sigmaAlgebraGeneratedByCountableTopologicalBasis.tex}
+}
+
+\newcommand{\mIsSigmaRing}{
+    \begin{exercise}{\texorpdfstring{$\mathfrak{M}$}{m} é \texorpdfstring{$\sigma$}{sigma}-anel}{m_is_sigma_ring}
+        Nas condições do Teorema \ref{thm:caratheodory}, mostre que $\mathfrak{M}$ é $\sigma$-anel.
+    \end{exercise}
+    \input{modules/proofs/exercises/mIsSigmaRing.tex}
+}

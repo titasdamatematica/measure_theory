@@ -72,6 +72,16 @@
     \end{definition}
 }
 
+\newcommand{\productTopology}{
+    \begin{definition}{Topologia Produto}{product_topology}
+        Seja $\{(X_i,\tau_i)\}_{i\in I}$ uma família de \nameref{def:topological_space} indexada por $I$. Considere a família
+        \begin{equation*}
+            \mathcal{C}\coloneqq \left\{\pi_i^{-1}(U); U\in \tau_i, i\in I\right\}.
+        \end{equation*}
+        Chamamos de \textbf{topologia produto} em $\Pi_{i_\in I} X_i$ a topologia cuja base é $\mathcal{C}$. Denotaremos esta topologia por $\Pi_{i_\in I}\tau_i$.
+    \end{definition}
+}
+
 \newcommand{\borelSigmaAlgebra}{
     \begin{definition}{\texorpdfstring{$\sigma$}{sigma}-álgebra de Borel}{borel_sigma_algebra}
         Seja $(X,\tau)$ um \nameref{def:topological_space}. Então $\mathcal{B}(X)=\sigma [\tau]$ é a \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebra de Borel}. Os elementos de $\mathcal{B}(X)$ são chamados de \textbf{boreleanos}.
@@ -103,7 +113,7 @@
         \begin{equation*}
             \mathcal{C}\coloneqq \left\{\pi_i^{-1}(E_i); E_i\in \Sigma_i, i\in I\right\}.
         \end{equation*}
-        Chamamos $\mathcal{C}$ de \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebra produto} em $\Pi_{i_\in I} X_i$. Denotaremos esta $\sigma$-álgebra por $\bigotimes_{i\in I} \Sigma_i$.
+        Chamamos $\generateSigmaAlg{\mathcal{C}}$ de \textbf{\texorpdfstring{$\sigma$}{sigma}-álgebra produto} em $\Pi_{i_\in I} X_i$. Denotaremos esta $\sigma$-álgebra por $\bigotimes_{i\in I} \Sigma_i$.
     \end{definition}
 }
 
@@ -247,10 +257,10 @@
 }
 
 \newcommand{\lebesgueIntegral}{
-    \begin{definition}{Integral de Lebesgue de Função Positiva}{lebesgue_integral}
+    \begin{definition}{Integral de Lebesgue}{lebesgue_integral}
         A integral de uma função mensurável pode ser definida para funções na classe 
     \begin{equation*}
-        L(X,\Sigma, \mu) = \{f \in M(X,\Sigma); \ f^{+}\text{ e } f^{-} \text{ são mensuráveis}\}.
+        \mathcal{L}_1(X,\Sigma, \mu) = \left\{f \in M(X,\Sigma); \ \int f^{+} d\mu \text{ e } \int f^{-} d\mu \text{ são limitadas}\right\}.
     \end{equation*}
     A integral de $f$ é então dada por:
     \begin{equation*}
@@ -265,5 +275,15 @@
     \begin{equation*}
         \int_E f \, d\mu = \int_X f\chi_E \, d\mu.
     \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\basisOfRExtend}{
+    \begin{definition}{Base de $\Rextend$}{basis_of_r_extend}
+        Seja $\tau$ a família dos abertos da topologia usual de $\R$. Então,
+        a topologia de $\Rextend$ é a topologia gerada pela família
+        \begin{equation*}
+            \mathcal{C}=\tau \cup \left\{ [-\infty,a ); a\in\R \right\} \cup \left\{ (a,\infty ]; a\in\R \right\}.
+        \end{equation*}
     \end{definition}
 }

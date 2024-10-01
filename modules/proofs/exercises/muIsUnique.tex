@@ -1,0 +1,15 @@
+\begin{proof}
+    Sejam $\overline{\nu}$ e $\overline{\mu}$ extensões de $\mu$ como no Teorema \ref{thm:measure_completion}. 
+
+    Para todo $E\cup F\in \overline{\Sigma}$, temos pela \hyperref[prop:measure_is_monotonic]{monotonicidade} e \hyperref[prop:measure_is_subadditive]{subaditividadde} da medida,
+    \begin{equation*}
+        \overline{\nu}(E\cup F) \leq \overline{\nu}(E) + \overline{\nu}(F) = \overline{\nu}(E) = \mu(E) = \overline{\mu}(E)\leq \overline{\mu}(E\cup F).
+    \end{equation*}
+
+    Analogamente, temos 
+    \begin{equation*}
+        \overline{\mu}(E\cup F) \leq \overline{\mu}(E) + \overline{\mu}(F) = \overline{\mu}(E) = \mu(E) = \overline{\nu}(E) \leq \overline{\nu}(E\cup F).
+    \end{equation*}
+
+    Portanto, $\overline{\nu}(E\cup F) = \overline{\mu}(E\cup F)$, e assim $\overline{\mu}$ é única.
+\end{proof}

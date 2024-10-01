@@ -1,0 +1,87 @@
+\begin{proof}
+    Precisamos provar que $\mathfrak{M}$ é fechado para a união enumerável e para a diferença de conjuntos.
+
+    \begin{claim}{.}{1}
+        $\mathfrak{M}$ é fechado para a união de conjuntos.
+    \end{claim}
+    \textbf{Demonstração da afirmação \ref{clm:1}:} Se $E_1, E_2 \in \mathfrak{M}$, então $E_1 \cup E_2 \in \mathfrak{M}$. Seja dado $A \in \mathcal{H}$. Usando o fato de que $E_1$ e $E_2$ são $\mu^*$-mensuráveis, obtemos:
+    \begin{equation*}
+        \mu^*(A) = \mu^*(A \cap E_1) + \mu^*(A \cap E_1^c) = \mu^*(A \cap E_1) + \mu^*(A \cap E_1^c \cap E_2) + \mu^*(A \cap E_1^c \cap E_2^c),
+    \end{equation*}
+    pois $A \cap (E_1 \cup E_2) = (A \cap E_1) \cup (A \cap E_1^c \cap E_2)$ e portanto:
+    \begin{equation*}
+        \mu^*(A \cap (E_1 \cup E_2)) \leq \mu^*(A \cap E_1) + \mu^*(A \cap E_1^c \cap E_2).
+    \end{equation*}
+    Das expressões acima, temos:
+    \begin{equation*}
+        \mu^*(A) = \mu^*(A \cap E_1) + \mu^*(A \cap E_1^c \cap E_2) + \mu^*(A \cap (E_1 \cup E_2)^c) \geq \mu^*(A \cap (E_1 \cup E_2)) + \mu^*(A \cap (E_1 \cup E_2)^c),
+    \end{equation*}
+    o que prova que $E_1 \cup E_2 \in \mathfrak{M}$.
+
+    Agora, vamos mostrar que $\mathfrak{M}$ é fechado para a diferença de conjuntos.
+
+    \begin{claim}{.}{4}
+        $\mathfrak{M}$ é fechado para a diferença de conjuntos.
+    \end{claim}
+    \textbf{Demonstração da afirmação \ref{clm:4}:} Primeiramente consideraremos o caso em que um conjunto está contido no outro. Mostraremos que, se $E_1, E_2 \in \mathfrak{M}$ e $E_1 \subset E_2$, então $E_2 \setminus E_1 \in \mathfrak{M}$. Seja dado $A \in \mathcal{H}$. Evidentemente:
+    \begin{equation*}
+        \mu^*(A \cap (E_2 \setminus E_1)) = \mu^*(A \cap E_2 \cap E_1^c);
+    \end{equation*}
+    Como $E_1 \subset E_2$, temos $E_2 \setminus E_1 = E_1^c \cap E_2$, e portanto:
+    \begin{equation*}
+        \mu^*(A \cap (E_2 \setminus E_1)^c) = \mu^*((A \cap E_1) \cup (A \cap E_2^c)) \leq \mu^*(A \cap E_1) + \mu^*(A \cap E_2^c).
+    \end{equation*}
+    Somando as duas expressões acima, obtemos:
+    \begin{equation*}
+        \mu^*(A \cap (E_2 \setminus E_1)) + \mu^*(A \cap (E_2 \setminus E_1)^c) \leq \mu^*(A \cap E_1) + \mu^*(A \cap E_1^c \cap E_2) + \mu^*(A \cap E_2^c) = \mu^*(A),
+    \end{equation*}
+    o que prova que $E_2 \setminus E_1 \in \mathfrak{M}$.
+    
+    Agora, considere $E_1, E_2 \in \mathfrak{M}$ quaisquer. Pela Afirmação \ref{clm:1} anterior, sabemos que $\mathfrak{M}$ é fechado pela união, ou seja, $E_1 \cup E_2 \in \mathfrak{M}$. Portanto, pelo que acabamos de provar, temos que $E_2 \setminus E_1 \in \mathfrak{M}$.
+
+    \begin{claim}{.}{2}
+        Se $E_1, E_2 \in \mathfrak{M}$, $A \in \mathcal{H}$ e $E_1 \cap E_2 = \emptyset$, então:
+        \begin{equation*}
+            \mu^*(A \cap (E_1 \cup E_2)) = \mu^*(A \cap E_1) + \mu^*(A \cap E_2).
+        \end{equation*}
+    \end{claim}
+    \textbf{Demonstração da afirmação \ref{clm:2}:} Como $A \cap (E_1 \cup E_2) \in \mathcal{H}$ e $E_1 \in \mathfrak{M}$, temos:
+    \begin{equation*}
+        \mu^*(A \cap (E_1 \cup E_2)) = \mu^*(A \cap (E_1 \cup E_2) \cap E_1) + \mu^*(A \cap (E_1 \cup E_2) \cap E_1^c).
+    \end{equation*}
+    Como $E_1 \cap E_2 = \emptyset$, a última igualdade implica que:
+    \begin{equation*}
+        \mu^*(A \cap (E_1 \cup E_2)) = \mu^*(A \cap E_1) + \mu^*(A \cap E_2),
+    \end{equation*}
+    onde usamos o fato de que $E_1 \cap E_2 = \emptyset$.
+    
+
+    \begin{claim}{.}{6}
+        Se $(E_k)_{k \geq 1}$ é uma sequência de elementos dois a dois disjuntos de $\mathfrak{M}$, então $\bigcup_{k=1}^{\infty} E_k \in \mathfrak{M}$.
+    \end{claim}
+    \textbf{Demonstração da afirmação \ref{clm:6}:} Usando indução e as Afirmações \ref{clm:1} e \ref{clm:2}, obtemos que $\bigcup_{k=1}^{t} E_k \in \mathfrak{M}$:
+    \begin{equation*}
+        \mu^*(A \cap \bigcup_{k=1}^{t} E_k) = \sum_{k=1}^{t} \mu^*(A \cap E_k),
+    \end{equation*}
+    para todo $A \in \mathcal{H}$ e todo $t \geq 1$; daí:
+    \begin{equation*}
+        \mu^*(A) = \mu^*(A \cap \bigcup_{k=1}^{t} E_k) + \mu^*(A \cap (\bigcup_{k=1}^{t} E_k)^c) = \left(\sum_{k=1}^{t} \mu^*(A \cap E_k)\right) + \mu^*(A \cap (\bigcup_{k=1}^{t} E_k)^c).
+    \end{equation*}
+    Como $A \cap (\bigcup_{k=1}^{t} E_k)^c \supseteq A \cap (\bigcup_{k=1}^{\infty} E_k)^c$, temos:
+    \begin{equation*}
+        \mu^*(A) \geq \left(\sum_{k=1}^{\infty} \mu^*(A \cap E_k)\right) + \mu^*(A \cap (\bigcup_{k=1}^{\infty} E_k)^c),
+    \end{equation*}
+    fazendo $t \to \infty$:
+    \begin{equation*}
+        \mu^*(A) \geq \mu^*(A \cap \bigcup_{k=1}^{\infty} E_k) + \mu^*(A \cap (\bigcup_{k=1}^{\infty} E_k)^c) \geq \mu^*(A),
+    \end{equation*}
+    provando que $\bigcup_{k=1}^{\infty} E_k \in \mathfrak{M}$.
+    
+
+    \begin{claim}{.}{7}
+        $\mathfrak{M}$ é fechado para a união enumerável.
+    \end{claim}
+    \textbf{Demonstração da afirmação \ref{clm:7}:} Se $(E_k)_{k\geq 1}$ é uma sequência em $\mathfrak{M}$, então $\bigcup_{k=1}^{\infty} E_k \in \mathfrak{M}$. Para cada $k \geq 1$, seja $F_k = E_k \setminus \bigcup_{i=0}^{k-1} E_i$, onde $E_0 = \emptyset$. Segue das Afirmações \ref{clm:1} e \ref{clm:4} que $F_k \in \mathfrak{M}$, para todo $k \geq 1$. Além disso, os conjuntos $(F_k)_{k\geq 1}$ são dois a dois disjuntos, e $\bigcup_{k=1}^{\infty} E_k = \bigcup_{k=1}^{\infty} F_k$. Segue então da Afirmação \ref{clm:6} que $\bigcup_{k=1}^{\infty} E_k \in \mathfrak{M}$.
+
+    Assim, mostramos que $\mathfrak{M}$ é fechado para a união enumerável (Afirmação \ref{clm:7}) e para a diferença de conjuntos (Afirmação \ref{clm:4}), o que prova que $\mathfrak{M}$ é um $\sigma$-anel.
+\end{proof}

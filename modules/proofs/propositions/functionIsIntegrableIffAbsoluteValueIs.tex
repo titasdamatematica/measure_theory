@@ -1,3 +1,24 @@
 \begin{proof}
-    
+    Comecemos supondo que $f$ é integrável. Sabemos que $\abs{f}=f^{+}+f^{-}$. Neste caso, a parte positiva de $\abs{f}$, denotada por $\abs{f}^{+}$ é a própria soma de funções mensuráveis $f^{+}+f^{-}$. Por outro lado, a parte negativa, $\abs{f}^{-}=0$, pois a função é não negativa. Pelo Lema \ref{lmm:integral_is_zero_iff_function_is_zero_almost_everywhere}, temos que 
+    \begin{equation*}
+        \int \abs{f}^{-} d\mu = 0 < +\infty.
+    \end{equation*}
+    Ademais, pela Proposição \ref{prop:integral_of_non_negative_function_is_linear},
+    \begin{equation*}
+        \int \abs{f}^{+} d\mu = \int f^{+}+f^{-} d\mu = \int f^{+} d\mu + \int f^{-} d\mu.
+    \end{equation*}
+    Como, pela Definição \ref{def:lebesgue_integral},
+    \begin{equation*}
+        \int f^{+} d\mu <+\infty \quad \text{e}\quad  \int f^{-} d\mu < +\infty, \text{ então} \int \abs{f}^{+} d\mu < +\infty.
+    \end{equation*}
+    concluimos que $\abs{f}$ é integrável e
+    \begin{equation*}
+        \int \abs{f} d\mu = \int \abs{f}^{+} d\mu + \int \abs{f}^{-} d\mu = \int f^{+} d\mu + \int f^{-} d\mu.
+    \end{equation*}
+    Reciprocamente, se $\abs{f}$ é integrável, então $f^{+}$ e $f^{-}$ são integráveis. Portanto, $f$ é integrável.
+
+    Mostrado isso, podemos concluir, pela desigualdade triangular, que
+    \begin{equation*}
+        \abs{\int f d\mu} = \abs{\int f^{+} - f^{-} d\mu} \leq \abs{\int f^{+} d\mu} + \abs{\int f^{-} d\mu} = \int f^{+} d\mu + \int f^{-} d\mu = \int \abs{f} d\mu.
+    \end{equation*}
 \end{proof}

@@ -1,7 +1,7 @@
 \begin{proof}
     Para demonstrar o teorema, precisamos mostrar vários resultados. Aqui serão apresentadas as ideias gerais. Você poderá seguir até o Apêndice para conferir a demonstração passo a passo.
     
-    Para mostrar o item \ref{teo:caratheodory/item/sigma_anel}, precisamos provar que $\mathfrak{M}$ é fechado para a união enumerável e para a diferença de conjuntos (ver em AAA).
+    Para mostrar o item \ref{teo:caratheodory/item/sigma_anel}, precisamos provar que $\mathfrak{M}$ é fechado para a união enumerável e para a diferença de conjuntos (Exercício \ref{exe:m_is_sigma_ring}).
     
     A fim de verificar o item \ref{teo:caratheodory/item/aditiva_contavel}, podemos usar indução para mostrar que, para algum $t\in\N$,
     
@@ -22,5 +22,19 @@
     \end{equation*}
     Chegamos no resultado desejado substituindo $A$ por $A\cap\left(\bigcup_{n=1}^{\infty} E_n\right)$.
     
-    Os últimos dois itens são mais simples. Verifique a demonstração passo a passo em BBB.
+    Os últimos dois itens são mais simples.
+
+    Para mostrar o Item \ref{teo:caratheodory/item/sigma_aditiva}, tome $A=\bigcup_{k=1}^{\infty} E_k$ e aplique no Item \ref{teo:caratheodory/item/aditiva_contavel}. Temos, então
+
+    \begin{equation*}
+        \mu^{*}\left(A\cap \bigcup_{n=1}^{\infty} E_n \right) = \mu^{*}\left(\bigcup_{n=1}^{\infty} E_n \right) = \sum_{n=1}^{\infty} \mu^{*}\left(E_n\right).
+    \end{equation*}
+
+    Para mostrar o Item \ref{teo:caratheodory/item/medida_mula}, tome um conjunto $E\in\mathcal{H}$ de medida nula e um outro $A\in\mathcal{H}$ qualquer. Pela \hyperref[prop:measure_is_monotonic]{monotonicidade} da medida,
+
+    \begin{equation*}
+        \mu^*(A\cap E) + \mu^*(A\cap \complement E) \leq \mu^*(E) + \mu^*(A) = \mu^*(A).
+    \end{equation*}
+
+    Logo, $E$ é $\mu^*$-mensurável.
     \end{proof}

@@ -1,0 +1,23 @@
+\begin{proof}
+    Precisamos mostrar que $\overline{\mu}$ satisfaz a definição de medida. Para tanto, basta verificar que $\overline{\mu}(\varnothing)=0$ e que $\overline{\mu}$ é \nameref{def:countably_additive_function}. Note que a função já é positiva por construção, pois $\overline{\mu}(E\cup F)=\mu(E)\geq 0$ para todo $E\cup F\in\overline{\Sigma}$
+
+    Note que $\varnothing\in\Sigma$ e $\varnothing\subset\varnothing\in\mathcal{N}$. Logo, $\varnothing=\varnothing\cup\varnothing\in\overline{\Sigma}$. Portanto, $\overline{\mu}(\varnothing)=\mu(\varnothing)=0$. Agora, só nos resta provar a segunda propriedade.
+
+    Vamos mostrar que $\overline{\mu}$ é \nameref{def:countably_additive_function}. Tome uma sequência disjunta $(E_n\cup F_n)_{n=1}^{\infty}\subseteq \overline{\Sigma}$. Também vamos impor a condição de $E_n$ e $N_n$ serem disjuntos, como no Exercício \ref{exe:extended_sigma_algebra}. Assim,
+
+    \begin{equation*}
+        \bigcup_{n=1}^{\infty} \left(E_n\cup F_n\right) = \left(\bigcup_{n=1}^{\infty}E_n\right) \cup \left(\bigcup_{n=1}^{\infty}F_n\right).
+    \end{equation*}
+
+    Aplicando este resultado a $\overline{\mu}$, temos,
+
+    \begin{eqnarray*}
+        \overline{\mu}\left(\bigcup_{n=1}^{\infty} \left(E_n\cup F_n\right)\right)
+        &=& \overline{\mu}\left(\left(\bigcup_{n=1}^{\infty}E_n\right) \cup \left(\bigcup_{n=1}^{\infty}F_n\right)\right)\\
+        &=& \mu\left(\bigcup_{n=1}^{\infty}E_n\right) (\text{pela definição de } \overline{\mu})\\
+        &=& \sum_{n=1}^{\infty} \mu(E_n)\\
+        &=& \sum_{n=1}^{\infty} \overline{\mu}(E_n\cup F_n).
+    \end{eqnarray*}
+
+    Portanto, $\overline{\mu}$ é \nameref{def:countably_additive_function}. Em conclusão, $\overline{\mu}$ é uma medida.
+\end{proof}

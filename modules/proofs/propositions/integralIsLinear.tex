@@ -1,0 +1,33 @@
+\begin{proof}
+    Se $\lambda = 0$, o resultado é claro. Se $\lambda > 0$, então
+    \[
+    (\lambda f)^+ = \lambda f^+ \quad \text{e} \quad (\lambda f)^- = \lambda f^-.
+    \]
+    Logo,
+    \[
+    \begin{aligned}
+        \int (\lambda f)^+ \, d\mu &= \int \lambda f^+ \, d\mu = \lambda \int f^+ \, d\mu < \infty, \\
+        \int (\lambda f)^- \, d\mu &= \int \lambda f^- \, d\mu = \lambda \int f^- \, d\mu < \infty,
+    \end{aligned}
+    \]
+    e portanto $\lambda f$ é integrável, com
+    \[
+    \int \lambda f \, d\mu = \int (\lambda f)^+ \, d\mu - \int (\lambda f)^- \, d\mu = \lambda \int f^+ \, d\mu - \lambda \int f^- \, d\mu = \lambda \int f \, d\mu.
+    \]
+
+    Agora, se $f, g \in L_1(X, \Sigma, \mu)$, então $|f|, |g| \in L_1(X, \Sigma, \mu)$. Note que $|f + g| \leq |f| + |g|$ e portanto
+    \[
+    \int (|f| + |g|) \, d\mu < \infty.
+    \]
+    Logo $f + g \in L_1(X, \Sigma, \mu)$ e daí $f + g \in L_1(X, \Sigma, \mu)$. Como
+    \[
+    f + g = (f^+ - f^-) + (g^+ - g^-) = (f^+ + g^+) - (f^- + g^-),
+    \]
+    segue da Observação 1.8.3 que
+    \begin{eqnarray*}
+        \int (f + g) \, d\mu &=& \int (f^+ + g^+) \, d\mu - \int (f^- + g^-) \, d\mu\\
+        &=& \int f^+ \, d\mu + \int g^+ \, d\mu - \int f^- \, d\mu - \int g^- \, d\mu \\
+        &=& \int f \, d\mu + \int g \, d\mu.
+    \end{eqnarray*}
+    
+\end{proof}

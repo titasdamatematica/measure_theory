@@ -1,0 +1,21 @@
+\begin{proof}
+    
+    Pela definição de \nameref{def:cartesian_product} aplicada ao conjunto descrito no enunciado, temos
+    \begin{equation*}
+        \prod_{i \in \mathcal{I}} E_i = \left\{f:\mathcal{I}\rightarrow \bigcup_{i \in \mathcal{I}} E_i; f(i)\in E_i \text{ e } \forall j\neq i \in \mathcal{I}, f(j)\in X_j\right\}.
+    \end{equation*}
+
+    Olhemos para o lado direito da equação. Fixado um $i\in\mathcal{I}$, a pré-imagem de uma \nameref{def:projection} é dada por
+    \begin{equation*}
+        \pi_{i}^{-1}(E_i) = \left\{f\in \prod_{j\in\mathcal{I}}E_j; f(i)\in E_i\right\}.
+    \end{equation*}
+    Observe que $\pi_{i}^{-1}(E_i)$ é, por definição, um subconjunto do produto cartesiano dos $E_i$. Seja $f\in\pi_{i}^{-1}(E_i)$. Então, $f(i)\in E_i$ e, para qualquer $j\neq i$, $f(j)\in X_j$ pela definição de \nameref{def:cartesian_product}. Portanto, $f\in \prod_{i \in \mathcal{I}} E_i$ e já temos um dos lados da igualdade que procuramos, $\pi_{i}^{-1}(E_i)\subseteq \prod_{i \in \mathcal{I}} E_i$.
+
+    Para mostrar a outra relação de continência, tome uma $f\in \prod_{i \in \mathcal{I}} E_i$. Vamos tentar mostrar que $f\in \pi_{i}^{-1}(E_i)$. Note bem, $f$ já satisfaz a propriedade de que $f(i)=E_i$. Portanto, $f\in \pi_{i}^{-1}(E_i)$ e $\pi_{i}^{-1}(E_i)\supseteq \prod_{i \in \mathcal{I}} E_i$.
+    
+    Concluimos, então, que 
+
+    \begin{equation*}
+        \pi_{i}^{-1}(E_i) = \prod_{i \in \mathcal{I}} E_i.
+    \end{equation*}
+\end{proof}

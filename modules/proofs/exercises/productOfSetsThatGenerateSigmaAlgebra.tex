@@ -1,0 +1,33 @@
+\begin{proof}
+    Pela Definição de \nameref{def:cartesian_product},
+    \begin{equation*}
+        \prod_{i \in \mathcal{I}} E_i = \left\{f:\mathcal{I}\rightarrow \bigcup_{i \in \mathcal{I}} E_i; \forall i \in \mathcal{I}, f(i)\in E_i \right\}.
+    \end{equation*}
+
+    Olhemos para o lado esquerdo da equação. Fixado um $i\in\mathcal{I}$, a pré-imagem de uma \nameref{def:projection} é dada por
+    \begin{equation*}
+        \pi_{i}^{-1}(E_i) = \left\{f\in \prod_{i\in\mathcal{I}}E_i; f(i)\in E_i\right\}.
+    \end{equation*}
+    Assim,
+    \begin{equation*}
+        \bigcap_{i \in \mathcal{I}} \pi_{i}^{-1}(E_i) = \left\{f\in \prod_{i\in\mathcal{I}}E_i; \forall i \in \mathcal{I},f(i)\in E_i\right\}.
+    \end{equation*}
+
+    Por definição, todo $f\in \bigcap_{i \in \mathcal{I}} \pi_{i}^{-1}(E_i)$ também pertence a $\prod_{i \in \mathcal{I}} E_i$, logo,
+
+    \begin{equation*}
+        \prod_{i \in \mathcal{I}} E_i \supseteq \bigcap_{i \in \mathcal{I}} \pi_{i}^{-1}(E_i). 
+    \end{equation*}
+
+    Por outro lado, qualquer $f\in \bigcap_{i \in \mathcal{I}} \pi_{i}^{-1}(E_i)$ é uma função $f:\mathcal{I}\rightarrow \bigcup_{i\in\mathcal{I}} E_i$ tal que, para todo $i\in\mathcal{I}$, $f(i)\in E_i$. Logo,
+
+    \begin{equation*}
+        \prod_{i \in \mathcal{I}} E_i \subseteq \bigcap_{i \in \mathcal{I}} \pi_{i}^{-1}(E_i). 
+    \end{equation*}
+
+    Portanto, 
+
+    \begin{equation*}
+        \prod_{i \in \mathcal{I}} E_i = \bigcap_{i \in \mathcal{I}} \pi_{i}^{-1}(E_i). 
+    \end{equation*}
+\end{proof}

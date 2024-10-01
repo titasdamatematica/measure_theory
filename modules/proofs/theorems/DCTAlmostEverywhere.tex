@@ -1,0 +1,24 @@
+\begin{proof}
+    Seja $N_0 \in \Sigma$ tal que $\mu(N_0) = 0$ e $f(x) = \lim_{n \to \infty} f_n(x)$ para todo $x \in X \setminus N_0$. Defina $N_n \in \Sigma$ com $\mu(N_n) = 0$ tal que $|f_n(x)| \leq |g(x)|$ para todo $x \in X \setminus N_n$.
+
+    Defina $N = \bigcup_{n=0}^{\infty} N_n$. Então, $\mu(N) = 0$ e temos que $f(x) = \lim_{n \to \infty} f_n(x)$ para todo $x \in X \setminus N$ e $|f_n(x)| \leq |g(x)|$ para todo $x \in X \setminus N$.
+
+    Se $A = X \setminus N$, então pelo \nameref{thm:dct}, $f|_A$ é integrável e
+    \[
+    \int_A f \, d\mu = \lim_{n \to \infty} \int_A f_n \, d\mu.
+    \]
+
+    Como
+    \[
+    f = f|_A + \chi_N \cdot f \quad \text{(logo $f$ é integrável)} \quad \text{e} \quad f_n = f_n|_A + \chi_N \cdot f_n \quad \text{para todo $n$},
+    \]
+    pelo Lema \ref{lmm:integral_is_zero_iff_function_is_zero_almost_everywhere}, temos que
+    \[
+    \int_X f_n \, d\mu = \int_A f_n \, d\mu \quad \text{e} \quad \int_X f \, d\mu = \int_A f \, d\mu.
+    \]
+
+    Logo,
+    \[
+    \int_X f \, d\mu = \lim_{n \to \infty} \int_X f_n \, d\mu.
+    \]
+\end{proof}

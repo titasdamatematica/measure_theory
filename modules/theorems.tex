@@ -193,7 +193,7 @@
         \begin{equation*}\label{teo:caratheodory/item/aditiva_contavel}
             \mu^{*}\left(A\cap \bigcup_{n=1}^{\infty} E_n \right) = \sum_{n=1}^{\infty} \mu^{*}\left(A\cap E_n\right).
         \end{equation*}
-        \item A restrição de $\mu^{*}$ a $\mathfrak{M}$ é uma medida \texorpdfstring{$\sigma$}{sigma}-aditiva.\label{teo:caratheodory/item/sigma_aditiva}
+        \item A restrição de $\mu^{*}$ a $\mathfrak{M}$ é \nameref{def:countably_additive_function}, uma medida.\label{teo:caratheodory/item/sigma_aditiva}
         \item Se $E\in\mathcal{H}$ é tal que $\mu^{*}(E)=0$ então $E\in\mathfrak{M}$.\label{teo:caratheodory/item/medida_mula}
     \end{enumerate}
     \end{theorem}
@@ -244,12 +244,22 @@
 \newcommand{\fatou}{
     \begin{lemma}{Lema de Fatou}{fatou}
         Seja $(f_n)\subset M^{+}(X,\Sigma)$. Então,
-    \begin{equation}
+    \begin{equation*}
         \int_{X} \left(\liminf_{n\rightarrow \infty} f_n\right) \ d\mu \leq \liminf_{n\rightarrow \infty} \left( 
  \int_{X} f_n \ d\mu\right).
-    \end{equation}
+    \end{equation*}
     \end{lemma}
     \input{modules/proofs/lemmas/fatou.tex}
+}
+
+\newcommand{\integralIsZeroIffFunctionIsZeroAlmostEverywhere}{
+    \begin{lemma}{Integral de funções nulas quase sempre}{integral_is_zero_iff_function_is_zero_almost_everywhere}
+        Seja $(X,\Sigma,\mu)$ um \nameref{def:measure_space} e $f\in L$. Então,
+        \begin{equation*}
+            \int_{X} \abs{f} \ d\mu = 0 \Longleftrightarrow f = 0 (\mu\text{-qtp}).
+        \end{equation*}
+    \end{lemma}
+    \input{modules/proofs/lemmas/integralIsZeroIffFunctionIsZeroAlmostEverywhere.tex}
 }
 
 
@@ -322,6 +332,28 @@
     \input{modules/proofs/propositions/integralOfSimpleFunctionIsLinear.tex}
 }
 
+\newcommand{\integralOfNonNegativeFunctionIsLinear}{
+    \begin{proposition}{Linearidade da integral de funções não negativas}{integral_of_non_negative_function_is_linear}
+        Sejam $f,g \in M^{+}(X,\Sigma)$ e $\lambda \geq 0$. Então
+    \begin{enumerate}
+        \item $\int_{X} \ \lambda f \ d\mu = \lambda \int_{X} \ f \ d\mu$.
+        \item $\int_{X} \ f + g \ d\mu = \int_{X} \ f \ d\mu + \int_{X} \ g \ d\mu$
+    \end{enumerate}
+    \end{proposition}
+    \input{modules/proofs/propositions/integralOfNonNegativeFunctionIsLinear.tex}
+}
+
+\newcommand{\integralIsLinear}{
+    \begin{proposition}{Linearidade da integral de Lebesgue}{integral_is_linear}
+        Sejam $f,g \in M(X,\Sigma)$ e $\lambda \geq 0$. Então
+    \begin{enumerate}
+        \item $\int_{X} \ \lambda f \ d\mu = \lambda \int_{X} \ f \ d\mu$.
+        \item $\int_{X} \ f + g \ d\mu = \int_{X} \ f \ d\mu + \int_{X} \ g \ d\mu$
+    \end{enumerate}
+    \end{proposition}
+    \input{modules/proofs/propositions/integralIsLinear.tex}
+}
+
 \newcommand{\functionIsIntegrableIffAbsoluteValueIs}{
     \begin{proposition}{Condição para integrabilidade}{function_is_integrable_iff_absolute_value_is}
         Uma função $f \in L$ se, e somente se, $|f| \in L$. Neste caso,
@@ -392,16 +424,30 @@
 
 \newcommand{\DCT}{
     \begin{theorem}{Teorema da Convergência Dominada}{dct}
-        Sejam $(f_n)\subset L$ e $f\in M(X,\Sigma)$ tais que
+        Sejam $(f_n)_{n=1}^{\infty}\subset L$ e $f\in M(X,\Sigma)$ tais que
+    \begin{equation*}
+        \lim_{n\rightarrow \infty} f_n (x) = f(x).
+    \end{equation*}
+    Se existe $g\in L$ tal que $|f_n| \leq g$ para todo $n$, então $f\in L$ e
+    \begin{equation*}
+        \int_X f d\mu = \lim_{n\rightarrow \infty} \int_X f_n d\mu.
+    \end{equation*}
+    \end{theorem}
+    \input{modules/proofs/theorems/DCT.tex}
+}
+
+\newcommand{\DCTAlmostEverywhere}{
+    \begin{theorem}{Teorema da Convergência Dominada (\texorpdfstring{$\mu$}{mu}-qtp)}{dct_ae}
+        Sejam $(f_n)_{n=1}^{\infty}\subset L$ e $f\in M(X,\Sigma)$ tais que
     \begin{equation*}
         \lim_{n\rightarrow \infty} f_n (x) = f(x) \ (\mu\text{-qtp}).
     \end{equation*}
-    Se existe $g\in L$ tal que $|f_n| \leq g$ para todo $n$, então $f\in L$ e
-    \begin{equation}
+    Se existe $g\in L$ tal que $|f_n| \leq \abs{g}$ ($\mu$-qtp) para todo $n$, então $f\in L$ e
+    \begin{equation*}
         \int_X f d\mu = \lim_{n\rightarrow \infty} \int_X f_n d\mu.
-    \end{equation}
+    \end{equation*}
     \end{theorem}
-    \input{modules/proofs/theorems/DCT.tex}
+    \input{modules/proofs/theorems/DCTAlmostEverywhere.tex}
 }
 
 
@@ -418,11 +464,44 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % appendix lemmas
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\newcommand{\basisOfR}{
+    \begin{proposition}{Bases de $\R$}{basis_of_r}
+        Os conjuntos abaixo são bases para $\R$.
+        \begin{enumerate}
+            \item $C_1 = \{(a,b) : a,b \in \mathbb{R}\}$,
+            \item $C_2 = \{[a,b] : a,b \in \mathbb{R}\}$,
+            \item $C_3 = \{[a,b) : a,b \in \mathbb{R}\}$,
+            \item $C_4 = \{(a,b] : a,b \in \mathbb{R}\}$,
+            \item $C_5 = \{(a,\infty) : a \in \mathbb{R}\}$,
+            \item $C_6 = \{(\infty,a) : a \in \mathbb{R}\}$,
+            \item $C_7 = \{[a,\infty) : a \in \mathbb{R}\}$,
+            \item $C_8 = \{(\infty,a] : a \in \mathbb{R}\}$.
+        \end{enumerate}
+    \end{proposition}
+}
+
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % appendix propositions
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\newcommand{\finiteProductOfOpenSetsIsOpen}{
+    \begin{proposition}{O produto cartesiano de abertos é aberto}{finite_product_of_open_sets_is_open}
+        Sejam $(X_1,\tau_1),(X_2,\tau_2)$ \nameref{def:topological_space} e $X_1\times X_2$ equipado com a \nameref{def:product_topology} $\tau$. Se $U\in\tau_1$ e $V\in\tau_2$, então $U\times V\in\tau$. Por indução, o resultado vale para famílias finitas.
+    \end{proposition}
+}
+
+\newcommand{\metrizableSeparableSpaceIsSecondCountable}{
+    \begin{proposition}{Espaços metrizáveis separáveis possuem base enumerável}{metrizable_separable_space_is_second_countable}
+        Seja $(X,\tau)$ um \nameref{def:topological_space} separável e metrizável. Então, $X$ admite uma base $\mathcal{B}$ enumerável.
+    \end{proposition}
+}
+
+\newcommand{\rnIsSeparable}{
+    \begin{proposition}{\texorpdfstring{$\R^n$}{Rn} é separável}{rn_is_separable}
+        Para todo $n\in\N$. $\Q_n$ é um subconjunto denso e enumerável de $\R^n$ e $\R^n$ é separável.
+    \end{proposition}
+}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % appendix corollary

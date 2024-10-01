@@ -1,0 +1,11 @@
+\begin{proof}
+    \textbf{(1)} Se $\lambda = 0$, a igualdade é clara. Para $\lambda > 0$, seja $(\varphi_n)_{n=1}^{\infty}$ uma sequência crescente de funções simples em $M^+(X, \Sigma)$ que converge para $f$. Como $\lambda \varphi_n$ é uma sequência crescente de funções simples que converge para $\lambda f$, pelo \nameref{thm:mct}, temos
+    \begin{equation*}
+    \int_X \lambda f \, d\mu = \lim_{n \to \infty} \int_X \lambda \varphi_n \, d\mu = \lim_{n \to \infty} \lambda \int_X \varphi_n \, d\mu = \lambda \int_X f \, d\mu.
+    \end{equation*}
+
+    \textbf{(2)} Seja $(\varphi_n)_{n=1}^{\infty}$ e $(\psi_n)_{n=1}^{\infty}$ sequências crescentes de funções simples, convergindo para $f$ e $g$, respectivamente. Então, $(\varphi_n + \psi_n)_{n=1}^{\infty}$ é uma sequência crescente de funções simples que converge para $f + g$. Pelo \nameref{thm:mct}, temos
+    \begin{equation*}
+    \int_X (f + g) \, d\mu = \lim_{n \to \infty} \int_X (\varphi_n + \psi_n) \, d\mu = \lim_{n \to \infty} \left( \int_X \varphi_n \, d\mu + \int_X \psi_n \, d\mu \right) = \int_X f \, d\mu + \int_X g \, d\mu.
+    \end{equation*}
+\end{proof}
