@@ -18,9 +18,11 @@
 
 \section{Espaços \texorpdfstring{$L^p$}{Lp}}
 
+\subsection{Construção de um espaço vetorial normado}
+
 O nosso objetivo neste capítulo é construir um espaço de Banach com as funções. Para tanto, vamos mostrar que o espaço das funções é um espaço vetorial, introduzir uma norma e, por fim, mostrar que ele é um espaço completo.
 
-Vamos começar introduzindo uma \nameref{def:semi_norm}.
+Vamos começar introduzindo uma semi-norma.
 
 \functionSeminorm
 
@@ -44,11 +46,42 @@ Tratamos o caso em que $p=+\infty$ de forma análoga. Definimos a norma como a n
 
 \functionInftySeminorm
 
+Para que esta seminorma vire uma norma, fazemos a mesma construção via classes de equivalência.
+
+\LinftySpace
+
+\subsection{Desigualdades de Hölder e Minkowski}
+
+As desigualdades de Hölder e Minkowski são fundamentais para o estudo dos espaços $L_p$ e suas propriedades. Em particular, a desigualdade de Minkowski é a prova que $\norm{\cdot}_p$ satisfaz a deigualdade triangular.
+
+Para provar a desigualdade de Hölder, vamos provar o lema abaixo.
+
+\powerInequality
+
+\holder
+
+\minkowski
+
+\subsection{Teorema de Riesz-Fischer}
+
+Vamos relembrar o nosso objetivo. O que foi dito no começo do capítulo é que queremos mostrar que os espaços $L_p$ são espaços de Banach. Assim, vamos definir exatamente o que queremos e provar o Teorema de Riesz-Fischer, essencial para provar este fato.
+
+\banachSpace
+
+No nosso context, temos um espaço vetorial normado, $L_p$. Vamos definir nossas sequências de Cauchy.
+
+\cauchySequenceLp
+
+De fato, o conceito de sequência de Cauchy é mais fraco que o de sequência convergente. Um resultado geral sobre espaços métricos mostra que toda sequência convergente é de Cauchy. No entanto, a recíproca nem sempre é verdadeira. Os espaços completos são aqueles onde as duas definições são equivalentes: uma sequência é convergente se, e somente se, ela for de Cauchy.
+
+O teorema de Riesz-Fischer garante que o espaço $L^p$ é completo, ou seja, que toda sequência de Cauchy em $L^p$ converge para um elemento em $L^p$.
+
+\rieszFischer
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%      Seção 2 - Integração
+% Seção 2 - Modos de Convergência
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -60,6 +93,25 @@ Tratamos o caso em que $p=+\infty$ de forma análoga. Definimos a norma como a n
 
 \section{Modos de Convergência}
 
+\subsection{Convergência de funções}
+
+Já conhecemos o sentido usual de convegência de funções, quando olhamos para a sequência aplicada a um ponto $x$. As principais noções de convergência estão listadas abaixo, da mais fraca para a mais forte.
+
+\aeConvergence
+\pointwiseConvergence
+\uniformConvergence
+
+\subsection{Convergência em \texorpdfstring{$L_p$}{Lp}}
+
+\LpConvergence
+
+Estudar a convergência de funções em $L_p$ nem sempre é intuitivo. Não podemos garantir que o limite está em $L_p$ apenas com a convergência uniforme. Pelo menos não no caso geral. Vamos estudar algumas restrições que podemos impor para garantir a convergência em $L_p$.
+
+\uniformConvergenceLp
+
+\dominatedConvergenceLp
+
+\boundedConvergenceLp
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,9 @@
+\begin{proof}
+    Seja $\epsilon > 0$ e seja $N(\epsilon)$ tal que $|f_n(x) - f(x)| < \epsilon$ sempre que $n \geq N(\epsilon)$ e $x \in X$. Se $n \geq N(\epsilon)$, então
+    \begin{equation}
+        \norm{f_n - f}_p = \left( \int_X |f_n(x) - f(x)|^p \, d\mu \right)^{1/p}
+        \leq \left( \int_X \epsilon^p \, d\mu \right)^{1/p}
+        = \epsilon \mu(X)^{1/p},
+    \end{equation}
+    de modo que $(f_n)$ converge em $L_p$ para $f$.
+\end{proof}

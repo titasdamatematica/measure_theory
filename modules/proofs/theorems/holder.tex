@@ -1,0 +1,20 @@
+\begin{proof}
+    O caso em que $\norm{f}_p = 0$ ou $\norm{g}_q = 0$ é triva. De fato, a desigualdade vira $0 \leq 0$. Suponha então $\norm{f}_p \neq 0$ e $\norm{g}_q \neq 0$.
+
+    Pelo Lema \ref{lmm:power_inequality}, temos que, para quaisquer $a, b > 0$,
+    \begin{equation}\label{eq:proof/holder/step1}
+        a^p b^q \leq \frac{a}{p} + \frac{b}{q}.
+    \end{equation}
+
+    Tome, em \eqref{eq:proof/holder/step1}
+    \begin{equation*}
+        a = \frac{|f(x)|^p}{\norm{f}_p^p}
+        \quad \text{e} \quad
+        b = \frac{|g(x)|^q}{\norm{g}_q^q}.
+    \end{equation*}
+    Assim, temos
+    \begin{equation*}
+        \int_X \frac{|f(x)g(x)|}{\norm{f}_p \norm{g}_q} d\mu \leq \int_X \frac{|f(x)|^p}{p \norm{f}_p^p} d\mu + \int_X \frac{|g(x)|^q}{q \norm{g}_q^q} d\mu = 1,
+    \end{equation*}
+    e o resultado segue.
+\end{proof}

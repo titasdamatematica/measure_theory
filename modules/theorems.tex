@@ -453,6 +453,107 @@
 
 
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%            THIRD CHAPTER STATEMENTS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% third chapter lemmas
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\newcommand{\powerInequality}{
+    \begin{lemma}{.}{power_inequality}
+        Para quaisquer $a, b > 0$, temos
+    \begin{equation*}
+        a^p b^q \leq \frac{a}{p} + \frac{b}{q}.
+    \end{equation*}
+    \end{lemma}
+    \input{modules/proofs/lemmas/powerInequality.tex}
+}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% third chapter propositions
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\newcommand{\uniformConvergenceLp}{
+    \begin{proposition}{Convergência Uniforme em $L_p$}{uniform_convergence_lp}
+        Suponha que $\mu(X) < +\infty$ e que $(f_n)$ é uma sequência em $L_p$ que converge uniformemente em $X$ para $f$. Então, $f \in L_p$ e a sequência $(f_n)$ converge em $L_p$ para $f$.
+    \end{proposition}
+    \input{modules/proofs/propositions/uniformConvergenceLp.tex}
+}
+
+\newcommand{\dominatedConvergenceLp}{
+    \begin{proposition}{Convergência Dominada em $L_p$}{dominated_convergence_lp}
+        Seja $(f_n)$ uma sequência em $L_p$ que converge para uma função mensurável $f$ para quase todo ponto. Se existir uma função $g \in L_p$ tal que
+        \begin{equation}\label{eq:dominated_convergence}
+            |f_n(x)| \leq g(x), \quad x \in X, \quad n \in \mathbb{N},
+        \end{equation}
+        então $f \in L_p$ e $(f_n)$ converge em $L_p$ para $f$.
+    \end{proposition}
+    \input{modules/proofs/propositions/dominatedConvergenceLp.tex}
+}
+
+\newcommand{\boundedConvergenceLp}{
+    \begin{corollary}{Corolário da Convergência Dominada com Limite Constante}{bounded_convergence_lp}
+        Suponha que $\mu(X) < +\infty$, e que $(f_n)$ seja uma sequência em $L_p$ que converge para uma função mensurável $f$ para quase todo ponto \(\mu\)-(qtp). Se existir uma constante $K$ tal que
+        \begin{equation}
+            |f_n(x)| \leq K, \quad x \in X, \quad n \in \mathbb{N},
+            \tag{7.3}
+        \end{equation}
+        então $f \in L_p$ e $(f_n)$ converge em $L_p$ para $f$.
+    \end{corollary}
+    \input{modules/proofs/corollaries/boundedConvergenceLp.tex}
+}
+
+
+
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% third chapter corollary
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% third chapter theorems
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\newcommand{\holder}{
+    \begin{theorem}{Desigualdade de Hölder}{holder}
+        Sejam $f \in L_p$ e $g \in L_q$, com $1 \leq p, q \leq \infty$ e $\frac{1}{p} + \frac{1}{q} = 1$. Então, $fg\in L_1$ e
+        \begin{equation*}
+            \int |f(x) g(x)| \, dx \leq \norm{f}_p \norm{g}_q.
+        \end{equation*}
+    \end{theorem}
+    \input{modules/proofs/theorems/holder.tex}
+}
+
+\newcommand{\minkowski}{
+    \begin{theorem}{Desigualdade de Minkowski}{minkowski}
+        Sejam $f, g \in L_p$, com $1 \leq p \leq \infty$. Então, $f+g\in L_p$ e
+        \begin{equation}\label{eq:minkowski}
+            \norm{f+g}_p \leq \norm{f}_p + \norm{g}_p.
+        \end{equation}
+    \end{theorem}
+    \input{modules/proofs/theorems/minkowski.tex}
+}
+
+\newcommand{\rieszFischer}{
+    \begin{theorem}{Teorema de Riesz-Fischer}{riesz_fischer}
+        Seja $(f_n)$ uma sequência de Cauchy em $L_p$ com $1 \leq p \leq \infty$. Então, existe $f \in L_p$ tal que $f_n \to f$ em $L_p$.
+    \end{theorem}
+    \input{modules/proofs/theorems/rieszFischer.tex}
+}
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

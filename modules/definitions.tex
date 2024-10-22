@@ -352,9 +352,9 @@
 
 \newcommand{\LinftySpace}{
     \begin{definition}{Espaço \texorpdfstring{$L_{\infty}$}{Linfty}}{l_infty_space}
-        Seja $(X,\Sigma,\mu)$ um espaço de medida. Para $1 \leq p < \infty$, definimos o conjunto 
+        Seja $\mathcal{L}_{\infty}(X,\Sigma,\mu)$ o espaço vetorial das funções reais limitadas $\mu$-(qtp). Definimos,
         \begin{equation*}
-            L_p(X,\Sigma,\mu) \coloneq \left\{ [f]; \norm{[f]}_{p}=\norm{f}_p < \infty \right\}.
+            L_{\infty}(X,\Sigma,\mu) \coloneq \left\{ [f]; f\in \mathcal{L}_{\infty}\right\}.
         \end{equation*}
     \end{definition}
 }
@@ -367,6 +367,63 @@
         \end{equation*}
         \begin{equation*}
             \norm{f}_{p} \coloneq \inf \{S_f{N}; \ N\in\Sigma, \mu(N)=0\}.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\banachSpace}{
+    \begin{definition}{Espaço de Banach}{banach_space}
+        Um \textbf{espaço de Banach} é um espaço vetorial normado $(X, \norm{\cdot})$ que é um espaço métrico completo em relação à distância induzida pela norma. Isso significa que, nestes espaços, toda sequência de Cauchy é convergente.
+    \end{definition}
+}
+
+\newcommand{\cauchySequenceLp}{
+    \begin{definition}{Sequência de Cauchy no Espaço $L_p$}{cauchy_sequence_lp}
+        Uma sequência $(f_n)$ em $L_p$ é uma \textbf{sequência de Cauchy} em $L_p$ se,
+
+        \begin{equation*}
+            \forall \varepsilon >0, \ \exists N(\varepsilon) \in \N; \ n,m \geq N(\varepsilon) \Longrightarrow \norm{f_m - f_n}_p < \varepsilon.
+        \end{equation*}
+        
+        Uma sequência $(f_n)$ em $L_p$ é \textbf{convergente} para $f$ em $L_p$ se, para todo número positivo $\varepsilon$, existe um $N(\varepsilon)$ tal que, se $n \geq N(\varepsilon)$, então 
+        \begin{equation*}
+            \norm{f - f_n}_p < \varepsilon.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\aeConvergence}{
+    \begin{definition}{Convergência para quase todo ponto}{ae_convergence}
+        Uma sequência $(f_n)$ converge para quase todo ponto ($\mu$-qtp) para $f$ se
+        \begin{equation*}
+            \forall \varepsilon >0, \ \exists N(\varepsilon,x) \in \N; \ n \geq N(\varepsilon,x) \Longrightarrow \abs{f_n(x) - f}_p < \varepsilon \quad(\mu\text{-qtp}).
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\pointwiseConvergence}{
+    \begin{definition}{Convergência pontual}{pointwise_convergence}
+        Uma sequência $(f_n)$ converge pontualmente para $f$ se
+        \begin{equation*}
+            \forall \varepsilon >0, \ \exists N(\varepsilon,x) \in \N; \ n \geq N(\varepsilon,x) \Longrightarrow \abs{f_n(x) - f}_p < \varepsilon
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\uniformConvergence}{
+    \begin{definition}{Convergência uniforme}{uniform_convergence}
+        Uma sequência $(f_n)$ converge uniformemente para $f$ se
+        \begin{equation*}
+            \forall \varepsilon >0, \ \exists N(\varepsilon) \in \N; \ n \geq N(\varepsilon) \Longrightarrow \abs{f_n(x) - f}_p < \varepsilon
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\LpConvergence}{
+    \begin{definition}{Convergência no espaço \texorpdfstring{$L_p$}{Lp}}{Lp_convergence}
+        Uma sequência $(f_n)\subset L_p$ converge para $f\in L_p$ se
+        \begin{equation*}
+            \forall \varepsilon >0, \ \exists N(\varepsilon) \in \N; \ n \geq N(\varepsilon) \Longrightarrow \norm{f_n - f}_p < \varepsilon
         \end{equation*}
     \end{definition}
 }

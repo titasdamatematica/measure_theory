@@ -1,0 +1,51 @@
+\begin{proof}
+    Faremos a demonstração do teorema em dois casos. Para o primeiro caso, suponha que $p=\infty$.
+
+    Seja $(f_n)$ uma sequência de Cauchy em $L^\infty$. Dado um inteiro $k \geq 1$, existe um $N_k$ tal que
+    \begin{equation}\label{proof:rieszFischer/eq1}
+        \norm{f_m - f_n}_\infty \leq \frac{1}{k}, \quad \text{para } m, n \geq N_k.
+    \end{equation}
+    Portanto, existe um conjunto de medida nula $E_k$ tal que
+    \begin{equation*}
+        |f_m(x) - f_n(x)| \leq \frac{1}{k}, \quad \forall x \in \Omega \setminus E_k, \quad \text{para } m, n \geq N_k.
+    \end{equation*}
+
+    Agora defina $E = \bigcup_{k=1}^\infty E_k$, de forma que $E$ seja um conjunto de medida nula. Para quase todo ponto em $\Omega \setminus E$, a sequência $f_n(x)$ é de Cauchy em $\mathbb{R}$. Logo, $f_n(x) \to f(x)$ $\mu$-qtp em $\Omega \setminus E$. Passando ao limite em \eqref{proof:rieszFischer/eq1} conforme $m \to \infty$, obtemos
+    \begin{equation*}
+        |f(x) - f_n(x)| \leq \frac{1}{k}, \quad \forall x \in \Omega \setminus E, \quad \text{para } n \geq N_k.
+    \end{equation*}
+
+    Concluímos, então, que $f \in L^\infty$ e que $\norm{f - f_n}_\infty \leq \frac{1}{k}$ para $n \geq N_k$. Portanto, $f_n \to f$ em $L^\infty$.
+
+    Agora, consideremos o caso $1 \leq p < \infty$. 
+
+    Seja $(f_n)$ uma sequência de Cauchy em $L_p$. Para concluir a prova, basta mostrar que uma subsequência converge em $L_p$. Extraímos uma subsequência $(f_{n_k})$ tal que
+    \begin{equation}\label{proof:rieszFischer/eq2}
+        \norm{f_{n_{k+1}} - f_{n_k}}_p \leq \frac{1}{2^k}, \quad \forall k \geq 1.
+    \end{equation}
+
+    Procedemos da seguinte forma: escolhemos $n_1$ tal que $\norm{f_m - f_n}_p \leq \frac{1}{2}$ para todo $m, n \geq n_1$; depois, escolhemos $n_2 \geq n_1$ tal que $\norm{f_m - f_n}_p \leq \frac{1}{2^2}$ para todo $m, n \geq n_2$; e assim por diante. Com isso, afirmamos que $(f_{n_k})$ converge em $L_p$. Para simplificar a notação, escrevemos $f_k$ em vez de $f_{n_k}$, de modo que temos
+    \begin{equation*}
+        \norm{f_{k+1} - f_k}_p \leq \frac{1}{2^k}, \quad \forall k \geq 1.
+    \end{equation*}
+
+    Definimos
+    \begin{equation*}
+        g_n(x) = \sum_{k=1}^n |f_{k+1}(x) - f_k(x)|,
+    \end{equation*}
+    de modo que
+    \begin{equation*}
+        \norm{g_n}_p \leq 1.
+    \end{equation*}
+
+    Como consequência do \nameref{thm:mct}, $g_n(x)$ tende a um limite finito, que chamamos $g(x)$, para quase todo ponto \(\mu\)-qtp em $\Omega$, com $g \in L_p$. Por outro lado, para $m \geq n \geq 2$, temos
+    \begin{equation*}
+        |f_m(x) - f_n(x)| \leq |f_m(x) - f_{m-1}(x)| + \cdots + |f_{n+1}(x) - f_n(x)| \leq g(x) - g_{n-1}(x).
+    \end{equation*}
+
+    Portanto, para quase todo ponto em $\Omega$, $f_n(x)$ é de Cauchy e converge para um limite finito, que chamamos $f(x)$. Temos, então, para quase todo ponto em $\Omega$, que
+    \begin{equation*}
+        |f(x) - f_n(x)| \leq g(x), \quad \text{para } n \geq 2,
+    \end{equation*}
+    e, em particular, $f \in L_p$. Finalmente, concluímos pela convergência dominada que $\norm{f_n - f}_p \to 0$, uma vez que $|f_n(x) - f(x)|^p \to 0$ para quase todo ponto e também $|f_n - f|^p \leq g^p \in L_1$.
+\end{proof}

@@ -1,0 +1,30 @@
+\begin{proof}
+    Considere, para cada $0 < \alpha < 1$, a função $f_\alpha : (0, \infty) \to \mathbb{R}$ dada por $f_\alpha(t) = t^\alpha - \alpha t$. Temos
+    \begin{equation*}
+        f'_\alpha(t) = \alpha t^{\alpha - 1} - \alpha = \alpha(t^{\alpha - 1} - 1).
+    \end{equation*}
+    Logo,
+    \begin{equation*}
+        f'_\alpha(t) > 0 \text{ se } 0 < t < 1
+        \quad \text{e} \quad
+        f'_\alpha(t) < 0 \text{ se } t > 1,
+    \end{equation*}
+    e $f_\alpha$ tem um máximo em $t = 1$. Portanto,
+    \begin{equation*}
+        f_\alpha(t) \leq f_\alpha(1)
+    \end{equation*}
+    para todo $t > 0$, e
+    \begin{equation*}
+        t^\alpha \leq \alpha t + (1 - \alpha).
+    \end{equation*}
+
+    Fazendo $t = \frac{a}{b}$ e $\alpha = \frac{1}{p}$, temos
+    \begin{equation*}
+        \left( \frac{a}{b} \right)^{\frac{1}{p}} \leq \frac{1}{p} \frac{a}{b} + \left(1 - \frac{1}{p}\right).
+    \end{equation*}
+    Multiplicando a desigualdade acima por $b$, obtemos
+    \begin{equation*}
+        a^{\frac{1}{p}} b^{\frac{1}{q}} \leq \frac{a}{p} + \frac{b}{q},
+    \end{equation*}
+    o que demonstra o lema.
+\end{proof}

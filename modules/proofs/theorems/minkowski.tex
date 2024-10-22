@@ -1,0 +1,36 @@
+\begin{proof}
+    Se $\norm{f + g}_p = 0$, o resultado é claro. Suponha $\norm{f + g}_p \neq 0$. Perceba que para todo $x \in X$, temos
+    \begin{eqnarray*}
+        |f(x) + g(x)|^p
+        &\leq& \left( |f(x)| + |g(x)| \right)^p\\
+        &\leq& \left( \max\{|f(x)|, |g(x)|\} + \max\{|f(x)|, |g(x)|\} \right)^p \\
+        &\leq& 2^p \max\{ |f(x)|^p, |g(x)|^p \} \\
+       &\leq& 2^p \left( |f(x)|^p + |g(x)|^p \right).
+    \end{eqnarray*}
+    E daí segue que $f + g \in L_p(X, \Sigma, \mu)$.
+
+    Agora vamos provar \eqref{eq:minkowski}. Se $p = 1$, o resultado é consequência direta da Proposição \ref{prop:function_is_integrable_iff_absolute_value_is}. Suponha $p > 1$. Então
+    \begin{equation}\label{proof:minkowski/eq1}
+        |f + g|^p = |f + g||f + g|^{p-1}
+        \leq \left( |f| + |g| \right) |f + g|^{p-1}.
+    \end{equation}
+
+    Se $1/p + 1/q = 1$, temos $(p-1)q = p$, e portanto $|f + g|^{p-1} \in L_q(X, \Sigma, \mu)$. Da \nameref{thm:holder}, temos
+    \begin{equation*}
+        \int_X |f||f + g|^{p-1} d\mu \leq \left( \int_X |f|^p d\mu \right)^{\frac{1}{p}} \left( \int_X |f + g|^q d\mu \right)^{\frac{1}{q}},
+    \end{equation*}
+    \begin{equation*}
+        \int_X |g||f + g|^{p-1} d\mu \leq \left( \int_X |g|^p d\mu \right)^{\frac{1}{p}} \left( \int_X |f + g|^q d\mu \right)^{\frac{1}{q}}.
+    \end{equation*}
+
+    Das duas desigualdades acima e de \ref{proof:minkowski/eq1}, temos que
+    \begin{equation*}
+        \int_X |f + g|^p d\mu \leq \left( \int_X |f|^p d\mu \right)^{\frac{1}{p}} \left( \int_X |f + g|^q d\mu \right)^{\frac{1}{q}} + \left( \int_X |g|^p d\mu \right)^{\frac{1}{p}} \left( \int_X |f + g|^q d\mu \right)^{\frac{1}{q}}.
+    \end{equation*}
+
+    Isso é equivalente a
+    \begin{equation*}
+        \left( \int_X |f + g|^p d\mu \right)^{\frac{1}{p}} \leq \left( \int_X |f|^p d\mu \right)^{\frac{1}{p}} + \left( \int_X |g|^p d\mu \right)^{\frac{1}{p}},
+    \end{equation*}
+    e, dividindo ambos os membros por $\left( \int_X |f + g|^p d\mu \right)^{\frac{1}{p}}$, o resultado segue.
+\end{proof}

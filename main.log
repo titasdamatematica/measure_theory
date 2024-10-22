@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  21 OCT 2024 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  22 OCT 2024 09:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -905,19 +905,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ])
 
-[2] (main.toc)
+[2] (main.toc
+
+[3
+
+])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-[3
-
-]
-
-[4
-
-] (modules/chapters/measures.tex
+[4] (modules/chapters/measures.tex
 Chapter 1.
 
 
@@ -927,6 +925,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.41 
       [1
+
 
 ] (modules/proofs/lemmas/sigmaAlgebraIntersection.tex)
 
@@ -1031,14 +1030,26 @@ Chapter 3.
 
 [35
 
-])
+] (modules/proofs/lemmas/powerInequality.tex
 
-[36] (modules/appendices/definitions.tex
+[36]) (modules/proofs/theorems/holder.tex
+
+[37]) (modules/proofs/theorems/minkowski.tex)
+
+[38] (modules/proofs/theorems/rieszFischer.tex
+
+[39])
+
+[40] (modules/proofs/propositions/uniformConvergenceLp.tex
+
+[41]) (modules/proofs/propositions/dominatedConvergenceLp.tex) (modules/proofs/corollaries/boundedConvergenceLp.tex))
+
+[42] (modules/appendices/definitions.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[37
+[43
 
 
 ]
@@ -1046,65 +1057,65 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[38]
+[44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[39]) (modules/appendices/theorems.tex
+[45]) (modules/appendices/theorems.tex
 
-[40]) (modules/appendices/exercises.tex
+[46]) (modules/appendices/exercises.tex
 
-[41
+[47
 
 ]
 
-[42
+[48
 
 ] (modules/proofs/exercises/extendedSigmaAlgebra.tex
 
-[43]) (modules/proofs/exercises/muIsWellDefined.tex
+[49]) (modules/proofs/exercises/muIsWellDefined.tex
 
-[44]) (modules/proofs/exercises/muIsMeasure.tex
+[50]) (modules/proofs/exercises/muIsMeasure.tex
 
-[45]) (modules/proofs/exercises/muIsUnique.tex) (modules/proofs/exercises/productOfSetsThatGenerateSigmaAlgebra.tex
+[51]) (modules/proofs/exercises/muIsUnique.tex) (modules/proofs/exercises/productOfSetsThatGenerateSigmaAlgebra.tex
 
-[46]) (modules/proofs/exercises/preimageOnCountableFamilyOfSets.tex
+[52]) (modules/proofs/exercises/preimageOnCountableFamilyOfSets.tex
 
-[47]) (modules/proofs/exercises/sigmaAlgebraGeneratedByCountableTopologicalBasis.tex) (modules/proofs/exercises/mIsSigmaRing.tex
+[53]) (modules/proofs/exercises/sigmaAlgebraGeneratedByCountableTopologicalBasis.tex) (modules/proofs/exercises/mIsSigmaRing.tex
 Overfull \hbox (26.45148pt too wide) detected at line 18
 \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )[]) \OMS/cmsy/m/n/12 ^^U \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )[])\OML/cmm/m/it/12 ;
  []
 
 
 
-[48]
+[54]
 
-[49]))
+[55]))
 
-[50] (main.aux)
+[56] (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E33926FEE46D0319F00529AD4ECC5F08;5505.
+(rerunfilecheck)             Checksum: 3E80A4BC94E52DB2E8CCF144BDD12CF6;6584.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33398 strings out of 473898
- 669639 string characters out of 5726480
+ 33523 strings out of 473898
+ 673313 string characters out of 5726480
  1946960 words of memory out of 5000000
- 55413 multiletter control sequences out of 15000+600000
- 575671 words of font info for 104 fonts, out of 8000000 for 9000
+ 55490 multiletter control sequences out of 15000+600000
+ 576143 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,14n,104p,956b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\pedro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (56 pages, 469398 bytes).
+ <C:\Users\pedro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (62 pages, 514845 bytes).
 PDF statistics:
- 900 PDF objects out of 1000 (max. 8388607)
- 245 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 998 PDF objects out of 1000 (max. 8388607)
+ 279 named destinations out of 1000 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 
