@@ -287,3 +287,86 @@
         \end{equation*}
     \end{definition}
 }
+
+\newcommand{\semiNorm}{
+    \begin{definition}{Semi-norma}{semi_norm}
+        Seja $V$ um espaço vetorial real. Uma função $N:V\mapsto\R$ é dita uma \textbf{seminorma} se:
+        \begin{enumerate}
+            \item $N(v)\geq 0 \quad \forall v\in V$,
+            \item $N(\alpha v)=\abs{a} N(v) \quad \forall v\in V, \forall \alpha\in\R$,
+            \item $N(u+v)\leq N(u)+N(v) \quad  \forall u,v\in V$.
+        \end{enumerate}
+    \end{definition}
+}
+
+\newcommand{\vectorNorm}{
+    \begin{definition}{Norma}{norm}
+        Seja $V$ um espaço vetorial real. Uma função $N:V\mapsto\R$ é dita uma \textbf{norma} se é \nameref{def:semi_norm} tal que
+        \begin{itemize}
+            \item $N(v)=0\Longleftrightarrow v=0$.
+        \end{itemize}
+    \end{definition}
+}
+
+\newcommand{\functionSeminorm}{
+    \begin{definition}{Semi-norma \texorpdfstring{$\mathcal{L}_p$}{Lp}}{lp_seminorm}
+        Seja $M(X,\Sigma)$ o espaço vetorial das funções reais mensuráveis e $p\in [1,\infty)$. Definimos
+        \begin{equation*}
+            \norm{f}_{p} \coloneq \left( \int_{X}\abs{f}^p d\mu \right)^\frac{1}{p}
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\spaceLpSeminorm}{
+    \begin{definition}{Espaço \texorpdfstring{$\mathcal{L}_p$}{Lp}}{lp_seminorm_space}
+        Seja $M(X,\Sigma)$ o espaço vetorial das funções reais mensuráveis e $p\in [1,\infty)$. Definimos
+        \begin{equation*}
+            \mathcal{L}_p \coloneq \left\{f\in\mathcal{F}(X,\R); \ \norm{f}_p < \infty\right\}.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\equivalenceRelationLp}{
+    \begin{definition}{Relação de Equivalência para o Espaço \texorpdfstring{$L_p$}{Lp}}{equivalence_relation_lp}
+        Sejam $(X,\Sigma,\mu)$ um espaço de medida e $f,g : X \rightarrow \R$. Dizemos que $f$ e $g$ são \textbf{equivalentes} (denotado $f \sim g$) se $f=g \ (\mu\text{-qtp})$.
+    \end{definition}
+}
+
+\newcommand{\equivalenceClassOfFunction}{
+    \begin{definition}{Classe de Equivalência de uma Função}{equivalence_class_of_function}
+        Seja $(X,\Sigma,\mu)$ um espaço de medida e $f: X \rightarrow \R$ uma função mensurável. Definimos a \textbf{classe de equivalência} de $f$ como
+        \begin{equation*}
+            [f] \coloneq \left\{ g : X \rightarrow \R; \ g = f \ (\mu\text{-qtp}) \right\}.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\LpSpace}{
+    \begin{definition}{Espaço \texorpdfstring{$L_p$}{Lp}}{lp_space}
+        Seja $(X,\Sigma,\mu)$ um espaço de medida. Para $1 \leq p < \infty$, definimos o conjunto 
+        \begin{equation*}
+            L_p(X,\Sigma,\mu) \coloneq \left\{ [f]; \norm{[f]}_{p}=\norm{f}_p < \infty \right\}.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\LinftySpace}{
+    \begin{definition}{Espaço \texorpdfstring{$L_{\infty}$}{Linfty}}{l_infty_space}
+        Seja $(X,\Sigma,\mu)$ um espaço de medida. Para $1 \leq p < \infty$, definimos o conjunto 
+        \begin{equation*}
+            L_p(X,\Sigma,\mu) \coloneq \left\{ [f]; \norm{[f]}_{p}=\norm{f}_p < \infty \right\}.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\functionInftySeminorm}{
+    \begin{definition}{Semi-norma \texorpdfstring{$\mathcal{L}_{\infty}$}{Linfty}}{l_infty_seminorm}
+        Seja $\mathcal{L}_{\infty}(X,\Sigma,\mu)$ o espaço vetorial das funções reais limitadas $\mu$-(qtp). Definimos,
+        \begin{equation*}
+            S_f(N) \coloneq \sup_{x\in X}\left\{ \abs{f(x)}; \ x\not\in N \right\},
+        \end{equation*}
+        \begin{equation*}
+            \norm{f}_{p} \coloneq \inf \{S_f{N}; \ N\in\Sigma, \mu(N)=0\}.
+        \end{equation*}
+    \end{definition}
+}

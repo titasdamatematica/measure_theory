@@ -18,8 +18,31 @@
 
 \section{Espaços \texorpdfstring{$L^p$}{Lp}}
 
+O nosso objetivo neste capítulo é construir um espaço de Banach com as funções. Para tanto, vamos mostrar que o espaço das funções é um espaço vetorial, introduzir uma norma e, por fim, mostrar que ele é um espaço completo.
 
+Vamos começar introduzindo uma \nameref{def:semi_norm}.
 
+\functionSeminorm
+
+Definimos uma função integrável como aquela que tem norma finita. Isto dá origem aos nossos espaços $\mathcal{L}_p$.
+
+\spaceLpSeminorm
+
+Não é difícil verificar que este é, de fato, um espaço vetorial equipa com uma semi-norma. Um grande incoveniente dos espaços $\mathcal{L}_p$ é que ele não diferencia funções, isto é, $\norm{\cdot}$ não é uma norma. Vamos contornar este problema com uma construção inteligente.
+
+\equivalenceRelationLp
+
+Vamos definir o conjunto de todas as funções mensuráveis que são equivalentes a $f$, ou seja, funções que diferem de $f$ apenas em um conjunto de medida nula. Com este truque, colocamos todas as funções iguais quase sempre em um mesmo bolo, eliminando o nosso problemas inicial.
+
+\equivalenceClassOfFunction
+
+A partir desta relação, identificamos a norma de uma classe de equivalência com a norma de um representante daquela classe.
+
+\LpSpace
+
+Tratamos o caso em que $p=+\infty$ de forma análoga. Definimos a norma como a norma do supremo.
+
+\functionInftySeminorm
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
