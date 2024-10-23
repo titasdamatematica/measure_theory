@@ -1,0 +1,16 @@
+\begin{proof}
+    Suponhamos, sem perda de generalidade, que $(f_n)$ converge em todo ponto de $X$ para $f$. Sejam $m, n \in \mathbb{N}$, e defina
+    \begin{equation*}
+        E_n(m) = \bigcup_{k=n}^{\infty} \left\{ x \in X : |f_k(x) - f(x)| \geq \frac{1}{m} \right\},
+    \end{equation*}
+    de modo que $E_n(m)$ pertence a $X$ e $E_{n+1}(m) \subseteq E_n(m)$. Como $f_n(x) \to f(x)$ para todo $x \in X$, segue que
+    \begin{equation*}
+        \bigcap_{n=1}^{\infty} E_n(m) = \varnothing.
+    \end{equation*}
+
+    Como $\mu(X) < +\infty$, inferimos que $\mu(E_n(m)) \to 0$ conforme $n \to +\infty$. Se $\delta > 0$, escolha $k_m$ tal que $\mu(E_{k_m}(m)) < \delta / 2^m$, e defina $E_\delta = \bigcup_{m=1}^{\infty} E_{k_m}(m)$, de modo que $E_\delta \subset X$ e $\mu(E_\delta) < \delta$. Observe que, se $x \notin E_\delta$, então $x \notin E_{k_m}(m)$, de modo que
+    \begin{equation*}
+        |f_k(x) - f(x)| < \frac{1}{m}
+    \end{equation*}
+    para todo $k \geq k_m$. Portanto, $(f_k)$ é uniformemente convergente no complemento de $E_\delta$.
+\end{proof}

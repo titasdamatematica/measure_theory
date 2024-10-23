@@ -1,0 +1,21 @@
+\begin{proof}
+    Vimos que existe uma subsequência $(f_{n_k})$ que converge em medida para uma função $f$. Para mostrar que toda a sequência $(f_n)$ converge em medida para $f$, observe que, como
+    \begin{equation*}
+        |f(x) - f_n(x)| \leq |f(x) - f_{n_k}(x)| + |f_{n_k}(x) - f_n(x)|,
+    \end{equation*}
+    segue que
+    \begin{equation*}
+        \{x \in X : |f(x) - f_n(x)| \geq \alpha\} \subseteq \{x \in X : |f(x) - f_{n_k}(x)| \geq \frac{\alpha}{2}\} \cup \{x \in X : |f_{n_k}(x) - f_n(x)| \geq \frac{\alpha}{2}\}.
+    \end{equation*}
+    A convergência em medida de $(f_n)$ para $f$ decorre dessa relação.
+
+    Suponha agora que a sequência $(f_n)$ converge em medida tanto para $f$ quanto para $g$. Como
+    \begin{equation*}
+        |f(x) - g(x)| \leq |f(x) - f_n(x)| + |f_n(x) - g(x)|,
+    \end{equation*}
+    segue que
+    \begin{equation*}
+        \{x \in X : |f(x) - g(x)| \geq \alpha\} \subseteq \{x \in X : |f(x) - f_n(x)| \geq \frac{\alpha}{2}\} \cup \{x \in X : |f_n(x) - g(x)| \geq \frac{\alpha}{2}\},
+    \end{equation*}
+    de modo que $\mu(\{x \in X : |f(x) - g(x)| \geq \alpha\}) = 0$ para todo $\alpha > 0$. Tomando $\alpha = 1/n$, $n \in \mathbb{N}$, concluímos que $f = g$ \(\mu\)-qtp.
+\end{proof}

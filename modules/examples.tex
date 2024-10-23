@@ -69,7 +69,37 @@
 
 \newcommand{\counterExampleUniformConvergence}{
     \begin{example}{Convergência Uniforme \texorpdfstring{$\not\Rightarrow$}{->} Convergência em $L_p$}{counter_example_uniform_convergence}
-        Seja $f_n:x\in X\mapsto n^{-1}\chi_{(0,n)}$ para todo $n\in\N$. Esta sequência converge uniformemente para $0$ pois, para todo $\varepsilon>0$ existe, pelo princípio de arquimedes, $N(\varepsilon) \in \N$ tal que $0<N^{-1}<\varepsilon$. Se $n\geq N$, então $n^{-1}<\varepsilon$. Por fim, note que , para todo $x\in X$, $f_n(x)\leq n^{-1}<\varepsilon$, o que mostra a converência uniforme. No entanto, $\norm{f_n}_p=1$, logo $\lim \norm{f_n-0}_p \neq 0$ e $f_n$ não pode convergir para $0$ em $L_p$.
+        Seja $$f_n:x\in X\mapsto n^{-1}\chi_{(0,n)}\in\R$$ para todo $n\in\N$. Esta sequência converge uniformemente para $0$ pois, para todo $\varepsilon>0$ existe, pelo princípio de arquimedes, $N(\varepsilon) \in \N$ tal que $0<N^{-1}<\varepsilon$. Se $n\geq N$, então $n^{-1}<\varepsilon$. Por fim, note que , para todo $x\in X$, $f_n(x)\leq n^{-1}<\varepsilon$, o que mostra a converência uniforme. No entanto, $\norm{f_n}_p=1$, logo $\lim \norm{f_n-0}_p \neq 0$ e $f_n$ não pode convergir para $0$ em $L_p$.
     \end{example}
 }
 
+\newcommand{\counterExamplePointwiseConvergence}{
+    \begin{example}{Convergência Pontual \texorpdfstring{$\not\Rightarrow$}{->} Convergência em $L_p$}{counter_example_pointwise_convergence}
+        Seja $$f_n:x\in X\mapsto \chi_{(n,n+1)}\in\R$$ para todo $n\in\N$. Esta sequência converge pontualmente para $0$ pois, fixado um $x\in X$, $f_n(x)= 0$ para todo $n > x$, o que mostra a converência de $(f_n(x))$. No entanto, $\norm{f_n}_p=1$, logo $\lim \norm{f_n-0}_p \neq 0$ e $f_n$ não pode convergir para $0$ em $L_p$.
+    \end{example}
+}
+
+\newcommand{\counterExampleAEConvergence}{
+    \begin{example}{Convergência \texorpdfstring{$\mu$}{u}-qtp \texorpdfstring{$\not\Rightarrow$}{->} Convergência em $L_p$}{counter_example_ae_convergence}
+        Seja $$f_n:x\in X\mapsto n\chi_{(0,\frac{1}{n})}\in\R$$ para todo $n\in\N$. Esta sequência converge pontualmente para $0$ exceto no ponto $\{0\}$, que tem medida nula, o que conclui a converência $\mu$-qtp. No entanto, $\norm{f_n}_p=1$, logo $\lim \norm{f_n-0}_p \neq 0$ e $f_n$ não pode convergir para $0$ em $L_p$.
+    \end{example}
+}
+
+\newcommand{\counterExampleLpConvergence}{
+    \begin{example}{Convergência em $L_p$ \texorpdfstring{$\not\Rightarrow$}{->} Convergência \texorpdfstring{$\mu$}{u}-qtp}{counter_example_lp_convergence}
+        Seja $$f_n:x\in X\mapsto \chi_{\left(\frac{j}{2^k}, \frac{(j+1)}{2^k}\right)}\in\R$$ para todo $k\in\N$ e $n=2^k+j$ com $0\leq j < 2^k$.
+        
+        Visualize essa sequência como ondas quadradas de período progressivamente menores, percorrendo o intervalo entre $0$ e $1$.
+
+
+        \input{assets/tikz/binaryWave.tex}
+        
+        Esta sequência converge pontualmente para $0$ em $L_1$ pois
+        
+        \begin{equation*}
+            \lim_{n\rightarrow \infty} \norm{f_n-0}_1 = \lim_{n\rightarrow \infty} \int_{X} \abs{f_n(x)-0} d\mu =  \lim_{n\rightarrow \infty} \int_{\frac{j}{2^k}}^{\frac{j+1}{2^k}} 1 d\mu = \lim_{n\rightarrow \infty} 2^k = 0.
+        \end{equation*}
+        
+        No entanto, $(f_n)$ não converge $\mu$-qtp (logo, nem pontualmente, nem uniformemente).
+    \end{example}
+}

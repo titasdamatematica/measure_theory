@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  22 OCT 2024 21:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  23 OCT 2024 11:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -787,7 +787,11 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 27.
 ) (config/commands.tex) (config/title.tex) (modules/definitions.tex) (modules/theorems.tex) (modules/examples.tex) (modules/remarks.tex) (modules/exercises.tex)
 \@quotelevel=\count463
 \@quotereset=\count464
- (main.aux)
+ (main.aux
+
+LaTeX Warning: Label `def:cauchy_convergence' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -1046,105 +1050,134 @@ Chapter 4.
 
 [41
 
-] (modules/proofs/propositions/uniformConvergenceLp.tex) (modules/proofs/propositions/dominatedConvergenceLp.tex) (modules/proofs/corollaries/boundedConvergenceLp.tex
+] (assets/tikz/binaryWave.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[42]))
 
-[43]
 
-[44
+[42] (modules/proofs/propositions/uniformConvergenceLp.tex
+
+[43]) (modules/proofs/propositions/dominatedConvergenceLp.tex) (modules/proofs/corollaries/boundedConvergenceLp.tex)
+
+[44] (modules/proofs/propositions/convergentInLpConvergentInMeasure.tex) (modules/proofs/propositions/cauchyInMeasure.tex
+
+[45]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33     \begin{equation}
+                         \label{prop:cauchy_in_measure/eq1}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33     \begin{equation}
+                         \label{prop:cauchy_in_measure/eq1}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33     \begin{equation}
+                         \label{prop:cauchy_in_measure/eq1}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.33     \begin{equation}
+                         \label{prop:cauchy_in_measure/eq1}) (modules/proofs/corollaries/cauchyMeasureCorollary.tex
+
+[46]
+Overfull \hbox (33.05989pt too wide) detected at line 9
+\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j ^^U \OML/cmm/m/it/12 \OMS/cmsy/m/n/12 g ^^R f\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j ^^U []g [ f\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j ^^U []g\OML/cmm/m/it/12 :
+ []
+
+
+Overfull \hbox (13.09499pt too wide) detected at line 19
+\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j ^^U \OML/cmm/m/it/12 \OMS/cmsy/m/n/12 g ^^R f\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j ^^U []g [ f\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j ^^U []g\OML/cmm/m/it/12 ;
+ []
+
+) (modules/proofs/propositions/convergenceInMeasureLpConvergence.tex)
+
+[47] (modules/proofs/lemmas/almostUniformCauchyLemma.tex) (modules/proofs/propositions/almostUniformConvergenceProposition.tex
+
+[48]) (modules/proofs/theorems/egoroff.tex))
+
+[49]
+
+[50
 
 ] (modules/appendices/definitions.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[45
+[51
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[46]
+[52]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[47]) (modules/appendices/theorems.tex
+[53]) (modules/appendices/theorems.tex
 
-[48]) (modules/appendices/exercises.tex
+[54]) (modules/appendices/exercises.tex
 
-[49
+[55
 
 ]
 
-[50
+[56
 
 ] (modules/proofs/exercises/extendedSigmaAlgebra.tex
 
-[51]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.39     \begin{equation}
-                         \label{pf:extended_sigma_algebra:eq:1}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.39     \begin{equation}
-                         \label{pf:extended_sigma_algebra:eq:1}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.39     \begin{equation}
-                         \label{pf:extended_sigma_algebra:eq:1}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.39     \begin{equation}
-                         \label{pf:extended_sigma_algebra:eq:1}) (modules/proofs/exercises/muIsWellDefined.tex
+[57]) (modules/proofs/exercises/muIsWellDefined.tex
 
-[52]) (modules/proofs/exercises/muIsMeasure.tex
+[58]) (modules/proofs/exercises/muIsMeasure.tex
 
-[53]) (modules/proofs/exercises/muIsUnique.tex) (modules/proofs/exercises/productOfSetsThatGenerateSigmaAlgebra.tex
+[59]) (modules/proofs/exercises/muIsUnique.tex) (modules/proofs/exercises/productOfSetsThatGenerateSigmaAlgebra.tex
 
-[54]) (modules/proofs/exercises/preimageOnCountableFamilyOfSets.tex
+[60]) (modules/proofs/exercises/preimageOnCountableFamilyOfSets.tex
 
-[55]) (modules/proofs/exercises/sigmaAlgebraGeneratedByCountableTopologicalBasis.tex) (modules/proofs/exercises/mIsSigmaRing.tex
+[61]) (modules/proofs/exercises/sigmaAlgebraGeneratedByCountableTopologicalBasis.tex) (modules/proofs/exercises/mIsSigmaRing.tex
 Overfull \hbox (26.45148pt too wide) detected at line 18
 \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )[]) \OMS/cmsy/m/n/12 ^^U \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )) + \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 \ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[] \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 )[])\OML/cmm/m/it/12 ;
  []
 
 
 
-[56]
+[62]
 
-[57]))
+[63]))
 
-[58] (main.aux)
+[64] (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A5E378A7130F9D92F2AA0AF204505AA3;6742.
+(rerunfilecheck)             Checksum: 52A0DFABDD6AEAF2C4030691907C9E29;7389.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33538 strings out of 473898
- 673742 string characters out of 5726480
- 1946960 words of memory out of 5000000
- 55499 multiletter control sequences out of 15000+600000
+ 33666 strings out of 473898
+ 678350 string characters out of 5726480
+ 1955960 words of memory out of 5000000
+ 55584 multiletter control sequences out of 15000+600000
  576143 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,14n,104p,956b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,14n,104p,956b,899s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\pedro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (64 pages, 519181 bytes).
+Output written on main.pdf (70 pages, 554350 bytes).
 PDF statistics:
- 1011 PDF objects out of 1200 (max. 8388607)
- 282 named destinations out of 1000 (max. 500000)
- 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1079 PDF objects out of 1200 (max. 8388607)
+ 306 named destinations out of 1000 (max. 500000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

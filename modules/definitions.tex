@@ -427,3 +427,28 @@
         \end{equation*}
     \end{definition}
 }
+
+\newcommand{\measureConvergence}{
+    \begin{definition}{Convergência na Medida}{cauchy_convergence}
+        Uma sequência $(f_n)$ converge na medida para $f$ se, para todo $\varepsilon > 0$
+        \begin{equation*}
+            \lim_{n\rightarrow \infty}\mu\left(\{x\in X; \ \abs{f_n(x)-f(x)} \geq \varepsilon\}\right)=0.
+        \end{equation*}
+    \end{definition}
+}
+
+\newcommand{\measureCauchyConvergence}{
+    \begin{definition}{Convergênciade Cauchy na Medida}{cauchy_convergence}
+        Uma sequência $(f_n)$ converge na medida para $f$ se, para todo $\varepsilon > 0$
+        \begin{equation*}
+            \mu\left(\{x\in X; \ \abs{f_n(x)-f_m(x)} \geq \varepsilon\}\right)=0
+        \end{equation*}
+        quando $n$ e $m$ tendem ao infinito.
+    \end{definition}
+}
+
+\newcommand{\almostUniformConvergence}{
+    \begin{definition}{Convergência Quase Uniforme}{almost_uniform_convergence}
+        Uma sequência $(f_n)$ de funções mensuráveis é dita \textbf{quase uniformemente convergente} para uma função mensurável $f$ se, para cada $\delta > 0$, existe um conjunto $E_{\delta} \subset X$ com $\mu(E_{\delta}) < \delta$ tal que $(f_n)$ converge uniformemente para $f$ em $X \setminus E_{\delta}$. A sequência $(f_n)$ é dita uma \textbf{sequência de Cauchy quase uniformemente} se, para cada $\delta > 0$, existe um conjunto $E_{\delta} \subset X$ com $\mu(E_{\delta}) < \delta$ tal que $(f_n)$ é uniformemente convergente em $X \setminus E_{\delta}$.
+    \end{definition}
+}

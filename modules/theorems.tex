@@ -478,6 +478,14 @@
     \input{modules/proofs/lemmas/powerInequality.tex}
 }
 
+\newcommand{\almostUniformCauchyLemma}{
+    \begin{lemma}{Convergência Quase Uniforme para Sequência de Cauchy}{almost_uniform_cauchy_lemma}
+        Seja $(f_n)$ uma sequência de Cauchy quase uniformemente. Então, existe uma função mensurável $f$ tal que $(f_n)$ converge quase uniformemente e quase todo ponto (\(\mu\)-(qtp)) para $f$.
+    \end{lemma}
+    \input{modules/proofs/lemmas/almostUniformCauchyLemma.tex}
+}
+
+
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % third chapter propositions
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -499,8 +507,45 @@
     \input{modules/proofs/propositions/dominatedConvergenceLp.tex}
 }
 
+\newcommand{\convergentInLpConvergentInMeasure}{
+    \begin{proposition}{Convergência em $L_p$ $\Rightarrow$ convergência na medida}{convergent_in_lp_convergent_in_measure}
+        Seja $(f_n)$ uma sequência em $L_p$ tal que $f_n\rightarrow f$ em $L_p$. Então $f_n\rightarrow f$ na medida.
+    \end{proposition}
+    \input{modules/proofs/propositions/convergentInLpConvergentInMeasure.tex}
+}
+
+\newcommand{\cauchyInMeasure}{
+    \begin{proposition}{Convergência de Sequência Cauchy na Medida}{cauchy_in_measure}
+        Seja $(f_n)$ uma sequência de funções reais mensuráveis que é de Cauchy em medida. Então, existe uma subsequência $(f_{n_j})$ que converge para $f$ \(\mu\)-qtp e existe $f$ mensurável tal que $f_n \rightarrow f$ na medida. Além disso, se $f_n\rightarrow g$ na medida, então $f=g$ \(\mu\)-qtp.
+    \end{proposition}
+    \input{modules/proofs/propositions/cauchyInMeasure.tex}
+}
+
+\newcommand{\convergenceInMeasureLpConvergence}{
+    \begin{proposition}{Convergência na medida dominada}{convergence_in_measure_lp_convergence}
+        Seja $(f_n)$ uma sequência de funções em $L_p$ que converge em medida para $f$, e seja $g \in L_p$ tal que
+        \begin{equation*}
+            |f_n(x)| \leq g(x), \quad \mu\text{-}(qtp).
+        \end{equation*}
+        Então $f \in L_p$ e $(f_n)$ converge em $L_p$ para $f$.
+    \end{proposition}
+    \input{modules/proofs/propositions/convergenceInMeasureLpConvergence.tex}
+}
+
+\newcommand{\almostUniformConvergenceProposition}{
+    \begin{proposition}{Convergência Quase Uniforme e Convergência na Medida}{almost_uniform_convergence_proposition}
+        Se uma sequência $(f_n)$ converge quase uniformemente para $f$, então ela converge na medida. Reciprocamente, se uma sequência $(h_n)$ converge na medida para $h$, então alguma subsequência converge quase uniformemente para $h$.
+    \end{proposition}
+    \input{modules/proofs/propositions/almostUniformConvergenceProposition.tex}
+}
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% third chapter corollary
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 \newcommand{\boundedConvergenceLp}{
-    \begin{corollary}{Corolário da Convergência Dominada com Limite Constante}{bounded_convergence_lp}
+    \begin{corollary}{Convergência Dominada por Constante}{bounded_convergence_lp}
         Suponha que $\mu(X) < +\infty$, e que $(f_n)$ seja uma sequência em $L_p$ que converge para uma função mensurável $f$ para quase todo ponto \(\mu\)-(qtp). Se existir uma constante $K$ tal que
         \begin{equation}
             |f_n(x)| \leq K, \quad x \in X, \quad n \in \mathbb{N},
@@ -511,13 +556,13 @@
     \input{modules/proofs/corollaries/boundedConvergenceLp.tex}
 }
 
+\newcommand{\cauchyMeasureCorollary}{
+    \begin{corollary}{Cauchy em Medida é convergente na medida}{cauchy_measure_corollary}
+        Seja $(f_n)$ uma sequência de funções reais mensuráveis que é de Cauchy em medida. Então, existe uma função real mensurável $f$ para a qual a sequência converge em medida. Essa função limite $f$ é unicamente determinada\(\mu\)-qtp.
+    \end{corollary}
+    \input{modules/proofs/corollaries/cauchyMeasureCorollary.tex}
+}
 
-
-
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% third chapter corollary
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -550,6 +595,12 @@
     \input{modules/proofs/theorems/rieszFischer.tex}
 }
 
+\newcommand{\egoroff}{
+    \begin{theorem}{Teorema de Egoroff}{egoroff}
+        Suponha que $\mu(X) < +\infty$ e que $(f_n)$ é uma sequência de funções reais mensuráveis que converge para quase todo ponto (\(\mu\)-(qtp)) em $X$ para uma função real mensurável $f$. Então, a sequência $(f_n)$ converge quase uniformemente e na medida para $f$.
+    \end{theorem}
+    \input{modules/proofs/theorems/egoroff.tex}
+}
 
 
 

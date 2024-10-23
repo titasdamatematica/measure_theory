@@ -1,0 +1,8 @@
+\begin{proof}
+    Fixe um $\varepsilon >0$. Seja $E_{n} = \{x\in X ; \ |f_n(x) - f(x)| \geq \varepsilon \}$. Vamos mostrar que a medida deste conjunto é limitada é vai para zero no limite. Observe que 
+    \begin{equation*}
+        \norm{f_n - f}_p=\left(\int |f_n - f|^p \right)^{\frac{1}{p}}\geq \left(\int_{E_n} |f_n - f|^p \right)^{\frac{1}{p}} \geq \left(\int_{E_n} \varepsilon^p \right)^{\frac{1}{p}}= \varepsilon \mu(E_n)^{\frac{1}{p}} \geq 0.
+    \end{equation*}
+    
+    Sabemos que $\lim \norm{f_n - f}_p = 0$ por $f_n\rightarrow f$ em $L_p$ por hipótese. Tomando o limite dos dois lados, concluímos, pelo teorema do confronto, que $\mu(E_{n})\rightarrow 0$. Pela arbitrariedade da escolha de $\varepsilon$ temos, por fim, que $f_n \to f$ em medida.
+\end{proof}

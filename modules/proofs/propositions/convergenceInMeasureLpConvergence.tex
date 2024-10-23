@@ -1,0 +1,12 @@
+\begin{proof}
+    Se $(f_n)$ não converge em $L_p$ para $f$, então existe uma subsequência $(g_k)$ de $(f_n)$ e um $\epsilon > 0$ tal que
+    \begin{equation}\label{prop:convergence_in_measure_lp_convergence/eq1}
+        \norm{g_k - f}_p > \epsilon \quad \text{para } k \in \mathbb{N}.
+    \end{equation}
+
+    Como $(g_k)$ é uma subsequência de $(f_n)$, segue que $(g_k)$ converge em medida para $f$. Pela Proposição \ref{prop:cauchy_in_measure}, existe uma subsequência $(h_r)$ de $(g_k)$ que converge para quase todo ponto \(\mu\)-qtp e em medida para uma função $h$. Pela parte de unicidade do Corolário \ref{cor:cauchy_measure_corollary}, segue que $h = f$ \(\mu\)-qtp.
+
+    Como $(h_r)$ converge para quase todo ponto \(\mu\)-qtp para $f$ e é dominada por $g$, a Proposição \ref{prop:dominated_convergence_lp} implica que $\norm{h_r - f}_p \to 0$. No entanto, isso contradiz a relação \eqref{prop:convergence_in_measure_lp_convergence/eq1}.
+
+    Portanto, $(f_n)$ converge em $L_p$ para $f$.
+\end{proof}

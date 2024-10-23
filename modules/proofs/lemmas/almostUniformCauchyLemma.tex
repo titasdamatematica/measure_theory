@@ -1,0 +1,14 @@
+\begin{proof}
+    Se $k \in \mathbb{N}$, seja $E_k \subset X$ tal que $\mu(E_k) < 2^{-k}$ e $(f_n)$ é uniformemente convergente em $X \setminus E_k$. Defina $F_k = \bigcup_{i=k}^{\infty} E_i$, de modo que $F_k \subset X$ e $\mu(F_k) < 2^{-(k-1)}$. Note que $(f_n)$ converge uniformemente em $X \setminus F_k$. Defina $g_k$ por
+    \begin{equation*}
+        g_k(x) =
+        \begin{cases}
+            \lim f_n(x), & x \notin F_k, \\
+            0, & x \in F_k.
+        \end{cases}
+    \end{equation*}
+
+    Observamos que a sequência $(F_k)$ é decrescente e que, se $F = \bigcap_{k=1}^{\infty} F_k$, então $F \subset X$ e $\mu(F) = 0$. Se $h \leq k$, então $g_h(x) = g_k(x)$ para todo $x \notin F_h$. Portanto, a sequência $(g_k)$ converge em todo $X$ para uma função limite mensurável, que denotamos por $f$. Se $x \notin F_k$, então $f(x) = g_k(x) = \lim f_n(x)$. Segue que $(f_n)$ converge para $f$ em $X \setminus F$, de modo que $(f_n)$ converge para $f$ para quase todo ponto (\(\mu\)-(qtp)) em $X$.
+
+    Para ver que a convergência é quase uniforme, seja $\epsilon > 0$ e escolha $K$ suficientemente grande para que $2^{-(K-1)} < \epsilon$. Então, $\mu(F_K) < \epsilon$, e $(f_n)$ converge uniformemente para $g_K = f$ em $X \setminus F_K$.
+\end{proof}

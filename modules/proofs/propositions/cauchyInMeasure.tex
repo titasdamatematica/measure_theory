@@ -1,0 +1,48 @@
+\begin{proof}Vamos começar construindo uma subsequência especial de onda vamos tirar propriedades boas. A construção começa pela hipótese de que $f_n$ é de Cauchy na medida. Escolha $\varepsilon_j = 2^{-j}$, então
+
+\begin{equation*}
+    \mu\left(\{x\in X; \ \abs{f_n(x)-f_m(x)} \geq 2^{-j}\}\right)=0.
+\end{equation*}
+quando $n$ e $m$ tendem ao infinito. Em particular, se $m$ for o sucessor de $n$, temos que
+
+\begin{equation*}
+    \lim_{n\rightarrow \infty}\mu\left(\{x\in X; \ \abs{f_n(x)-f_{n+1}(x)} \geq 2^{-j}\}\right)=0.
+\end{equation*}
+
+Em outras palavras, para todo $\varepsilon_j=2^{-j}$, existe $N(j)\in\N$ tal que $n\geq N(j)$,
+
+\begin{equation*}
+    \mu\left(\{x\in X; \ \abs{f_n(x)-f_{n+1}(x)} \geq 2^{-j}\}\right) < \varepsilon_j = 2^{-j}.
+\end{equation*}
+
+Para formar a subsequência escolhemos $j=1$ e $n_1$ o menor natural maior ou igual a $N(1)$. Assim, 
+
+\begin{equation*}
+    \mu\left(\{x\in X; \ \abs{f_{n_1}(x)-f_{n_1+1}(x)} \geq 2^{-1}\}\right) < 2^{-1}.
+\end{equation*}
+
+Definiremos os dois primeiros elementos da nossa subsequência, $g_1=f_{n_1}$ e $g_2=f_{n_1+1}$. Para simplificar a representação, chamaremos
+
+\begin{equation*}
+    E_1=\{x\in X; \ \abs{g_1(x)-g_{1+1}} \geq 2^{-1}\}, \quad \mu(E_1) < 2^{-1}.
+\end{equation*}
+
+Seguimos definindo dessa forma para garantir que a subsequência $(g_j)$ é tal que $\mu(E_j) \leq 2^{-j}$ para todo $j$.
+
+Se $F_k = \bigcup_{j=k}^{\infty} E_j$, então $\mu(F_k) \leq \sum_{j=k}^{\infty} 2^{-j} = 2^{1-k}$, e se $x \notin F_k$, para $i \geq j \geq k$, temos
+    \begin{equation}\label{prop:cauchy_in_measure/eq1}
+        |g_j(x) - g_i(x)| \leq \sum_{l=j}^{i-1} |g_{l+1}(x) - g_l(x)| \leq \sum_{l=j}^{i-1} 2^{-l} \leq 2^{1-j}.
+    \end{equation}
+
+    Assim, $\{g_j\}$ é de Cauchy pontualmente em $F_k^c$. Definimos $$F = \bigcap_{k=1}^\infty F_k = \limsup E_j.$$ Como $\mu(F) = 0$, definimos $f(x) = \lim g_j(x)$ para $x \notin F$ e $f(x) = 0$ para $x \in F$. Então, $f$ é mensurável (veja os Exercícios 3 e 5) e $g_j \to f$ \(\mu\)-(qtp). Além disso, \eqref{prop:cauchy_in_measure/eq1} mostra que $|g_j(x) - f(x)| \leq 2^{1-j}$ para $x \notin F_k$ e $j \geq k$. Como $\mu(F_k) \to 0$ quando $k \to \infty$, segue que $g_j \to f$ em medida. Mas $f_n \to f$ em medida, pois
+    \begin{equation*}
+        \{x : |f_n(x) - f(x)| \geq \epsilon\} \subset \{x : |f_n(x) - g_j(x)| \geq \frac{\epsilon}{2}\} \cup \{x : |g_j(x) - f(x)| \geq \frac{\epsilon}{2}\},
+    \end{equation*}
+    e os conjuntos à direita têm medida pequena para $n$ e $j$ suficientemente grandes. Da mesma forma, se $f_n \to g$ em medida,
+    \begin{equation*}
+        \{x : |f(x) - g(x)| \geq \epsilon\} \subset \{x : |f(x) - f_n(x)| \geq \frac{\epsilon}{2}\} \cup \{x : |f_n(x) - g(x)| \geq \frac{\epsilon}{2}\}
+    \end{equation*}
+    para todo $n$, e portanto $\mu(\{x : |f(x) - g(x)| \geq \epsilon\}) \to 0$ para todo $\epsilon$. Deixando $\epsilon \to 0$, concluímos que $f = g$ \(\mu\)-(qtp).
+
+
+\end{proof}

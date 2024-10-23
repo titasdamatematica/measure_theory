@@ -1,0 +1,5 @@
+\begin{proof}
+    Suponha que $(f_n)$ converge quase uniformemente para $f$. Sejam $\alpha$ e $\epsilon$ números positivos. Então, existe um conjunto $E_\epsilon \subset X$ com $\mu(E_\epsilon) < \epsilon$ tal que $(f_n)$ converge uniformemente para $f$ em $X \setminus E_\epsilon$. Portanto, se $n$ for suficientemente grande, o conjunto $\{x \in X : |f_n(x) - f(x)| \geq \alpha\}$ deve estar contido em $E_\epsilon$. Isso mostra que $(f_n)$ converge na medida para $f$.
+
+    Reciprocamente, suponha que $(h_n)$ converge na medida para $h$. Segue da Proposição \ref{prop:cauchy_in_measure} que existe uma subsequência $(g_k)$ de $(h_n)$ que converge em medida para uma função $g$, e a prova da Proposição \ref{prop:cauchy_in_measure}  mostra que a convergência é quase uniforme. Como $(g_k)$ converge na medida tanto para $h$ quanto para $g$, segue do Corolário \ref{cor:cauchy_measure_corollary} que $h = g$ \(\mu\)-qtp. Portanto, a subsequência $(g_k)$ de $(h_n)$ converge quase uniformemente para $h$.
+\end{proof}
