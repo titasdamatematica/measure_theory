@@ -67,3 +67,9 @@
     \end{example}
 }
 
+\newcommand{\counterExampleUniformConvergence}{
+    \begin{example}{Convergência Uniforme \texorpdfstring{$\not\Rightarrow$}{->} Convergência em $L_p$}{counter_example_uniform_convergence}
+        Seja $f_n:x\in X\mapsto n^{-1}\chi_{(0,n)}$ para todo $n\in\N$. Esta sequência converge uniformemente para $0$ pois, para todo $\varepsilon>0$ existe, pelo princípio de arquimedes, $N(\varepsilon) \in \N$ tal que $0<N^{-1}<\varepsilon$. Se $n\geq N$, então $n^{-1}<\varepsilon$. Por fim, note que , para todo $x\in X$, $f_n(x)\leq n^{-1}<\varepsilon$, o que mostra a converência uniforme. No entanto, $\norm{f_n}_p=1$, logo $\lim \norm{f_n-0}_p \neq 0$ e $f_n$ não pode convergir para $0$ em $L_p$.
+    \end{example}
+}
+

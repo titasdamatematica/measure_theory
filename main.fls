@@ -550,6 +550,9 @@ INPUT modules\proofs\theorems\minkowski.tex
 INPUT .\modules\proofs\theorems\rieszFischer.tex
 INPUT .\modules\proofs\theorems\rieszFischer.tex
 INPUT modules\proofs\theorems\rieszFischer.tex
+INPUT .\modules\chapters\convergence.tex
+INPUT .\modules\chapters\convergence.tex
+INPUT modules\chapters\convergence.tex
 INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
 INPUT C:\Users\pedro\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm7.tfm
 INPUT .\modules\proofs\propositions\uniformConvergenceLp.tex
