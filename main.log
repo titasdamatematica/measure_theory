@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  23 OCT 2024 11:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  4 NOV 2024 12:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -787,11 +787,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 27.
 ) (config/commands.tex) (config/title.tex) (modules/definitions.tex) (modules/theorems.tex) (modules/examples.tex) (modules/remarks.tex) (modules/exercises.tex)
 \@quotelevel=\count463
 \@quotereset=\count464
- (main.aux
-
-LaTeX Warning: Label `def:cauchy_convergence' multiply defined.
-
-)
+ (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -1097,18 +1093,17 @@ Overfull \hbox (13.09499pt too wide) detected at line 19
 
 [47] (modules/proofs/lemmas/almostUniformCauchyLemma.tex) (modules/proofs/propositions/almostUniformConvergenceProposition.tex
 
-[48]) (modules/proofs/theorems/egoroff.tex))
+[48]) (modules/proofs/theorems/egoroff.tex
 
-[49]
+[49]))
 
-[50
-
-] (modules/appendices/definitions.tex
+[50] (modules/appendices/definitions.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [51
+
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1156,10 +1151,6 @@ Overfull \hbox (26.45148pt too wide) detected at line 18
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 52A0DFABDD6AEAF2C4030691907C9E29;7389.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1167,17 +1158,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33666 strings out of 473898
- 678350 string characters out of 5726480
+ 33669 strings out of 473898
+ 678408 string characters out of 5726480
  1955960 words of memory out of 5000000
- 55584 multiletter control sequences out of 15000+600000
+ 55586 multiletter control sequences out of 15000+600000
  576143 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,14n,104p,956b,899s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\pedro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/pedro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (70 pages, 554350 bytes).
+Output written on main.pdf (70 pages, 560255 bytes).
 PDF statistics:
- 1079 PDF objects out of 1200 (max. 8388607)
- 306 named destinations out of 1000 (max. 500000)
+ 1089 PDF objects out of 1200 (max. 8388607)
+ 307 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,14 +1,56 @@
 \begin{proof}
-    Suponhamos, sem perda de generalidade, que $(f_n)$ converge em todo ponto de $X$ para $f$. Sejam $m, n \in \mathbb{N}$, e defina
+    Por hipótese, $f_n$ converge para $f$ para quase todo ponto. Portanto, existe um conjunto de medida nula $N$ tal que $f_n\chi_N$ converge para $f\chi_N$ para todo ponto em $X\setminus N$. Em símbolos,
+
+    \begin{equation*}
+        f_n \rightarrow f (\mu \text{-qtp}) \Rightarrow \exists N\in \Sigma, \mu (N)=0; \ f_n(x) \rightarrow f(x) \ \forall x\in X\setminus N.
+    \end{equation*}
+
+    De fato, é preferível trabalhar apenas nos lugares onde temos a convergência pontual. Assim, ao invés de olharmos para a nossa função toda, podemos olhar só para a função restrita ao subconjunto onde temos a convergência pontual garantida, elimiando um detalhe técnico da hipótese. 
+    
+    Seguiremos, então, partindo do princípio que $(f_n)$ converge em todo ponto de $X$ para $f$. Caso isso não ocorra, basta olhar para $f_n\chi_N$ que converge pontualmente para $f\chi_N$. Portanto, não há perda de generalidade.
+
+    Para o próximo passo, vamos usar a convergência pontual para criar um conjunto vazio. Pela Definição de \nameref{def:pointwise_convergence}, em um $x\in X$ onde a sequência converge, temos que
+
+    \begin{equation*}
+        \forall \varepsilon >0, \exists N(\varepsilon, x) \in \N ; n\geq N(\varepsilon, x)\Rightarrow \abs{f_n(x) - f(x)} < \varepsilon.
+    \end{equation*}
+
+    Assim, se $x\in X$ é um ponto onde a sequência NÃO converge, existe $\varepsilon>0$ tal que, para todo natural $N$, é possível achar um $n>N$ tal que $\abs{f_n(x)-f(x)}\geq\varepsilon$. Em símbolos,
+
+    \begin{equation}\label{proof:egoroff/eq1}
+        \exists \, \varepsilon >0; \forall N \in \N , \exists \, n\geq N(\varepsilon, x); \abs{f_n(x) - f(x)} \geq \varepsilon.
+    \end{equation}
+    
+    Guardemos esta ideia. Vamos definir um conjunto de pontos de $x$ onde vale a segunda parte da sentença acima. Sejam $m, n \in \mathbb{N}$, e defina
     \begin{equation*}
         E_n(m) = \bigcup_{k=n}^{\infty} \left\{ x \in X : |f_k(x) - f(x)| \geq \frac{1}{m} \right\},
     \end{equation*}
-    de modo que $E_n(m)$ pertence a $X$ e $E_{n+1}(m) \subseteq E_n(m)$. Como $f_n(x) \to f(x)$ para todo $x \in X$, segue que
+    de modo que $E_n(m)$ pertence a $X$ e $E_{n+1}(m) \subseteq E_n(m)$ (toda vez que aumentamos o $n$, tiramos um elemento da união, então os conjuntos vão ficando menores e a sequência é decrescente). Note que, se $x\in E_n(m)$, então existe $k\geq n$ tal que $\abs{f_k(x) - f(x)} \geq \frac{1}{m}$. Repare na semelhança com \eqref{proof:egoroff/eq1}.
+
+    Agora, considere a interseção de todos os $E_n(m)$, dada por $\cup_{n=1}^{\infty} E_n(m)$. Se $x$ pertence a este conjunto então, para todo $n$ natural, $x\in E_n(m)$. Como argumentamos no parágrafo acima, isto significa que, para todo $n$, existe $k\geq n$ tal que $\abs{f_k(x) - f(x)} \geq \frac{1}{m}$. Repare mais uma vez na semelhança com \eqref{proof:egoroff/eq1}. Desta vez, estamos com a sentença completa! Neste caso, $\frac{1}{m}$ faz o papel do nosso $\varepsilon$. Concluimos, então, que $f_n(x)$ diverge para todo ponto em $\cup_{n=1}^{\infty} E_n(m)$.
+
+    Eis aqui a ideia inteligente. Como $f_n(x) \to f(x)$ para todo $x \in X$ (por hipótese), segue que não existem pontos onde a sequência diverge, ou seja,
     \begin{equation*}
         \bigcap_{n=1}^{\infty} E_n(m) = \varnothing.
     \end{equation*}
 
-    Como $\mu(X) < +\infty$, inferimos que $\mu(E_n(m)) \to 0$ conforme $n \to +\infty$. Se $\delta > 0$, escolha $k_m$ tal que $\mu(E_{k_m}(m)) < \delta / 2^m$, e defina $E_\delta = \bigcup_{m=1}^{\infty} E_{k_m}(m)$, de modo que $E_\delta \subset X$ e $\mu(E_\delta) < \delta$. Observe que, se $x \notin E_\delta$, então $x \notin E_{k_m}(m)$, de modo que
+    Como $\mu(X) < +\infty$ e a sequência é descrescente, estamos nas hipóteses da \nameref{prop:measure_is_continuous_from_above}. Assim
+    
+    \begin{equation*}
+        0=\mu(\varnothing)=\mu\left(\bigcap_{n=1}^{\infty} E_n(m)\right) = \lim_{n\rightarrow \infty} \mu (E_n),
+    \end{equation*}
+    
+    e concluimos que $\mu(E_n(m)) \to 0$ conforme $n \to +\infty$.
+    
+    Vamos usar mais uma vez as definições básicas de limite vindas da análise real. Comecemos por fixar um $\delta >0$. Agora, como sabemos que $\mu(E_n(m))$ converge para $0$, temos, para cada $m$, que $\frac{\delta}{2^m}>0$ e, portanto, podemos afirmar que
+    
+    \begin{equation*}
+        \exists k_m \in \N ; \abs{\mu(E_{k_m}(m))-0}=\mu(E_{k_m}(m)) < \frac{\delta}{2^m}.
+    \end{equation*}
+    
+    Defina $E_\delta = \bigcup_{m=1}^{\infty} E_{k_m}(m)$, de modo que $E_\delta \subset X$ e $\mu(E_\delta) < \delta$ (basta usar \nameref{prop:measure_is_subadditive} e soma de progressão geométrica para verificar este fato). Lembre-se que estamos tentando provar que a sequência converge quase uniformemente. Jé conseguimos construir um conjunto de medida arbitrariamente pequena, resta mostrar que a sequência converge uniformemente no seu complemento.
+    
+    Observe que, se $x \notin E_\delta$, então $x \notin E_{k_m}(m)$. Dessa forma, 
     \begin{equation*}
         |f_k(x) - f(x)| < \frac{1}{m}
     \end{equation*}
