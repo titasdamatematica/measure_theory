@@ -605,6 +605,74 @@
 
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                FOURTH CHAPTER STATEMENTS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% fourth chapter lemmas
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\newcommand{\eitherSingular}{
+    \begin{lemma}{.}{either_singular}
+        Sejam $\nu$ e $\mu$ medidas positivas finitas. Então, ou $\nu \perp \mu$ ou existem $\varepsilon > 0$ e $E\in\Sigma$ tais que $\mu(E)>0$ e $\nu(E) \geq \varepsilon \mu(E)$.
+    \end{lemma}
+    \input{modules/proofs/lemmas/either_singular.tex}
+}
+
+\newcommand{\asZero}{
+    \begin{lemma}{.}{as_zero}
+        Sejam $\nu,\mu$ medidas. Se $\nu \perp \mu$ e $\nu \ll \mu$, então $\nu=0$.
+    \end{lemma}
+    \input{modules/proofs/lemmas/as_zero.tex}
+}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% fourth chapter propositions
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% fourth chapter corollary
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% fourth chapter theorems
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\newcommand{\lebesgueRadonNikodym}{
+    \begin{theorem}{Teorema de Lebesgue-Radon-Nikodým}{lebesgueRadonNikodym}
+        Seja $\nu$ uma medida com sinal $\sigma$-finita e $\mu$ uma medida positiva $\sigma$-finita. Então existe um único par de medidas $\sigma$-finitas $(\nu_s,\nu_a)$ tal que
+    \begin{equation*}
+        \nu_s \perp \mu, \quad \nu_a \ll \mu, \quad \text{e} \quad \nu = \nu_s + \nu_a.
+    \end{equation*}
+    Também existe $f:\X \to \R$ $\mu$-quase integrável tal que
+    \begin{equation*}
+        \nu (E)=\int_E f \ d\nu.
+    \end{equation*}
+    \end{theorem}
+    \input{modules/proofs/theorems/lebesgueRadonNikodym.tex}
+}
+
+\newcommand{\jordan}{
+    \begin{theorem}{Teorema de Decomposição de Jordan}{jordan}
+        Seja $\nu$ uma medida com sinal. Então, existe um único par de medidas positivas, $(\nu^{+}, \nu^{-})$, tal que $\nu = \nu^{+} - \nu^{-}$ e $\nu^{+} \perp \nu^{-}$.
+    \end{theorem}
+    \input{modules/proofs/theorems/jordan.tex}
+}
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

@@ -1,0 +1,231 @@
+\begin{proof}
+    Esta demonstração será dividida em $3$ casos. No primeiro caso, vamos supor que as duas medidas são positivas e finitas. Para o segundo caso, vamos tirar a hipótese das medidas serem finitas e vamos ficar com duas medidas positivas $\sigma$-finitas. Neste caso, o objetivo será separar o conjunto $\X$ em conjuntos de medida finita e aplicar o caso $1$. Por fim, vamos tirar a hipótese de uma das medidas ser finita para que tenhamos uma medida com sinal. Neste caso, aplicaremos o Teorema da Decomposição de Jordan. Vamos para a demonstração.
+
+    \textbf{(Caso 1)} Vamos supor que $\nu$ e $\mu$ são medidas positivas finitas, isto é,
+    
+    \begin{equation*}
+        0 \leq \nu(E) < \infty, \quad 0 \leq \mu(E) < \infty \quad \forall E\in\Sigma.
+    \end{equation*}
+
+    Primeiramente, vamos construir a medida absolutamente contínua. Como queremos que ela tenha uma cara bem específica, vamos começar procurando por esta medida em uma família especial de funções.
+
+    Defina
+
+    \begin{equation*}
+        \F \coloneq \left\{ f\in L^{+}(\X); \ \int_E f \ d\mu \leq \nu(E) \ \forall E\in\Sigma \right\}.
+    \end{equation*}
+
+    Façamos algumas afirmações sobre este conjuntos.
+
+    \begin{claim}{.}{nao_vazio}
+       $\F$ não é vazio.
+    \end{claim}
+
+    De fato, a imagem da função identicamente nula é menor ou igual a medida de qualquer conjunto mensurável pois $\nu$ é positiva por hipótese. Assim $f\equiv 0 \in \F$ e a família é não vazia.
+
+    \begin{claim}{.}{max_pertence}
+        Se $f,g \in \F$, então $\max \{f,g\} \in \F$.
+    \end{claim}
+
+    Denotemos $h=\max \{f,g\}$. Para provar esta afirmação, precisamos mostrar que, para qualquer conjunto $E$ mensurável, $\int_E g \  d\mu \leq \nu(E)$. A ideia é separar $E$ nos pontos onde $h$ assume o valor de $f$ e de $g$. Para tanto, defina
+
+    \begin{equation*}
+        A\coloneq \{x\in X; \ f(x)> g(x)\}.
+    \end{equation*}
+
+    Dessa forma $h$ restrita a $A$ coincide com a função $f$. No complementar de $A$, então ela assumirá o mesmo valor que $g$. Se escrevermos $E=(E\cap A) \cup (E\setminus A)$, temos
+
+    \begin{equation*}
+        \int_E h \ d\mu = \int_{E\cap A} f\  d\mu + \int_{E\setminus A} g \ d\mu.
+    \end{equation*}
+
+    Como, por hipótese, $f$ e $g$ pertencem a $\F$, então, pela definição da família,
+
+    \begin{equation*}
+        \int_E h \ d\mu \leq \nu(E\cap A) + \nu(E\setminus A) = \nu (E).
+    \end{equation*}
+
+    O que prova que $h\in\F$ pela arbitrariedade de $E$.
+
+    Com essas duas afirmações em mãos, vamos seguir com a nossa demonstração. Pela Afirmação \ref{clm:nao_vazio}, sabemos que existem $f$ na família. Tomemos, então, o supremo das integrais dela:
+    \begin{equation*}
+        \alpha \coloneq \left\{\int_{\X} f\ d\mu; \ f\in\F\right\}.
+    \end{equation*}
+
+    Usaremos algumas propriedades básicas para mostrar que o supremo é finito. Depois disso, mostraremos que este supremo é atingido (ele é um máximo), e vamos tomar a função que faz isso.
+    
+    \begin{claim}{.}{sup_finito}
+        $\alpha \leq \nu(\X) < \infty$.
+    \end{claim}
+
+    Com efeito, se $f\in\F$, então pela definição da família, $\int_E f \ d\mu\leq \nu(E)$ para todo $E\in\Sigma$. Em particular, $\X \in \Sigma$, logo, $\int_{\X} f \ d\mu \leq \nu(\X) $ para toda $f\in\F$. Isto nos diz que $\nu(\X)$ é uma cota superior para a família $\{\int_{\X} f \ d\mu\}$. Como $\alpha$, pela definição do supremo, é a menor das cotas superiores, então, $\alpha \leq \nu(\X)$. Portanto, o supremo é finito.
+
+    Como, pela Afirmação \ref{clm:sup_finito}, o supremo é finito, então existe uma sequência que converge para este número. Considere, portanto, a sequência $\left(\int_{\X} f_n \ d\mu\right)_{n=1}^{\infty}$ tal que
+    \begin{equation}\label{def:fn_lim}
+        \lim_{n\to \infty} \int_{\X} f_n \ d\mu = \alpha.
+    \end{equation}
+
+    A partir desta sequência, vamos construir uma outra sequência $(g_n)_{n=1}^{\infty}\subseteq \F$ onde $g_n=\max\{f_1,\dots, f_n\}$. Note que, pela Afirmação \ref{clm:max_pertence}, garantimos que $g_n\in\F$ para todo $n\in\N$. A função que nos interessa é o limite desta sequência. Observe a afirmação abaixo.
+
+    \begin{claim}{.}{gn_sup}
+    A sequência $(g_n)$ converge monotonicamente para $f$, como definida abaixo.
+        \begin{equation}\label{def:f}
+            \lim_{n\to\infty} g_n = \sup_{n\in\N} f_n \coloneq f.
+        \end{equation}
+    \end{claim}
+
+    Para justificar a Afirmação \ref{clm:gn_sup}, basta notar que adicionar funções ao máximo sempre eleva o valor que ele pode assumir, então $g_n\leq g_{n+1}$ para todo $n\in\N$. Olhando pontualmente para um $x\in\X$ fixado, temos que $(g_n(x))_{n=1}^{\infty}$ é uma sequência monotônica crescente e limitada (pela Afirmação \ref{clm:sup_finito}) . Portanto, existe o supremo e é possível mostrar pela definição que ele coincide com o supremo da sequência $(f_n(x))_{n=1}^{\infty}$.
+
+    Lembre-se que o nosso objetivo é mostrar que o supremo é atingido, isto é, existe uma função de $\F$ tal que a sua integral é $\alpha$. A nossa candidata é $f$ como definimos em \eqref{def:f}, mas ainda não sabemos se ela pertence a $\F$.
+
+    \begin{claim}{.}{teste}
+        $f\in\F$ e $\int_{\X} f \ d\mu = \alpha$
+    \end{claim}
+
+    Para validar esta afirmação, vamos usar o Teorema da Convergência Monótona (TCM) e a monotonicidade da integral.
+
+    \begin{equation*}
+        g_n \geq f_n \Rightarrow \int_{\X} g_n \ d\mu \geq \int_{\X} f_n \ d\mu \quad (\forall n\in\N)
+    \end{equation*}
+
+    Tomando o limite dos dois lados da desigualdade, temos
+
+    \begin{equation*}
+        \lim_{n\to\infty} \int_{\X} g_n \ d\mu \geq \lim_{n\to\infty}  \int_{\X} f_n \ d\mu \quad
+    \end{equation*}
+
+    Garantimos que estamos nas condições do Teorema com a Afirmação \ref{clm:gn_sup}. Aplicando o TCM do lado esquerdo e usando a definição da sequência $(f_n)$ que está em \eqref{def:fn_lim}, temos que
+    
+    \begin{equation*}
+         \int_{\X} f \ d\mu \geq \alpha.
+    \end{equation*}
+
+    Agora, nota que $\int_{\X} f \ d\mu \leq \alpha$ pois $\alpha$ é o supremo. Então, $\int_{\X} f \ d\mu = \alpha$, como queríamos. Para concluir a prova da afirmação, resta mostrar que $f\in\F$. Para tanto, usaremos o fato que $g_n\in\F$ e o TCM mais uma vez.
+
+    \begin{equation*}
+        \int_E f\ d\mu = \int_E \lim_{n\to\infty} g_n \ d\mu = \lim_{n\to\infty} \int_{E} g_n \ d\mu \leq \nu(E).
+    \end{equation*}
+
+    A conclusão é que a integral desta $f$ é finita (lembre-se que, pela Afirmação \eqref{clm:sup_finito}, o supremo é finito) a menos de um conjunto de medida nula. Diante disso, podemos reescrever $f$ como uma função real fazendo com que ela assuma o valor $0$ onde o conjunto tiver medida nula.
+
+    Todo o trabalho que tivemos até aqui foi para mostrar que o supremo era atingido. Vamos continuar a nossa prova tomando, com segurança, uma função $f$, como definida anteriormente. Intuitivamente, esta função é a ``maior função integrável que ainda é menor do que a medida dos conjuntos com relação a $\nu$''. De fato, ela fará o papel da nossa medida absolutamente contínua.
+
+    Vamos definir a função abaixo.
+
+    \begin{equation}\label{def:v_singular}
+        \nu_s(E) = \nu(E) - \int_E f \ d\mu, \quad \forall \ E\in \Sigma.
+    \end{equation}
+
+    É fácil ver que a função acima é positiva com o que argumentamos anteriormente.
+
+    \begin{claim}{.}{vs_singular}
+        $v_s \perp \mu$.
+    \end{claim}
+
+    Para mostrar que isto é verdade usaremos o Lema \ref{lmm:either_singular}.
+    
+    Suponha, por contradição, que $\nu_s$ não é mutuamente singular com respeito a $\mu$. Então, pelo Lema \ref{lmm:either_singular}, existem $\varepsilon > 0$ e $E_0\in\Sigma$ tais que $\mu(E_0)>0$ e $\nu_s(E_0) \geq \varepsilon \mu(E_0)$.
+
+    A partir disso, vamos construir uma função que contradiz a maximalidade de $f$. Defina
+
+    \begin{equation*}
+        F\coloneq f+\varepsilon \chi_{E_0}.
+    \end{equation*}
+
+    Temos que mostrar que esta candidata está em $\F$ e que a sua integral é maior que a de $f$.
+
+    \begin{claim}{.}{5}
+        $F\in\F$ e $\int_{\X} F \ d\mu > \int_{\X} f \ d\mu$.
+    \end{claim}
+
+    Para provar a primeira parte, temos que calcular a integral de $F$ em um conjunto mensurável arbitrário, $E$.
+
+    \begin{equation*}
+        \int_E F\ d\mu = \int_E f \ d\mu + \varepsilon \int_E \chi_{E_0} \ d\mu =  \int_E f \ d\mu + \varepsilon\mu(E\cap E_0).
+    \end{equation*}
+
+    Podemos quebrar a primeira integral em duas partes para obter:
+
+    \begin{eqnarray*}
+        \int_E F\ d\mu &=& \int_{E\setminus E_0} f\ d\mu + \left(\int_{E\cap E_0} f\ d\mu + \varepsilon \mu(E\cap E_0)\right) \\
+        &\leq& \nu(E\setminus E_0) + \left(\int_{E\cap E_0} f\ d\mu + \nu_s (E\cap E_0)\right) \\
+        &\leq& \nu(E\setminus E_0) + \nu(E\cap E_0)\\
+        &\leq& \nu(E).
+    \end{eqnarray*}
+
+    Mostrado que $f\in\F$ podemos partir para a segunda parte da afirmação, que é imediata. De fato, como $\varepsilon > 0$, temos que
+
+    \begin{equation*}
+        F = f + \varepsilon \chi_{E_0} > f \Rightarrow \int_{\X} F \ d\mu > \int_{\X} f \ d\mu.
+    \end{equation*}
+
+    Isto é um absurdo pois havíamos escolhido a $f$ como o a máxima de $\F$.
+
+    Lembre-se que estávamos buscando uma contradição para justificar a Afirmação \ref{clm:vs_singular}, que acabamos de provar.
+
+    Resta-nos definir a medida absolutamente contínua.
+
+    \begin{equation*}
+        \nu_a(E)=\int_E f \ d\mu \quad \forall \ E\in \Sigma.
+    \end{equation*}
+
+    \begin{claim}{.}{va_continua}
+        $\nu_a \ll \mu$
+    \end{claim}
+
+    Já sabemos que $\nu_a$ vai ser uma medida, pelo que estudamos no começo do curso. Para mostrar que $\nu_a$ vai ser absolutamente contínua com respeito a $\mu$ basta notar que a integral sobre qualquer conjunto de medida nula será igual a zero, portanto, se $\mu(E)=0$, então $\nu(E)=0$.
+
+    Por fim, chegamos à relação desejada,
+
+    \begin{equation}\label{eq:decomposição}
+        \nu = \nu_s + \nu_a\quad \text{onde}\quad \nu_s \perp \mu, \quad \nu_a \ll \mu.
+    \end{equation}
+
+    \begin{claim}
+        O par $(\nu_s,\nu_a)$ em \eqref{eq:decomposição} é único.
+    \end{claim}
+
+    Para mostrar este passo, seguiremos o argumento mais natural. Suponha que existam dois pares $(\nu_s,\nu_a)$ e $(\lambda_s,\lambda_a)$ tais que
+    \begin{equation*}
+        \nu=\nu_s+\nu_a=\lambda_s+\lambda_a
+    \end{equation*}
+    satisfazendo as condições desejadas.
+    
+    Vamos mostrar que
+
+    \begin{claim}{.}{3}
+        \begin{eqnarray*}
+            \nu_s-\lambda_s &\perp \mu, \\
+            \lambda_a-\nu_a &\ll \mu.
+        \end{eqnarray*}
+    \end{claim}
+
+    Como $\nu_s$ e $\lambda_s$ são mutuamente singulares, existem conjuntos $E_1,E_2$ tais que $\X=E_1\cup E_1^c=E_2\cup E_2^c$ com $E_1^c$ nulo com respeito a $\nu_s$ e $E_2^c$ nulo com respeito a $\lambda_s$. $E_1$ e $E_2$ são nulos com respeito a $\mu$. Denote por $E=E_1 \cup E_2$. Note que $E$ tem medida nula com relação a $\mu$ pois $\mu(E_1\cup E_2)\leq \mu(E_1)+\mu(E_2)=0$. Analogamente, mostramos que $(\nu_s-\lambda_s)(E^c)=0$.
+
+    O argumento para mostrar que a outra medida é absolutamente contínua com relação a $\mu$ é direto. Se $\mu(E)=0$, então $\nu_a(E)=\lambda_a(E)=0$. Logo, $(\lambda_a-\nu_a)(E)=0$.
+
+    Note que isso nos diz, pelo Lema \ref{lmm:as_zero}, que $\nu_s=\lambda_s$ e $\nu_a=\lambda_a$. Quando olhamos para as medidas absolutamente contínuas na sua forma integral, temos
+
+    \begin{equation*}
+        \int_{E} f d\mu = \int_{E} g d\mu
+    \end{equation*}
+
+    de onde vem a unicidade de $f$ a menos de um conjunto de medida nula. Isto completa o teorema para o caso 1.
+
+    \textbf{(Caso 2)} Vamos supor que $\nu$ e $\mu$ são medidas positivas $\sigma$-finitas. Então $\X$ pode ser escrito com o a união enumerável disjunta de conjuntos $\X_n$ com medida finita tanto para $\nu$ quanto para $\mu$. Consideramos então, as restrições das medidas a cada um desses conjuntos. Para todo $E\in\Sigma$,
+
+    \begin{equation*}
+        \nu_n(E) = \nu(E\cap \X_n), \quad \mu_n(E) = \mu(E\cap \X_n).
+    \end{equation*}
+
+    Para cada $\X_n$, vale o caso 1, de onde obtemos pares $(\nu_{s,n}, \nu_{a,n})$, além das funções $f_n$. Fazemos
+
+    \begin{eqnarray*}
+        \nu_s = \sum_{n=1}^{\infty} \nu_{s,n}, \quad \nu_a = \sum_{n=1}^{\infty} \nu_{s,a}, \quad  f = \sum_{n=1}^{\infty} f_n.
+    \end{eqnarray*}
+
+    Estas funções satisfazem as propriedades desejadas.
+
+    \textbf{(Caso 3)} Para o caso geral, temos que $\nu$ é uma medida com sinal e podemos aplicar o Teorema da Decomposição de Jordan para escrever $\nu = \nu^{+} - \nu^{-}$. Assim, basta aplicar o caso $2$ em cada uma das partes da medida e subtrair os resultados. 
+    
+\end{proof}
